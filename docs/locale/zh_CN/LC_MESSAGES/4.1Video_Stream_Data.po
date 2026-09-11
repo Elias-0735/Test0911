@@ -1,0 +1,80 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Agibot
+# This file is distributed under the same license as the D1_Max package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: D1_Max \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-03 09:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/4.1Video_Stream_Data.md:1
+msgid "4.1 Video Stream Data"
+msgstr "4.1 视频流数据"
+
+#: ../../source/4.1Video_Stream_Data.md:4
+msgid ""
+"Video streams from the front and rear wide‑angle cameras are pushed via "
+"GStreamer to the following URLs:"
+msgstr "前后广角相机的视频分别以Gstreamer方式推流到以下URL:"
+
+#: ../../source/4.1Video_Stream_Data.md:9
+msgid ""
+"By default, the live video feed is pulled and displayed on the remote-"
+"controller. The streams can also be previewed and accessed using VLC or "
+"ffplay. Examples:<br>"
+msgstr "默认会在遥控器侧拉流显示实时画面，可通过 VLC 或者 ffplay 进行预览和调用，例如："
+
+#: ../../source/4.1Video_Stream_Data.md:10
+msgid ""
+"**case1:On a Windows PC connected to the robot's Wi‑Fi, use VLC to view "
+"the video stream:**"
+msgstr "**case1:在 windows 电脑连接四足机器人 wifi，可通过 VLC 软件进行视频流数据查看：**"
+
+#: ../../source/4.1Video_Stream_Data.md:11
+msgid ""
+"step1:Open VLC, click \"Media → Open Network Stream\" "
+"![图片](images/VLC_Step1.png)"
+msgstr ""
+"step1:打开 vlc，点击\"媒体-->打开网络串流\""
+"![图片](images/VLC_Step1.png)"
+
+#: ../../source/4.1Video_Stream_Data.md:11
+#: ../../source/4.1Video_Stream_Data.md:13
+#: ../../source/4.1Video_Stream_Data.md:16
+msgid "图片"
+msgstr "图片"
+
+#: ../../source/4.1Video_Stream_Data.md:13
+msgid ""
+"step2:Enter the stream URL, e.g., `rtsp://192.168.234.1:8554/front`<br> "
+"![图片](images/VLC_Step2.png)"
+msgstr ""
+"step2:输入设备推流地址： `rtsp://192.168.234.1:8554/front`<br>"
+"![图片](images/VLC_Step2.png)"
+
+#: ../../source/4.1Video_Stream_Data.md:16
+msgid "step3:Preview the video<br> ![图片](images/VLC_Step3.png)"
+msgstr "step3:预览画面<br> ![图片](images/VLC_Step3.png)"
+
+#: ../../source/4.1Video_Stream_Data.md:19
+msgid ""
+"**case2:On an Ubuntu PC connected to the robot's Wi‑Fi, use the following"
+" commands in the terminal to retrieve the video stream:**"
+msgstr "**case2:ubuntu 电脑连接四足机器人 wifi，在终端中输入以下指令进行视频流获取：**"
+
+#: ../../source/4.1Video_Stream_Data.md:24
+msgid "Note: For low‑latency video stream retrieval, use the following method:"
+msgstr "注意：若以低延迟获取视频流数据，可按如下方法获取："
+

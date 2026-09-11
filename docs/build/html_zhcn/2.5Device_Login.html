@@ -1,0 +1,148 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2.5 设备登录 &mdash; D1_Max V0.1.0 文档</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/css/hide_top_select.css?v=d3441683" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=599f233c"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=beaddf03"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="2.6 SDK获取" href="2.6Obtaining_the_SDK.html" />
+    <link rel="prev" title="2.4 环境依赖" href="2.4Environment_Dependencies.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            D1_Max
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="1.Product_Introduction.html">一、产品介绍</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="2.SDK_Development_Guide.html">二、SDK开发指南</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="2.1SDK_Introduction.html">2.1 SDK介绍</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2SDK_Software_Service_Interface_List.html">2.2 SDK软件服务接口列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.3Safety_Protection_Mechanisms.html">2.3 安全保护机制</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.4Environment_Dependencies.html">2.4 环境依赖</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.5 设备登录</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.6Obtaining_the_SDK.html">2.6 SDK获取</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.7Demo_Execution.html">2.7 示例Demo运行步骤</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.8SDK_Control_Instructions.html">2.8 SDK控制说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.9Joint_Naming_Convention.html">2.9 关节命名规范</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.10Sensor_Device_Coordinate_Definitions.html">2.10 传感设备坐标定义</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="3.SDK_Function_Introduction.html">三、SDK函数介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4.Sensor_Data_Retrieval.html">四、传感设备数据获取</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5.Debugging_Instructions.html">五、调试指南</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">D1_Max</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="2.SDK_Development_Guide.html">二、SDK开发指南</a></li>
+      <li class="breadcrumb-item active">2.5 设备登录</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="device-login">
+<h1>2.5 设备登录<a class="headerlink" href="#device-login" title="Link to this heading"></a></h1>
+<p><strong>网络连接</strong></p>
+<ul class="simple">
+<li><p>wifi 连接登录</p>
+<ul>
+<li><p>wifi名称：XG2WIFI_xxxxxx</p></li>
+<li><p>wifi密码：12345678</p></li>
+</ul>
+</li>
+<li><p>有线连接</p>
+<ul>
+<li><p>使用网线连接机器狗拓展网口和控制端PC</p></li>
+<li><p>设置控制端PC网口IP为192.168.168.x(不能设置为192.168.168.168和192.168.168.100)</p></li>
+</ul>
+</li>
+</ul>
+<p><img alt="image" src="_images/Device_Login.png" /></p>
+<p><strong>ssh登录</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Connect via Wi-Fi</span>
+<span class="n">ssh</span> <span class="n">robot</span><span class="o">@</span><span class="mf">192.168.234.1</span>       <span class="c1">#RK3588，password: bot</span>
+
+<span class="c1">#Connect via Ethernet cable</span>
+<span class="n">ssh</span> <span class="n">robot</span><span class="o">@</span><span class="mf">192.168.168.168</span>     <span class="c1">#RK3588, password: bot</span>
+<span class="n">ssh</span> <span class="n">robot</span><span class="o">@</span><span class="mf">192.168.168.100</span>     <span class="c1">#Orin NX,password: 1</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="2.4Environment_Dependencies.html" class="btn btn-neutral float-left" title="2.4 环境依赖" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="2.6Obtaining_the_SDK.html" class="btn btn-neutral float-right" title="2.6 SDK获取" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2026, Agibot.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

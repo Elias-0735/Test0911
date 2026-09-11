@@ -1,0 +1,48 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Agibot
+# This file is distributed under the same license as the D1_Max package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: D1_Max \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-03 09:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/1.1Product_Overview.md:1
+msgid "1.1 Product Overview"
+msgstr "1.1 产品概述"
+
+#: ../../source/1.1Product_Overview.md:4
+msgid ""
+"The AGIBOT D1 Max Quadruped Robot is a wheel‑legged bionic quadruped "
+"robot featuring low self‑weight, high payload capacity, long endurance, "
+"robust protection, and agile, stable locomotion. Each leg is equipped "
+"with 3 joint motors and 1 hub motor. The robot integrates optical "
+"cameras, LiDAR, ultrasonic sensors, an IMU, an RTK module, and other "
+"sensing devices. It is powered by a high‑performance onboard computing "
+"platform for motion control, autonomous navigation and positioning, "
+"environmental perception, and other functions. It provides extensive "
+"power and communication interfaces, supporting a wide range of task-"
+"payload expansions."
+msgstr ""
+"智元仿生四足机器人D1 Max是一款轮足式仿生四足机器人，具备自重轻、负载大、续航长、防护强、运动灵活稳定等优势。机器狗每条腿配备3个关节电机和1个轮毂电机，配备光学相机、激光雷达、超声波雷达、IMU、RTK模块等传感设备，内部搭载高算力平台，用于实现运动控制、自主导航定位、环境侦测等功能，提供丰富的供电和通信接口，支持多品类的任务载荷拓展。"
+
+#: ../../source/1.1Product_Overview.md:6
+msgid "![image](images/Product_Overview.png)"
+msgstr "![image](images/Product_Overview.png)"
+
+#: ../../source/1.1Product_Overview.md:6
+msgid "image"
+msgstr "image"
+

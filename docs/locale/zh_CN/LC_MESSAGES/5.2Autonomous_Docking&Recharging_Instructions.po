@@ -1,0 +1,54 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Agibot
+# This file is distributed under the same license as the D1_Max package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: D1_Max \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-03 09:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/5.2Autonomous_Docking&Recharging_Instructions.md:1
+msgid "5.2 Autonomous Docking & Recharging Instructions"
+msgstr "5.2 自主回充说明"
+
+#: ../../source/5.2Autonomous_Docking&Recharging_Instructions.md:4
+msgid ""
+"**Version Requirements:** RK3588 version: 0.2.4+; Orin NX firmware "
+"version: 0.4.5+"
+msgstr "**版本要求：**<br>rk3588版本为: 0.2.4，Orin NX固件版本为: 0.4.5"
+
+#: ../../source/5.2Autonomous_Docking&Recharging_Instructions.md:7
+msgid ""
+"**Usage Requirements:** A charging station is required. For installation "
+"instructions, refer to the \"AGIBOT D1 Max Autonomous Charging Product "
+"Manual\". Currently, the system supports mapless docking & recharging, "
+"which requires positioning the D1 Max robot directly facing the charging "
+"station with the robot's head approximately 1.5m away from the station, "
+"ensuring that the QR code on the charging station is fully visible within"
+" the camera's field of view."
+msgstr "**使用要求：**<br>需搭配充电桩进行使用，安装说明详见“智元D1 Max自主充电产品说明书”，目前支持"无图回充"，即将四足机器人D1 Max设备正对充电桩，设备头部距离充电桩1.5m左右，确保在相机视野中可完整看到充电桩的二维码。"
+
+#: ../../source/5.2Autonomous_Docking&Recharging_Instructions.md:10
+msgid "![图片](images/Autonomous_Charging.png)"
+msgstr "![图片](images/Autonomous_Charging.png)"
+
+#: ../../source/5.2Autonomous_Docking&Recharging_Instructions.md:10
+msgid "图片"
+msgstr "图片"
+
+#: ../../source/5.2Autonomous_Docking&Recharging_Instructions.md:12
+msgid "**Demo Execution:**"
+msgstr "**Deme运行**"
+

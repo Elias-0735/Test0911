@@ -1,0 +1,69 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Agibot
+# This file is distributed under the same license as the D1_Max package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: D1_Max \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-03 09:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/2.5Device_Login.md:1
+msgid "2.5 Device Login"
+msgstr "2.5 设备登录"
+
+#: ../../source/2.5Device_Login.md:4
+msgid "**Network Connection**"
+msgstr "**网络连接**"
+
+#: ../../source/2.5Device_Login.md:5
+msgid "Wi‑Fi Connection"
+msgstr "wifi 连接登录"
+
+#: ../../source/2.5Device_Login.md:6
+msgid "Wi‑Fi Name：XG2WIFI_xxxxxx"
+msgstr "wifi名称：XG2WIFI_xxxxxx"
+
+#: ../../source/2.5Device_Login.md:7
+msgid "Wi‑Fi Password：12345678"
+msgstr "wifi密码：12345678"
+
+#: ../../source/2.5Device_Login.md:8
+msgid "Wired Connection"
+msgstr "有线连接"
+
+#: ../../source/2.5Device_Login.md:9
+msgid ""
+"Use an Ethernet cable to connect the robot's expansion Ethernet port to "
+"the control PC"
+msgstr "使用网线连接机器狗拓展网口和控制端PC"
+
+#: ../../source/2.5Device_Login.md:10
+msgid ""
+"Set the control PC's Ethernet IP to 192.168.168.x (cannot be set to "
+"192.168.168.168 or 192.168.168.100)"
+msgstr "设置控制端PC网口IP为192.168.168.x(不能设置为192.168.168.168和192.168.168.100)"
+
+#: ../../source/2.5Device_Login.md:12
+msgid "![image](./images/Device_Login.png)"
+msgstr "![image](./images/Device_Login.png)"
+
+#: ../../source/2.5Device_Login.md:12
+msgid "image"
+msgstr "image"
+
+#: ../../source/2.5Device_Login.md:14
+msgid "**SSH Login**"
+msgstr "**ssh登录**"
+

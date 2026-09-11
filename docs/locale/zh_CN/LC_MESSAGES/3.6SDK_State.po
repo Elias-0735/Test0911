@@ -1,0 +1,69 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Agibot
+# This file is distributed under the same license as the D1_Max package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: D1_Max \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-03 09:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/3.6SDK_State.md:1
+msgid "3.6 SDK State"
+msgstr "3.6 SDK内部运动状态流转"
+
+#: ../../source/3.6SDK_State.md:4
+msgid ""
+"**Note: When transitioning from locked state to other states (stand up, "
+"crawl, lie down), it is considered unlocked.**"
+msgstr "**注意：锁定状态下切到其他状态(站立、匍匐、卧倒)下就算解锁。**"
+
+#: ../../source/3.6SDK_State.md:6
+msgid ""
+"*When a stand up command is issued, the stand up state is reported during"
+" the standing process. After standing is complete, it automatically "
+"switches to the universal state, in-place state, or stair-climbing state "
+"based on the current mode.*"
+msgstr "*当下发站立命令时，站立过程中会上报站立状态，当完成站立后会根据当前的模式自动切换到通用状态或原地状态或登阶状态*"
+
+#: ../../source/3.6SDK_State.md:8
+msgid "![Image](images/SDK-State.png)"
+msgstr "![Image](images/SDK-State.png)"
+
+#: ../../source/3.6SDK_State.md:8 ../../source/3.6SDK_State.md:18
+msgid "Image"
+msgstr "Image"
+
+#: ../../source/3.6SDK_State.md:10
+msgid "SDK Mode Switching"
+msgstr "SDK模式切换"
+
+#: ../../source/3.6SDK_State.md:12
+msgid ""
+"**When switching modes, the robot will automatically stand up; after "
+"standing is complete, the corresponding state is reported.**"
+msgstr "**当进行模式切换时，狗会自动进行站立；站立完成后会上报相应的状态。**"
+
+#: ../../source/3.6SDK_State.md:14
+msgid "SDK Command Delivery"
+msgstr "SDK命令下发"
+
+#: ../../source/3.6SDK_State.md:16
+msgid "The figure shows two command delivery designs."
+msgstr "图中表示两种命令下发设计"
+
+#: ../../source/3.6SDK_State.md:18
+msgid "![Image](images/SDK-SendCmd.png)"
+msgstr "![Image](images/SDK-SendCmd.png)"
+

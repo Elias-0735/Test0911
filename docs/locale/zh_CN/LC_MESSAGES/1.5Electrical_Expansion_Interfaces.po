@@ -1,0 +1,693 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Agibot
+# This file is distributed under the same license as the D1_Max package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: D1_Max \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-03 09:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:1
+msgid "1.5 Electrical Expansion Interfaces"
+msgstr "1.5 电气拓展接口"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:4
+msgid "![image](./images/Electrical_Expansion_Interface.png)"
+msgstr "![image](./images/Electrical_Expansion_Interface.png)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:4
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:35
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:47
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:54
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:66
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:73
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:93
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:100
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:120
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:127
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:143
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:150
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:159
+msgid "image"
+msgstr "image"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "No."
+msgstr "序号"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Interface Name"
+msgstr "接口名称"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "1"
+msgstr "1"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "48V(10A)"
+msgstr "48V(10A)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "2"
+msgstr "2"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "24V(20A)"
+msgstr "24V(20A)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "3"
+msgstr "3"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "24V(3A) + Ethernet Port"
+msgstr "24V(3A)+网口"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "4"
+msgstr "4"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "12V(5A) + Ethernet Port"
+msgstr "12V(5A)+网口"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "5"
+msgstr "5"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Serial Port(RS232 * 1, RS485 * 1, SBUS * 2, PPS * 1)"
+msgstr "串口（RS232 x1、RS485 x1、SBUS x2、PPS x1）"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "6、7"
+msgstr "6、7"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "USB3.0（5V、1A）"
+msgstr "USB3.0（5V、1A）"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "8"
+msgstr "8"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "RTK Antenna Interface"
+msgstr "RTK天线接口"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "9"
+msgstr "9"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Expansion Bay Button"
+msgstr "拓展仓按键"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:17
+msgid "The combined power output of all power interfaces shall not exceed 480W;"
+msgstr "所有供电接口的供电总功率在 480W 以内；"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:18
+msgid ""
+"All aviation connectors are equipped with protective caps to achieve IP67"
+" rating. Ensure that protective caps are properly fitted on any unused "
+"aviation connectors;"
+msgstr "有航插头配备防护盖，以确保 IP67，不用的航插头务必盖好防护盖；"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:19
+msgid ""
+"The expansion bay button controls power delivery to the expansion "
+"interfaces. Before connecting any payload wiring, be sure to turn off the"
+" expansion bay power supply."
+msgstr "扩展仓按键用于控制扩展接口的供电，在进行上装接线时，务必先关闭扩展仓的电源。"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:21
+msgid "**Aviation Connector Expansion Function Interface Description:**"
+msgstr "**航插扩展功能接口说明：**"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Device Name"
+msgstr "设备名称"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Device Path"
+msgstr "设备路径"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "RS232"
+msgstr "RS232"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "/dev/ttyCH9344USB4"
+msgstr "/dev/ttyCH9344USB4"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "RS485"
+msgstr "RS485"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "/dev/ttyCH9344USB5"
+msgstr "/dev/ttyCH9344USB5"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "SBUS1"
+msgstr "SBUS1"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "/dev/ttyCH9344USB2"
+msgstr "/dev/ttyCH9344USB2"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "SBUS2"
+msgstr "SBUS2"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "/dev/ttyCH9344USB3"
+msgstr "/dev/ttyCH9344USB3"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:30
+msgid "1.5.1 Power Port – 48V(10A)"
+msgstr "1.5.1 电源口48V(10A)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:33
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:52
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:71
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:98
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:125
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:148
+msgid "Female Aviation Connector"
+msgstr "航插母头"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:35
+msgid "![image](./images/Female_Aviation_Connector1.png)"
+msgstr "![image](./images/Female_Aviation_Connector1.png)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Connector Name"
+msgstr "航插名称"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "48V 10A"
+msgstr "48V 10A"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Board‑End Connector Model"
+msgstr "板端航插型号"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "M12-S4S-GPFM16-135-CS24044"
+msgstr "M12-S4S-GPFM16-135-CS24044"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Pin Assignment 1(Brown)"
+msgstr "线序 1(棕)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "GND"
+msgstr "GND"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Pin Assignment 2(Red)"
+msgstr "线序 2(红)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "48V"
+msgstr "48V"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Pin Assignment 3(Blue)"
+msgstr "线序 3(蓝)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "48V"
+msgstr "48V"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Pin Assignment 4(Yellow-Green)"
+msgstr "线序 4(黄绿)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "GND"
+msgstr "GND"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:45
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:64
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:91
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:118
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:141
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:157
+msgid "Mating Cable Harness"
+msgstr "对插线束"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:47
+msgid "![image](./images/Mating_Cable_Harness1.png)"
+msgstr "![image](./images/Mating_Cable_Harness1.png)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:49
+msgid "1.5.2 Power Port – 24V(20A)"
+msgstr "1.5.2 电源口24V(20A)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:54
+msgid "![image](./images/Female_Aviation_Connector2.png)"
+msgstr "![image](./images/Female_Aviation_Connector2.png)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Connector Name"
+msgstr "航插名称"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "24V 20A"
+msgstr "24V 20A"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Board‑End Connector Model"
+msgstr "板端航插型号"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "M12-S4S-GPFM16-135-CS24044"
+msgstr "M12-S4S-GPFM16-135-CS24044"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Pin Assignment 1(Brown)"
+msgstr "线序 1(棕)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "GND"
+msgstr "GND"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Pin Assignment 2(Red)"
+msgstr "线序 2(红)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "24V"
+msgstr "24V"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Pin Assignment 3(Blue)"
+msgstr "线序 3(蓝)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "24V"
+msgstr "24V"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Pin Assignment 4(Yellow-Green)"
+msgstr "线序 4(黄绿)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "GND"
+msgstr "GND"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:66
+msgid "![image](./images/Mating_Cable_Harness2.png)"
+msgstr "![image](./images/Mating_Cable_Harness2.png)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:68
+msgid "1.5.3 Ethernet Port(24V)"
+msgstr "1.5.3 网口(24V)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:73
+msgid "![image](./images/Female_Aviation_Connector3.png)"
+msgstr "![image](./images/Female_Aviation_Connector3.png)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Connector Name"
+msgstr "航插名称"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Ethernet + 24V"
+msgstr "网口+24V"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Board‑End Connector Model"
+msgstr "板端航插型号"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "M12-P12A-GPFM12"
+msgstr "M12-P12A-GPFM12"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Pin Assignment 1(Brown)"
+msgstr "线序 1(棕)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "GND"
+msgstr "GND"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Pin Assignment 2(Blue)"
+msgstr "线序 2(蓝)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "24V"
+msgstr "24V"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Pin Assignment 3(White)"
+msgstr "线序 3(白)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "24V"
+msgstr "24V"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Pin Assignment 4(Green)"
+msgstr "线序 4(绿)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Ethernet A+"
+msgstr "网口A+"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Pin Assignment 5(Pink)"
+msgstr "线序 5(粉)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Ethernet A-"
+msgstr "网口A-"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Pin Assignment 6(Yellow)"
+msgstr "线序 6(黄)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Ethernet B+"
+msgstr "网口B+"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Pin Assignment 7(Black)"
+msgstr "线序 7(黑)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Ethernet B-"
+msgstr "网口B-"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Pin Assignment 8(Gray)"
+msgstr "线序 8(灰)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Ethernet C+"
+msgstr "网口C+"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Pin Assignment 9(Red)"
+msgstr "线序 9(红)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Ethernet C-"
+msgstr "网口C-"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Pin Assignment 10(Purple)"
+msgstr "线序 10(紫)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "GND"
+msgstr "GND"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Pin Assignment 11(Orange)"
+msgstr "线序 11(橙)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Ethernet D+"
+msgstr "网口D+"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Pin Assignment 12(Light Green)"
+msgstr "线序 12(浅绿)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Ethernet D-"
+msgstr "网口D-"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:93
+msgid "![image](./images/Mating_Cable_Harness3.png)"
+msgstr "![image](./images/Mating_Cable_Harness3.png)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:95
+msgid "1.5.4 Ethernet Port(12V)"
+msgstr "1.5.4 网口(12V)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:100
+msgid "![image](./images/Female_Aviation_Connector4.png)"
+msgstr "![image](./images/Female_Aviation_Connector4.png)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Connector Name"
+msgstr "航插名称"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Ethernet +12V"
+msgstr "网口+12V"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Board‑End Connector Model"
+msgstr "板端航插型号"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "M12-P12A-GPFM12"
+msgstr "M12-P12A-GPFM12"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Pin Assignment 1(Brown)"
+msgstr "线序 1(棕)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "GND"
+msgstr "GND"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Pin Assignment 2(Blue)"
+msgstr "线序 2(蓝)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "12V"
+msgstr "12V"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Pin Assignment 3(White)"
+msgstr "线序 3(白)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "12V"
+msgstr "12V"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Pin Assignment 4(Green)"
+msgstr "线序 4(绿)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Ethernet A+"
+msgstr "网口A+"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Pin Assignment 5(Pink)"
+msgstr "线序 5(粉)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Ethernet A-"
+msgstr "网口A-"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Pin Assignment 6(Yellow)"
+msgstr "线序 6(黄)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Ethernet B+"
+msgstr "网口B+"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Pin Assignment 7(Black)"
+msgstr "线序 7(黑)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Ethernet B-"
+msgstr "网口B-"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Pin Assignment 8(Gray)"
+msgstr "线序 8(灰)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Ethernet C+"
+msgstr "网口C+"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Pin Assignment 9(Red)"
+msgstr "线序 9(红)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Ethernet C-"
+msgstr "网口C-"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Pin Assignment 10(Purple)"
+msgstr "线序 10(紫)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "GND"
+msgstr "GND"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Pin Assignment 11(Orange)"
+msgstr "线序 11(橙)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Ethernet D+"
+msgstr "网口D+"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Pin Assignment 12(Light Green)"
+msgstr "线序 12(浅绿)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Ethernet D-"
+msgstr "网口D-"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:120
+msgid "![image](./images/Mating_Cable_Harness4.png)"
+msgstr "![image](./images/Mating_Cable_Harness4.png)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:122
+msgid "1.5.5 Serial Port"
+msgstr "1.5.5 串口"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:127
+msgid "![image](./images/Female_Aviation_Connector5.png)"
+msgstr "![image](./images/Female_Aviation_Connector5.png)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Connector Name"
+msgstr "航插名称"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Serial Port (RS232, RS485, SBUS * 2, PPS)"
+msgstr "串口（RS232、RS845、SBUS * 2、PPS）"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Board‑End Connector Model"
+msgstr "板端航插型号"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "M12-P8A-GPFM12"
+msgstr "M12-P8A-GPFM12"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Pin Assignment 1(White)"
+msgstr "线序 1(白)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "PPS"
+msgstr "PPS"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Pin Assignment 2(Brown)"
+msgstr "线序 2(棕)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "SBUS1"
+msgstr "SBUS1"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Pin Assignment 3(Green)"
+msgstr "线序 3(绿)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "SBUS2"
+msgstr "SBUS2"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Pin Assignment 4(Yellow)"
+msgstr "线序 4(黄)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "RS485A"
+msgstr "RS485A"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Pin Assignment 5(Gray)"
+msgstr "线序 5(灰)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "RS485B"
+msgstr "RS485B"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Pin Assignment 6(Pink)"
+msgstr "线序 6(粉)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "RS232_TX"
+msgstr "RS232_TX"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Pin Assignment 7(Blue)"
+msgstr "线序 7(蓝)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "RS232_RX"
+msgstr "RS232_RX"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Pin Assignment 8(Red)"
+msgstr "线序 8(红)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "GND"
+msgstr "GND"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:143
+msgid "![image](./images/Mating_Cable_Harness5.png)"
+msgstr "![image](./images/Mating_Cable_Harness5.png)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:145
+msgid "1.5.6 USB Port"
+msgstr "1.5.6 USB口"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:150
+msgid "![image](./images/Female_Aviation_Connector6.png)"
+msgstr "![image](./images/Female_Aviation_Connector6.png)"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Connector Name"
+msgstr "航插名称"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "USB 3.0 + 5V (* 2)"
+msgstr "USB3.0+5V 两个"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Board‑End Connector Model"
+msgstr "板端航插型号"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "E10B-FT3-PPF"
+msgstr "E10B-FT3-PPF"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "Pin Assignment"
+msgstr "线序定义"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md
+msgid "None"
+msgstr "无"
+
+#: ../../source/1.5Electrical_Expansion_Interfaces.md:159
+msgid "![image](./images/Mating_Cable_Harness6.png)"
+msgstr "![image](./images/Mating_Cable_Harness6.png)"
+

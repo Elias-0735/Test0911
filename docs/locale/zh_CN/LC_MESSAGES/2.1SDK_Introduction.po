@@ -1,0 +1,71 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Agibot
+# This file is distributed under the same license as the D1_Max package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: D1_Max \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-03 09:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/2.1SDK_Introduction.md:1
+msgid "2.1 SDK Introduction"
+msgstr "2.1 SDK介绍"
+
+#: ../../source/2.1SDK_Introduction.md:4
+msgid ""
+"This document describes the Software Development Kit (SDK) for the D1 "
+"Max, providing detailed information on its core service interfaces, "
+"including high‑level command set interfaces, Inertial Measurement Unit "
+"(IMU) inertial navigation data interfaces, and motor status data "
+"interfaces."
+msgstr "本文档描述了 D1 Max 的软件开发工具包 (SDK)，提供其核心服务接口的详细信息，包括高层运动控制接口、IMU 惯导数据接口、电机状态数据接口。"
+
+#: ../../source/2.1SDK_Introduction.md:5
+msgid ""
+"Each chapter describes the invocation methods for different service "
+"interfaces, the standard format definitions for data input/output, and "
+"provides functional development examples."
+msgstr "各章节分别介绍不同服务接口的调用方法、数据输入/输出的标准格式定义与一些功能开发示例。"
+
+#: ../../source/2.1SDK_Introduction.md:6
+msgid ""
+"Interface definitions are subject to change based on production "
+"development status. Please refer to the latest version of the interface "
+"definition document."
+msgstr "接口定义会随量产开发状态产生变更，请以最新版本的接口定义文档为准。"
+
+#: ../../source/2.1SDK_Introduction.md:7
+msgid ""
+"The SDK communicates with the quadruped robot body program via a specific"
+" protocol. Therefore, different SDK versions may have compatibility "
+"differences with the robot body software. Please select the SDK version "
+"that corresponds to the device version. If conditions permit, it is "
+"recommended to update the quadruped robot firmware to the latest version "
+"for better compatibility."
+msgstr "SDK程序与狗本体内程序通讯存在特定协议，故不同版本的SDK程序设备本体内程序通讯存在差异，请根据设备版本选择对应版本SDK程序。若条件允许，建议更新狗内程序到最新版本，以获得更好的兼容性。"
+
+#: ../../source/2.1SDK_Introduction.md:8
+msgid ""
+"When controlled via the SDK interfaces, all states are designed and "
+"specified by the secondary developer. The robot body motion controller "
+"does not perform additional intervention or state transitions."
+msgstr "SDK接口控制时，全部状态均由二次开发者设计指定，本体运控不做额外的干预与状态跳转。"
+
+#: ../../source/2.1SDK_Introduction.md:9
+msgid ""
+"When running the SDK, please ensure that the system has sufficient "
+"resources; otherwise, the motion control module may fail."
+msgstr "运行SDK时, 请保证系统有足够的资源, 否则可能出现运动控制模块失效的情况。"
+

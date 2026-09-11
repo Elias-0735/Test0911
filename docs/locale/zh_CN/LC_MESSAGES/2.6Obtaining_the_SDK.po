@@ -1,0 +1,45 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Agibot
+# This file is distributed under the same license as the D1_Max package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: D1_Max \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-03 09:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/2.6Obtaining_the_SDK.md:1
+msgid "2.6 Obtaining the SDK"
+msgstr "2.6 SDK获取"
+
+#: ../../source/2.6Obtaining_the_SDK.md:4
+msgid "way1："
+msgstr "way1："
+
+#: ../../source/2.6Obtaining_the_SDK.md:7
+msgid ""
+"SSH into the robot body, query the current firmware version information, "
+"and send a screenshot of the quadruped robot's firmware version number to"
+" the after‑sales technical support team to obtain the corresponding SDK "
+"package and example code. The query method is as follows:"
+msgstr "通过ssh进入机器狗本体，查询对应的版本信息后，将查询到的机器狗固件版本号截图发送售后技术支持团队获取对应的SDK 安装包与示例代码，查询方式如下："
+
+#: ../../source/2.6Obtaining_the_SDK.md:17
+msgid "way2："
+msgstr "way2："
+
+#: ../../source/2.6Obtaining_the_SDK.md:20
+msgid "Obtain via the following GitHub repository"
+msgstr "通过如下github地址获取"
+

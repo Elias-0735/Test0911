@@ -1,0 +1,41 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Agibot
+# This file is distributed under the same license as the D1_Max package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: D1_Max \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-03 09:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/2.4Environment_Dependencies.md:1
+msgid "2.4 Environment Dependencies"
+msgstr "2.4 环境依赖"
+
+#: ../../source/2.4Environment_Dependencies.md:4
+msgid "Operating System: Ubuntu 22.04"
+msgstr "操作系统: Ubuntu 22.04"
+
+#: ../../source/2.4Environment_Dependencies.md:5
+msgid "Build Tools: CMake 3.8+, GCC 11+"
+msgstr "构建工具: CMake 3.8+, GCC 11+"
+
+#: ../../source/2.4Environment_Dependencies.md:6
+msgid "Dependencies: Boost 1.74+"
+msgstr "依赖库: Boost 1.74+"
+
+#: ../../source/2.4Environment_Dependencies.md:7
+msgid "Programming Language: C++"
+msgstr "编程语言: C++"
+

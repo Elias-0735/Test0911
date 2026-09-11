@@ -1,0 +1,411 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Agibot
+# This file is distributed under the same license as the D1_Max package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: D1_Max \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-10 11:57+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/4.4RTK_Data.md:1
+msgid "4.4 RTK Data"
+msgstr "4.4 RTK数据"
+
+#: ../../source/4.4RTK_Data.md:4
+msgid "4.4.1 RTK Introduction"
+msgstr "4.4.1 RTK简介"
+
+#: ../../source/4.4RTK_Data.md:7
+msgid ""
+"The LK1220D is an industrial‑grade, full‑frequency, high‑precision "
+"positioning and orientation module developed by Sixents Technology. It "
+"supports up to 1040 satellite channels and dual‑antenna input. The module"
+" features built‑in high‑precision NRTK and orientation algorithms, along "
+"with excellent anti‑interference capabilities. With a baseband‑integrated"
+" multi‑frequency narrowband anti‑interference unit, it ensures robust "
+"signal reception and processing performance in complex electromagnetic "
+"environments.<br> The D1 Max provides a reserved RTK expansion interface "
+"internally, with drivers pre‑installed. To use the RTK service, an "
+"external antenna (SMA connector) and an activated RTK service account are"
+" required. Additionally, the 4G module must have external network access "
+"for the RTK function to operate properly. Recommended RTK antenna model: "
+"Beitian BT560."
+msgstr "LK1220D 是六分科技自研的一款工规级全频高精度定位定向模组，最多支持 1040 卫星通道,支持双天线接入。模组可内置高精度 NRTK&定向算法，且具备优秀的抗干扰能力，通过基带内置多频窄带抗干扰单元，提升复杂电磁环境下的信号接收和处理性能。<br>D1 Max设备内部预留RTK拓展接口，且已安装驱动，如需使用RTK服务，需外接天线(SMA接头)并开通RTK服务账号 ，另外需要通过4G模组访问外网，方可正常使用RTK功能。推荐的rtk天线型号：北天BT560。"
+
+#: ../../source/4.4RTK_Data.md:18
+msgid "4.4.2 Obtaining Sixents RTK Service"
+msgstr "4.4.2 获取六分RTK服务"
+
+#: ../../source/4.4RTK_Data.md:21
+msgid ""
+"Log in to the official Sixents website using the registered account and "
+"password URL:<https://www.sixents.com/login>"
+msgstr "使用从注册的六分账户和密码登录到官网 网址：<https://www.sixents.com/login>"
+
+#: ../../source/4.4RTK_Data.md:23
+msgid "Log in to the console ![图片](images/Console_Login.png)"
+msgstr "登录进控制台 <br>![图片](images/Console_Login.png)"
+
+#: ../../source/4.4RTK_Data.md:23 ../../source/4.4RTK_Data.md:25
+#: ../../source/4.4RTK_Data.md:65
+msgid "图片"
+msgstr "图片"
+
+#: ../../source/4.4RTK_Data.md:25
+msgid "Obtain the AK and AS credentials ![图片](images/Get_AK_AS.png)"
+msgstr "获取AK和AS <br>![图片](images/Get_AK_AS.png)"
+
+#: ../../source/4.4RTK_Data.md:28
+msgid "4.4.3 RTK Service Configuration on the NX Side"
+msgstr "4.4.3 NX侧RTK服务配置"
+
+#: ../../source/4.4RTK_Data.md:31
+msgid ""
+"Log in to the NX<br> First, connect to the robot's Wi‑Fi (default "
+"password: 12345678)"
+msgstr "登录进入NX<br>首先需要连接机器狗的WIFI，密码默认是 12345678"
+
+#: ../../source/4.4RTK_Data.md:38
+msgid "Open the configuration file"
+msgstr "打开配置文件"
+
+#: ../../source/4.4RTK_Data.md:40
+msgid "Configuration file path: `sudo vim /ota/sixents_config.ini`"
+msgstr "配置文件路径：`sudo vim /ota/sixents_config.ini`"
+
+#: ../../source/4.4RTK_Data.md:51
+msgid "sdk_ak: Set to the AK of your purchased service instance"
+msgstr "sdk_ak: 设置您购买服务实例的 AK"
+
+#: ../../source/4.4RTK_Data.md:52
+msgid "sdk_as: Set to the AS of your purchased service instance"
+msgstr "sdk_as: 设置您购买服务实例的 AS"
+
+#: ../../source/4.4RTK_Data.md:53
+msgid "sdk_dev_id: Set your device ID or SN (customizable)"
+msgstr "sdk_dev_id: 设置您的设备 ID 或 SN（自定义）"
+
+#: ../../source/4.4RTK_Data.md:54
+msgid "sdk_dev_type: Set your device type (customizable)"
+msgstr "sdk_dev_type: 设置您的设备类型（自定义）"
+
+#: ../../source/4.4RTK_Data.md:56
+msgid ""
+"**Note: The sdk_dev_id and sdk_dev_type are uniquely bound to your "
+"account. Any subsequent changes require unbinding via the official "
+"website**"
+msgstr "**注意：sdk_dev_id 和 sdk_dev_type 是和 账户唯一绑定的，之后更改其他的需要去官网解绑**"
+
+#: ../../source/4.4RTK_Data.md:58
+msgid "4.4.4 ROS2 Interface Definition"
+msgstr "4.4.4 RTK ROS2接口定义"
+
+#: ../../source/4.4RTK_Data.md:61
+msgid "RTK Topic Name"
+msgstr "RTK话题名称"
+
+#: ../../source/4.4RTK_Data.md:63
+msgid "RTK Topic Name: `/rtk_pvh`"
+msgstr "RTK对应的话题为：`/rtk_pvh`"
+
+#: ../../source/4.4RTK_Data.md:65
+msgid "![图片](images/RTK_Topic_Instruction.png)"
+msgstr "![图片](images/RTK_Topic_Instruction.png)"
+
+#: ../../source/4.4RTK_Data.md:67
+msgid "Data Description"
+msgstr "数据说明"
+
+#: ../../source/4.4RTK_Data.md
+msgid "Category"
+msgstr "类别"
+
+#: ../../source/4.4RTK_Data.md
+msgid "Field"
+msgstr "字段"
+
+#: ../../source/4.4RTK_Data.md
+msgid "Description"
+msgstr "说明"
+
+#: ../../source/4.4RTK_Data.md
+msgid "heading"
+msgstr "heading"
+
+#: ../../source/4.4RTK_Data.md
+msgid "utc_time_s"
+msgstr "utc_time_s"
+
+#: ../../source/4.4RTK_Data.md
+msgid "Heading UTC time"
+msgstr "heading UTC时间"
+
+#: ../../source/4.4RTK_Data.md
+msgid "sol_status"
+msgstr "sol_status"
+
+#: ../../source/4.4RTK_Data.md
+msgid ""
+"Solution status<br>0：Solved<br>1: Insufficient observations<br>2: Not "
+"converged<br>4: Trace of covariance matrix exceeds maximum (trace > "
+"1000m)"
+msgstr "解的状态<br>0：已解出<br>1：观测量不足<br>2：未收敛<br>4：协方差矩阵的迹超过最大值(迹＞1000 米)"
+
+#: ../../source/4.4RTK_Data.md
+msgid "heading_type"
+msgstr "heading_type"
+
+#: ../../source/4.4RTK_Data.md
+msgid ""
+"Positioning type<br>0: No solution computed<br>16: Single‑point "
+"positioning<br>17: Pseudorange differential positioning<br>34: Float "
+"solution<br>50: Fixed integer solution<br>pos_type = 50 indicates high-"
+"precision positioning"
+msgstr "定位类型<br>0：不进行解算<br>16：单点定位<br>17：伪距查分定位<br>34：浮点解<br>50：整数解<br>pose_type是50说明是精准定位"
+
+#: ../../source/4.4RTK_Data.md
+msgid "base_line"
+msgstr "base_line"
+
+#: ../../source/4.4RTK_Data.md
+msgid "Baseline length (meters), range 0–3000"
+msgstr "基线长度，单位米(0~3000)"
+
+#: ../../source/4.4RTK_Data.md
+msgid "heading_deg"
+msgstr "heading_deg"
+
+#: ../../source/4.4RTK_Data.md
+msgid "Heading angle (degrees), range 0–360"
+msgstr "航向角，单位度(0~360)"
+
+#: ../../source/4.4RTK_Data.md
+msgid "pitch_deg"
+msgstr "pitch_deg"
+
+#: ../../source/4.4RTK_Data.md
+msgid "Pitch angle (degrees), range ±90"
+msgstr "俯仰角，单位度(±90)"
+
+#: ../../source/4.4RTK_Data.md
+msgid "heading_std"
+msgstr "heading_std"
+
+#: ../../source/4.4RTK_Data.md
+msgid "Heading angle standard deviation (degrees)"
+msgstr "航向角标准差，单位度"
+
+#: ../../source/4.4RTK_Data.md
+msgid "pitch_std"
+msgstr "pitch_std"
+
+#: ../../source/4.4RTK_Data.md
+msgid "Pitch angle standard deviation (degrees)"
+msgstr "俯仰角标准差，单位度"
+
+#: ../../source/4.4RTK_Data.md
+msgid "sys_num"
+msgstr "sys_num"
+
+#: ../../source/4.4RTK_Data.md
+msgid "Number of tracked satellites"
+msgstr "跟踪的卫星数"
+
+#: ../../source/4.4RTK_Data.md
+msgid "soln_svs_num"
+msgstr "soln_svs_num"
+
+#: ../../source/4.4RTK_Data.md
+msgid "Number of satellites used in solution"
+msgstr "参与解算的卫星数"
+
+#: ../../source/4.4RTK_Data.md
+msgid "bestnav"
+msgstr "bestnav"
+
+#: ../../source/4.4RTK_Data.md
+msgid "utc_time_s"
+msgstr "utc_time_s"
+
+#: ../../source/4.4RTK_Data.md
+msgid "Bestpos UTC time"
+msgstr "bestpos UTC时间"
+
+#: ../../source/4.4RTK_Data.md
+msgid "p_sol_status"
+msgstr "p_sol_status"
+
+#: ../../source/4.4RTK_Data.md
+msgid "Solution status"
+msgstr "解的状态"
+
+#: ../../source/4.4RTK_Data.md
+msgid "pos_type"
+msgstr "pos_type"
+
+#: ../../source/4.4RTK_Data.md
+msgid "Positioning type"
+msgstr "定位类型"
+
+#: ../../source/4.4RTK_Data.md
+msgid "latitude_deg"
+msgstr "latitude_deg"
+
+#: ../../source/4.4RTK_Data.md
+msgid "Latitude (degrees)"
+msgstr "纬度，单位度"
+
+#: ../../source/4.4RTK_Data.md
+msgid "longitude_deg"
+msgstr "longitude_deg"
+
+#: ../../source/4.4RTK_Data.md
+msgid "Longitude (degrees)"
+msgstr "经度，单位度"
+
+#: ../../source/4.4RTK_Data.md
+msgid "altitude_m"
+msgstr "altitude_m"
+
+#: ../../source/4.4RTK_Data.md
+msgid "Altitude (meters)"
+msgstr "海拔高，单位米"
+
+#: ../../source/4.4RTK_Data.md
+msgid "undulation"
+msgstr "undulation"
+
+#: ../../source/4.4RTK_Data.md
+msgid ""
+"Geoid undulation — the difference between the geoid and the WGS84 "
+"reference ellipsoid (meters)"
+msgstr "大地水准面差距，大地水准面与 WGS84 参考椭球面的差值，单位米"
+
+#: ../../source/4.4RTK_Data.md
+msgid "lat_std"
+msgstr "lat_std"
+
+#: ../../source/4.4RTK_Data.md
+msgid "Latitude standard deviation (meters)"
+msgstr "纬度标准差，单位米"
+
+#: ../../source/4.4RTK_Data.md
+msgid "lon_std"
+msgstr "lon_std"
+
+#: ../../source/4.4RTK_Data.md
+msgid "Longitude standard deviation (meters)"
+msgstr "经度标准差，单位米"
+
+#: ../../source/4.4RTK_Data.md
+msgid "hgt_std"
+msgstr "hgt_std"
+
+#: ../../source/4.4RTK_Data.md
+msgid "Height standard deviation (meters)"
+msgstr "高度标准差，单位米"
+
+#: ../../source/4.4RTK_Data.md
+msgid "diff_age_s"
+msgstr "diff_age_s"
+
+#: ../../source/4.4RTK_Data.md
+msgid "Differential correction age (seconds)"
+msgstr "差分龄期，单位秒"
+
+#: ../../source/4.4RTK_Data.md
+msgid "sol_age_s"
+msgstr "sol_age_s"
+
+#: ../../source/4.4RTK_Data.md
+msgid "Solution age (seconds)"
+msgstr "解的龄期，单位秒"
+
+#: ../../source/4.4RTK_Data.md
+msgid "svs_num"
+msgstr "svs_num"
+
+#: ../../source/4.4RTK_Data.md
+msgid "Number of tracked satellites"
+msgstr "跟踪的卫星数"
+
+#: ../../source/4.4RTK_Data.md
+msgid "soln_svs_num"
+msgstr "soln_svs_num"
+
+#: ../../source/4.4RTK_Data.md
+msgid "Number of satellites used in solution"
+msgstr "参与解算的卫星数"
+
+#: ../../source/4.4RTK_Data.md
+msgid "v_sol_status"
+msgstr "v_sol_status"
+
+#: ../../source/4.4RTK_Data.md
+msgid "Solution status"
+msgstr "解的状态"
+
+#: ../../source/4.4RTK_Data.md
+msgid "vel_type"
+msgstr "vel_type"
+
+#: ../../source/4.4RTK_Data.md
+msgid "Positioning type"
+msgstr "定位类型"
+
+#: ../../source/4.4RTK_Data.md
+msgid "hor_spd"
+msgstr "hor_spd"
+
+#: ../../source/4.4RTK_Data.md
+msgid "Horizontal ground speed (m/s)"
+msgstr "水平方向对地速度，单位米/秒"
+
+#: ../../source/4.4RTK_Data.md
+msgid "trk_gnd"
+msgstr "trk_gnd"
+
+#: ../../source/4.4RTK_Data.md
+msgid "True ground track direction relative to true north (degrees)"
+msgstr "相对于真北的实际对地运动方向，单位度"
+
+#: ../../source/4.4RTK_Data.md
+msgid "ver_spd"
+msgstr "ver_spd"
+
+#: ../../source/4.4RTK_Data.md
+msgid "Vertical velocity (m/s). positive = upward, negative = downward"
+msgstr "垂直方向速度，单位米/秒。正值表示方向向上，负值表示方向向下"
+
+#: ../../source/4.4RTK_Data.md
+msgid "ver_spd_std"
+msgstr "ver_spd_std"
+
+#: ../../source/4.4RTK_Data.md
+msgid "Vertical velocity standard deviation (not filled)"
+msgstr "垂直方向速度标准差(未填写)"
+
+#: ../../source/4.4RTK_Data.md
+msgid "hor_spd_std"
+msgstr "hor_spd_std"
+
+#: ../../source/4.4RTK_Data.md
+msgid "Horizontal ground speed standard deviation (not filled)"
+msgstr "水平方向对地速度标准差(未填写)"
+
+#: ../../source/4.4RTK_Data.md:103
+msgid "4.4.5 Retrieving RTK Data"
+msgstr "4.4.5 获取RTK数据"
+

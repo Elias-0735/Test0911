@@ -1,0 +1,193 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Agibot
+# This file is distributed under the same license as the D1_Max package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: D1_Max \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-03 09:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/4.3Ultrasonic_Radar_Data.md:1
+msgid "4.3 Ultrasonic Radar Data"
+msgstr "4.3 超声波雷达数据"
+
+#: ../../source/4.3Ultrasonic_Radar_Data.md:4
+msgid "4.3.1 ROS2 Interface Definition"
+msgstr "4.3.1 ROS2接口定义"
+
+#: ../../source/4.3Ultrasonic_Radar_Data.md
+msgid "topic"
+msgstr "topic"
+
+#: ../../source/4.3Ultrasonic_Radar_Data.md
+msgid "msg"
+msgstr "msg"
+
+#: ../../source/4.3Ultrasonic_Radar_Data.md
+msgid "Field Type"
+msgstr "字段类型"
+
+#: ../../source/4.3Ultrasonic_Radar_Data.md
+msgid "Field"
+msgstr "字段"
+
+#: ../../source/4.3Ultrasonic_Radar_Data.md
+msgid "Field Description"
+msgstr "字段释义"
+
+#: ../../source/4.3Ultrasonic_Radar_Data.md
+msgid "Default"
+msgstr "初始值"
+
+#: ../../source/4.3Ultrasonic_Radar_Data.md
+msgid "Range"
+msgstr "数值范围"
+
+#: ../../source/4.3Ultrasonic_Radar_Data.md
+msgid "Frequency"
+msgstr "发送周期"
+
+#: ../../source/4.3Ultrasonic_Radar_Data.md
+msgid ""
+"Left ultrasonic radar: /uss_driver/uss_left/range<br>Right ultrasonic: /uss_driver/uss_right/range"
+"radar:"
+msgstr "左侧超声波雷达：/uss_driver/uss_left/range<br>右侧超声波雷达：/uss_driver/uss_right/range"
+
+#: ../../source/4.3Ultrasonic_Radar_Data.md
+msgid "sensor_msgs::msg::Range"
+msgstr "sensor_msgs::msg::Range"
+
+#: ../../source/4.3Ultrasonic_Radar_Data.md
+msgid "std_msgs/Header"
+msgstr "std_msgs/Header"
+
+#: ../../source/4.3Ultrasonic_Radar_Data.md
+msgid "header"
+msgstr "header"
+
+#: ../../source/4.3Ultrasonic_Radar_Data.md
+msgid "ROS2 standard message header"
+msgstr "ROS2 标准MSG帧头"
+
+#: ../../source/4.3Ultrasonic_Radar_Data.md
+msgid "10hz"
+msgstr "10hz"
+
+#: ../../source/4.3Ultrasonic_Radar_Data.md
+msgid "uint8_t"
+msgstr "uint8_t"
+
+#: ../../source/4.3Ultrasonic_Radar_Data.md
+msgid "radiation_type"
+msgstr "radiation_type"
+
+#: ../../source/4.3Ultrasonic_Radar_Data.md
+msgid "Sensor type. Enum values: 0 = ultrasonic, 1 = infrared"
+msgstr "传感器类型。枚举值：0 超声波 1 红外线"
+
+#: ../../source/4.3Ultrasonic_Radar_Data.md
+msgid "0"
+msgstr "0"
+
+#: ../../source/4.3Ultrasonic_Radar_Data.md
+msgid "0-1"
+msgstr "0-1"
+
+#: ../../source/4.3Ultrasonic_Radar_Data.md
+msgid "float"
+msgstr "float"
+
+#: ../../source/4.3Ultrasonic_Radar_Data.md
+msgid "field_of_view"
+msgstr "field_of_view"
+
+#: ../../source/4.3Ultrasonic_Radar_Data.md
+msgid ""
+"Sensor field of view (radians); typically the angle of the conical "
+"ranging area"
+msgstr "传感器视场角（弧度），通常为测距锥形区域的角度"
+
+#: ../../source/4.3Ultrasonic_Radar_Data.md
+msgid "0"
+msgstr "0"
+
+#: ../../source/4.3Ultrasonic_Radar_Data.md
+msgid "Currently fixed at 0"
+msgstr "当前固定为0"
+
+#: ../../source/4.3Ultrasonic_Radar_Data.md
+msgid "float"
+msgstr "float"
+
+#: ../../source/4.3Ultrasonic_Radar_Data.md
+msgid "min_range"
+msgstr "min_range"
+
+#: ../../source/4.3Ultrasonic_Radar_Data.md
+msgid "Sensor minimum measurable distance (meters)"
+msgstr "传感器可测量最小距离（米）"
+
+#: ../../source/4.3Ultrasonic_Radar_Data.md
+msgid "0"
+msgstr "0"
+
+#: ../../source/4.3Ultrasonic_Radar_Data.md
+msgid "Currently fixed at 0"
+msgstr "当前固定为0"
+
+#: ../../source/4.3Ultrasonic_Radar_Data.md
+msgid "float"
+msgstr "float"
+
+#: ../../source/4.3Ultrasonic_Radar_Data.md
+msgid "max_range"
+msgstr "max_range"
+
+#: ../../source/4.3Ultrasonic_Radar_Data.md
+msgid "Sensor maximum measurable distance (meters)"
+msgstr "传感器可测量最大距离（米）"
+
+#: ../../source/4.3Ultrasonic_Radar_Data.md
+msgid "0"
+msgstr "0"
+
+#: ../../source/4.3Ultrasonic_Radar_Data.md
+msgid "Currently fixed at 0"
+msgstr "当前固定为0"
+
+#: ../../source/4.3Ultrasonic_Radar_Data.md
+msgid "float"
+msgstr "float"
+
+#: ../../source/4.3Ultrasonic_Radar_Data.md
+msgid "range"
+msgstr "range"
+
+#: ../../source/4.3Ultrasonic_Radar_Data.md
+msgid "Current actual distance measured (meters)"
+msgstr "当前实际测得距离（米）"
+
+#: ../../source/4.3Ultrasonic_Radar_Data.md
+msgid "0"
+msgstr "0"
+
+#: ../../source/4.3Ultrasonic_Radar_Data.md
+msgid "0-4m"
+msgstr "0-4m"
+
+#: ../../source/4.3Ultrasonic_Radar_Data.md:17
+msgid "4.3.2 Retrieving Ultrasonic Radar Data"
+msgstr "4.3.2 获取超声波雷达数据"
+

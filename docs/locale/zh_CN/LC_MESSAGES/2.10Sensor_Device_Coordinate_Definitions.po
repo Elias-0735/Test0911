@@ -1,0 +1,293 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Agibot
+# This file is distributed under the same license as the D1_Max package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: D1_Max \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-03 09:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md:1
+msgid "2.10 Sensor Device Coordinate Definitions"
+msgstr "2.10 传感设备坐标定义"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "Sensor Name"
+msgstr "传感器名称"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "Sensor Coordinates x(relative to body BASE origin)(mm)"
+msgstr "传感器x坐标(相对机身BASE原点)(单位mm)"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "Sensor Coordinates y"
+msgstr "传感器y坐标"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "Sensor Coordinates z"
+msgstr "传感器z坐标"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "Remarks"
+msgstr "备注"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "IMU_ICM42688(for motion control)"
+msgstr "IMU_ICM42688(运控用)"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "0"
+msgstr "0"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "0"
+msgstr "0"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "36.2"
+msgstr "36.2"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "IMU_LUA300C(automotive‑grade)"
+msgstr "IMU_LUA300C(车规级)"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "0"
+msgstr "0"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "0"
+msgstr "0"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "56.9"
+msgstr "56.9"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "Front LiDAR AIRY"
+msgstr "前激光雷达AIRY"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "404.3"
+msgstr "404.3"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "0"
+msgstr "0"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "-37.7"
+msgstr "-37.7"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "See datasheet for details"
+msgstr "详见规格书"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "Front Camera IMX415"
+msgstr "前摄像头IMX415"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "412.3"
+msgstr "412.3"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "0"
+msgstr "0"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "37.8"
+msgstr "37.8"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "See datasheet for details"
+msgstr "详见规格书"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "Front-Right Fill Light"
+msgstr "右前补光灯"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "420.3"
+msgstr "420.3"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "-30.9"
+msgstr "-30.9"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "28.3"
+msgstr "28.3"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "120° illumination range"
+msgstr "照射范围 120°"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "Front-Left Fill Light"
+msgstr "左前补光灯"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "420.3"
+msgstr "420.3"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "30.9"
+msgstr "30.9"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "28.3"
+msgstr "28.3"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "120° illumination range"
+msgstr "照射范围 120°"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "Rear LiDAR AIRY"
+msgstr "后激光雷达AIRY"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "-404.3"
+msgstr "-404.3"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "0"
+msgstr "0"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "-37.7"
+msgstr "-37.7"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "See datasheet for details"
+msgstr "详见规格书"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "Rear Camera IMX415"
+msgstr "后摄像头IMX415"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "-412.3"
+msgstr "-412.3"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "0"
+msgstr "0"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "37.8"
+msgstr "37.8"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "See datasheet for details"
+msgstr "详见规格书"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "Rear-Right Fill Light"
+msgstr "右后补光灯"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "-420.3"
+msgstr "-420.3"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "-30.9"
+msgstr "-30.9"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "28.3"
+msgstr "28.3"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "120° illumination range"
+msgstr "照射范围 120°"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "Rear-Left Fill Light"
+msgstr "左后补光灯"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "-420.3"
+msgstr "-420.3"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "30.9"
+msgstr "30.9"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "28.3"
+msgstr "28.3"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "120° illumination range"
+msgstr "照射范围 120°"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "Front-Right Ultrasonic Radar RADAR A22"
+msgstr "右前超声波雷达RADAR A22"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "179.2"
+msgstr "179.2"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "-100.2"
+msgstr "-100.2"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "50"
+msgstr "50"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "See datasheet for details"
+msgstr "详见规格书"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "Front-Left Ultrasonic Radar RADAR A22"
+msgstr "左前超声波雷达RADAR A22"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "179.2"
+msgstr "179.2"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "100.2"
+msgstr "100.2"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "50"
+msgstr "50"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md
+msgid "See datasheet for details"
+msgstr "详见规格书"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md:19
+msgid ""
+"When all joints are at zero degrees, the coordinate systems are as shown "
+"in the figure below. Red represents the X-axis, green represents the "
+"Y-axis, and blue represents the Z-axis. Please refer to the figure below "
+"for the joint rotation axes and positive rotation directions."
+msgstr "当各个关节均为零度时，各坐标系如下图。红色为 x 轴，绿色为 y 轴，蓝色为 z 轴。关节的旋转轴和旋转正方向请参考下图"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md:21
+msgid "![image](./images/Body-frame_Orientaion.png)"
+msgstr "![image](./images/Body-frame_Orientaion.png)"
+
+#: ../../source/2.10Sensor_Device_Coordinate_Definitions.md:21
+msgid "image"
+msgstr "image"
+

@@ -1,0 +1,41 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Agibot
+# This file is distributed under the same license as the D1_Max package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: D1_Max \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-03 09:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/5.5Device_Process_Utility_Usage.md:1
+msgid "5.5 Device Process Utility Usage"
+msgstr "5.5 设备进程工具使用"
+
+#: ../../source/5.5Device_Process_Utility_Usage.md:4
+msgid ""
+"**Usage Instructions:** The robot-launch tool is used on the device to "
+"manage related processes, including viewing process status, starting and "
+"stopping processes, and viewing process logs. **Format Description:** "
+"robot-launch [OPTIONS] [COMMAND]"
+msgstr "**使用说明：**<br>在设备内部通过robot-launch工具对相关进程进行管理，包括查看进程运行状态、启动和停止进程，查看进程日志信息等。<br>**格式说明：**<br>robot-launch [OPTIONS] [COMMAND]"
+
+#: ../../source/5.5Device_Process_Utility_Usage.md:9
+msgid "![图片](images/Device_process_Tools_Usage.png)"
+msgstr "![图片](images/Device_process_Tools_Usage.png)"
+
+#: ../../source/5.5Device_Process_Utility_Usage.md:9
+msgid "图片"
+msgstr "图片"
+

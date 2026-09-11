@@ -1,0 +1,78 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Agibot
+# This file is distributed under the same license as the D1_Max package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: D1_Max \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-03 09:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/1.4Rear-Mount_Payload_Installation.md:1
+msgid "1.4 Rear-Mount Payload Installation"
+msgstr "1.4 载荷上装"
+
+#: ../../source/1.4Rear-Mount_Payload_Installation.md:4
+msgid "1.4.1 Payload Mounting Hole Layout"
+msgstr "1.4.1 负载安装孔位图"
+
+#: ../../source/1.4Rear-Mount_Payload_Installation.md:7
+msgid ""
+"The robot's back provides a flat, level surface with a payload capacity "
+"of 25–30kg. Two guide rails are deployed on the back, each fitted with 14"
+" M4-threaded mounting holes to allow convenient installation of "
+"top‑mounted payloads. The specific dimensions of the dual guide rails are"
+" as follows:"
+msgstr "机器狗背部的空间平整，负载25-30kg，背部部署有双导轨，两条导轨上有14个M4孔位支持上装载荷便捷安装，双导轨具体尺寸如下"
+
+#: ../../source/1.4Rear-Mount_Payload_Installation.md:9
+msgid "![image](images/Payload_Mounting_Hole_Layout.png)"
+msgstr "![image](images/Payload_Mounting_Hole_Layout.png)"
+
+#: ../../source/1.4Rear-Mount_Payload_Installation.md:9
+#: ../../source/1.4Rear-Mount_Payload_Installation.md:19
+msgid "image"
+msgstr "image"
+
+#: ../../source/1.4Rear-Mount_Payload_Installation.md:11
+msgid ""
+"**Once a payload is installed on the robot, only basic locomotion mode is"
+" supported. Do not use the high‑platform mode once a payload is "
+"mounted**<br>"
+msgstr "**机器人加装负载后，仅支持基础运动模式，请勿在加装负载后使用高台模式**"
+
+#: ../../source/1.4Rear-Mount_Payload_Installation.md:12
+msgid ""
+"**Mounting a payload on the robot's back may affect its locomotion "
+"performance. Please consult after‑sales support personnel before "
+"installing any payload**"
+msgstr "**当在机器人背部加装载荷时，机器人的运动性能可能会受影响，请务必在加装前向售后人员咨询相关事宜**"
+
+#: ../../source/1.4Rear-Mount_Payload_Installation.md:14
+msgid "1.4.2 Center‑of‑Gravity Constraints"
+msgstr "1.4.2 重心限制"
+
+#: ../../source/1.4Rear-Mount_Payload_Installation.md:17
+msgid ""
+"To prevent collision or interference between the legs and a top‑mounted "
+"payload while traversing various terrains, the D1 Max provides the "
+"following recommended payload mounting envelope after payload "
+"installation: 40 cm (L) × 22 cm (W) × 24 cm (H). The mounting space is "
+"centered on the robot's back, as shown in the figure below:"
+msgstr "为避免D1 Max机身上加装上装载荷之后，在各类地形运动过程中，腿部与上装载荷发生碰撞干涉，对D1 Max的上装空间给出如下推荐示意，具体尺寸为长40cm，宽22cm，高24cm，位置在机身背部居中位置，如下图所示："
+
+#: ../../source/1.4Rear-Mount_Payload_Installation.md:19
+msgid "![image](images/GoG_Constraints.png)"
+msgstr "![image](images/GoG_Constraints.png)"
+

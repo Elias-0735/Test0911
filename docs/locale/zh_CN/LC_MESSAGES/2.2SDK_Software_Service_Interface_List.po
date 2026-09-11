@@ -1,0 +1,192 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Agibot
+# This file is distributed under the same license as the D1_Max package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: D1_Max \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-03 09:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/2.2SDK_Software_Service_Interface_List.md:1
+msgid "2.2 SDK Software Service Interface List"
+msgstr "2.2 SDK软件服务接口列表"
+
+#: ../../source/2.2SDK_Software_Service_Interface_List.md
+msgid "No."
+msgstr "序号"
+
+#: ../../source/2.2SDK_Software_Service_Interface_List.md
+msgid "Interface Name"
+msgstr "接口名称"
+
+#: ../../source/2.2SDK_Software_Service_Interface_List.md
+msgid "Function"
+msgstr "功能"
+
+#: ../../source/2.2SDK_Software_Service_Interface_List.md
+msgid "SDK Version"
+msgstr "SDK版本"
+
+#: ../../source/2.2SDK_Software_Service_Interface_List.md
+msgid "1"
+msgstr "1"
+
+#: ../../source/2.2SDK_Software_Service_Interface_List.md
+msgid "High‑Level Command Set Interface"
+msgstr "高层运动控制接口"
+
+#: ../../source/2.2SDK_Software_Service_Interface_List.md
+msgid ""
+"Implements high‑level command set of the robot, including "
+"forward/backward and turning motion, prone posture, rotation, and "
+"standing on all fours"
+msgstr "实现机器狗的高层运动控制，包括前后转向速度运动，趴下，旋转，四肢站立等"
+
+#: ../../source/2.2SDK_Software_Service_Interface_List.md
+msgid "V0.0.2"
+msgstr "V0.0.2"
+
+#: ../../source/2.2SDK_Software_Service_Interface_List.md
+msgid "2"
+msgstr "2"
+
+#: ../../source/2.2SDK_Software_Service_Interface_List.md
+msgid "Video Stream Push Data Interface"
+msgstr "视频流推送数据接口"
+
+#: ../../source/2.2SDK_Software_Service_Interface_List.md
+msgid "Streams the robot body camera's video feed to the client"
+msgstr "向客户端推送相机本体视频流"
+
+#: ../../source/2.2SDK_Software_Service_Interface_List.md
+msgid "V0.0.2"
+msgstr "V0.0.2"
+
+#: ../../source/2.2SDK_Software_Service_Interface_List.md
+msgid "3"
+msgstr "3"
+
+#: ../../source/2.2SDK_Software_Service_Interface_List.md
+msgid "Device Status Service Interface"
+msgstr "设备状态服务接口"
+
+#: ../../source/2.2SDK_Software_Service_Interface_List.md
+msgid ""
+"Queries and retrieves current device status and system resource usage "
+"information"
+msgstr "查询并获取当前设备状态和系统资源使用信息"
+
+#: ../../source/2.2SDK_Software_Service_Interface_List.md
+msgid "V0.0.3"
+msgstr "V0.0.3"
+
+#: ../../source/2.2SDK_Software_Service_Interface_List.md
+msgid "4"
+msgstr "4"
+
+#: ../../source/2.2SDK_Software_Service_Interface_List.md
+msgid "Inertial Navigation Status Data Interface"
+msgstr "惯导状态数据接口"
+
+#: ../../source/2.2SDK_Software_Service_Interface_List.md
+msgid "Retrieves raw IMU data"
+msgstr "获取IMU原始数据信息"
+
+#: ../../source/2.2SDK_Software_Service_Interface_List.md
+msgid "V0.0.4"
+msgstr "V0.0.4"
+
+#: ../../source/2.2SDK_Software_Service_Interface_List.md
+msgid "5"
+msgstr "5"
+
+#: ../../source/2.2SDK_Software_Service_Interface_List.md
+msgid "Ultrasonic Radar Interface"
+msgstr "超声波雷达接口"
+
+#: ../../source/2.2SDK_Software_Service_Interface_List.md
+msgid "Implements autonomous obstacle-avoidance functionality"
+msgstr "实现自主避障功能"
+
+#: ../../source/2.2SDK_Software_Service_Interface_List.md
+msgid "v0.0.5"
+msgstr "v0.0.5"
+
+#: ../../source/2.2SDK_Software_Service_Interface_List.md
+msgid "6"
+msgstr "6"
+
+#: ../../source/2.2SDK_Software_Service_Interface_List.md
+msgid ""
+"Remote Controller & SDK Control Authority Switching Function and SDK "
+"Interface"
+msgstr "遥控器和sdk控制权切换功能及sdk接口"
+
+#: ../../source/2.2SDK_Software_Service_Interface_List.md
+msgid "Implements control authority switching functionality"
+msgstr "实现控制权切换功能"
+
+#: ../../source/2.2SDK_Software_Service_Interface_List.md
+msgid "v0.0.6"
+msgstr "v0.0.6"
+
+#: ../../source/2.2SDK_Software_Service_Interface_List.md
+msgid "7"
+msgstr "7"
+
+#: ../../source/2.2SDK_Software_Service_Interface_List.md
+msgid "RTK Module Interface"
+msgstr "RTK模块的sdk接口"
+
+#: ../../source/2.2SDK_Software_Service_Interface_List.md
+msgid "Implements autonomous positioning functionality"
+msgstr "实现自主定位功能"
+
+#: ../../source/2.2SDK_Software_Service_Interface_List.md
+msgid "v0.0.6"
+msgstr "v0.0.6"
+
+#: ../../source/2.2SDK_Software_Service_Interface_List.md
+msgid "8"
+msgstr "8"
+
+#: ../../source/2.2SDK_Software_Service_Interface_List.md
+msgid "Autonomous Docking & Recharging Function and API Interface(Optional)"
+msgstr "自主回充功能及API接口(选配)"
+
+#: ../../source/2.2SDK_Software_Service_Interface_List.md
+msgid "Implements autonomous charging functionality"
+msgstr "实现自主充电功能"
+
+#: ../../source/2.2SDK_Software_Service_Interface_List.md
+msgid "v0.0.9"
+msgstr "v0.0.9"
+
+#: ../../source/2.2SDK_Software_Service_Interface_List.md
+msgid "9"
+msgstr "9"
+
+#: ../../source/2.2SDK_Software_Service_Interface_List.md
+msgid "SLAM Mapping & Navigation Function and API Interface(Optional)"
+msgstr "SLAM建图导航功能及API接口 (选配)"
+
+#: ../../source/2.2SDK_Software_Service_Interface_List.md
+msgid "Implements autonomous navigation functionality"
+msgstr "实现自主导航功能"
+
+#: ../../source/2.2SDK_Software_Service_Interface_List.md
+msgid "v0.1.0"
+msgstr "v0.1.0"
+

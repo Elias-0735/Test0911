@@ -1,0 +1,77 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Agibot
+# This file is distributed under the same license as the D1_Max package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: D1_Max \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-03 09:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/5.1Control_Authority_Switching_Instructions.md:1
+msgid "5.1 Control Authority Switching Instructions"
+msgstr "5.1 控制权切换说明"
+
+#: ../../source/5.1Control_Authority_Switching_Instructions.md:4
+msgid ""
+"**Function Overview:** The control authority switching function is "
+"primarily used during SDK control phases to handle emergency situations "
+"or scenarios requiring manual intervention."
+msgstr "**功能说明：**<br>控制权切换功能主要用来在进行sdk控制阶段，当出现一些紧急情况或需要人工介入处理的场景。"
+
+#: ../../source/5.1Control_Authority_Switching_Instructions.md:7
+msgid "**Control Principles:**"
+msgstr "**控制原则：**"
+
+#: ../../source/5.1Control_Authority_Switching_Instructions.md:8
+msgid ""
+"Simultaneous control by both the remote controller and the SDK is not "
+"supported."
+msgstr "在同一时间，不支持遥控器和sdk同时进行控制；"
+
+#: ../../source/5.1Control_Authority_Switching_Instructions.md:9
+msgid ""
+"During the SDK control phase, the APP on the remote controller can "
+"preempt control authority and trigger a soft emergency stop from the "
+"remote controller."
+msgstr "sdk控制阶段，可以在遥控器端APP进行控制权的抢夺，并可在遥控器端触发软急停；"
+
+#: ../../source/5.1Control_Authority_Switching_Instructions.md:10
+msgid ""
+"During the remote controller control phase, the SDK cannot acquire "
+"control authority, but it can still issue an emergency stop command via "
+"the SDK and retrieve device status."
+msgstr "遥控器控制阶段，sdk无法获得控制权，但可通过sdk下发急停指令并获取设备状态；"
+
+#: ../../source/5.1Control_Authority_Switching_Instructions.md:12
+msgid "SDK connects first, APP connects later"
+msgstr "SDK先链接，APP后链接"
+
+#: ../../source/5.1Control_Authority_Switching_Instructions.md:14
+msgid "![图片](images/Switch_Control1.png)"
+msgstr "![图片](images/Switch_Control1.png)"
+
+#: ../../source/5.1Control_Authority_Switching_Instructions.md:14
+#: ../../source/5.1Control_Authority_Switching_Instructions.md:18
+msgid "图片"
+msgstr "图片"
+
+#: ../../source/5.1Control_Authority_Switching_Instructions.md:16
+msgid "APP connects first, SDK connects later"
+msgstr "APP先链接，SDK后链接"
+
+#: ../../source/5.1Control_Authority_Switching_Instructions.md:18
+msgid "![图片](images/Switch_Control2.png)"
+msgstr "![图片](images/Switch_Control2.png)"
+

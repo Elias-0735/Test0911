@@ -1,0 +1,36 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Agibot
+# This file is distributed under the same license as the D1_Max package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: D1_Max \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-03 09:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/4.5IMU_Data.md:1
+msgid "4.5 IMU Data"
+msgstr "4.5 IMU数据"
+
+#: ../../source/4.5IMU_Data.md:4
+msgid ""
+"The system currently has three IMUs (2 LiDARs + 1 automotive‑grade). Data"
+" is published via ROS2 topics using the standard `sensor_msgs::msg::Imu` "
+"message type:<br> Front LiDAR IMU: `/front_lidar/imu`<br> Rear LiDAR IMU:"
+" `/rear_lidar/imu`<br> Automotive-grade IMU: "
+"`/imu_driver/imu_central`<br> **Note: The automotive‑grade IMU involves "
+"hardware modifications. If IMU data cannot be retrieved, please contact "
+"after‑sales support**"
+msgstr "目前系统中有三个IMU（2雷达+1独立），通过topic发出数据，标准ROS2的数据类型`sensor_msgs::msg::Imu`<br>前雷达IMU：`/front_lidar/imu`<br>后雷达IMU：`/rear_lidar/imu`<br>独立IMU：`/imu_driver/imu_central`<br>**注：独立IMU涉及硬件改动的问题，若无法获取imu数据，请联系售后服务人员**"
+

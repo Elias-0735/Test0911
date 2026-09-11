@@ -1,0 +1,187 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Agibot
+# This file is distributed under the same license as the D1_Max package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: D1_Max \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-03 09:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/4.2LiDAR_Data.md:1
+msgid "4.2 LiDAR Data"
+msgstr "4.2 激光雷达数据"
+
+#: ../../source/4.2LiDAR_Data.md:4
+msgid "4.2.1 ROS2 Interface Definition"
+msgstr "4.2.1 ROS2接口定义"
+
+#: ../../source/4.2LiDAR_Data.md
+msgid "topic"
+msgstr "topic"
+
+#: ../../source/4.2LiDAR_Data.md
+msgid "msg"
+msgstr "msg"
+
+#: ../../source/4.2LiDAR_Data.md
+msgid "Field Type"
+msgstr "字段类型"
+
+#: ../../source/4.2LiDAR_Data.md
+msgid "Field"
+msgstr "字段"
+
+#: ../../source/4.2LiDAR_Data.md
+msgid "Field Description"
+msgstr "字段释义"
+
+#: ../../source/4.2LiDAR_Data.md
+msgid "Default"
+msgstr "初始值"
+
+#: ../../source/4.2LiDAR_Data.md
+msgid "Range"
+msgstr "数值范围"
+
+#: ../../source/4.2LiDAR_Data.md
+msgid "Frequency"
+msgstr "发送周期"
+
+#: ../../source/4.2LiDAR_Data.md
+msgid ""
+"Front LiDAR point cloud: /front_lidar<br>Rear LiDAR point cloud: "
+"/rear_lidar"
+msgstr "前雷达点云数据：/front_lidar<br>后雷达点云数据：/rear_lidar"
+
+#: ../../source/4.2LiDAR_Data.md
+msgid "sensor_msgs::msg::PointCloud2<br>（Qos::best_effort）"
+msgstr "sensor_msgs::msg::PointCloud2<br>（数据服务模型Qos::best_effort）"
+
+#: ../../source/4.2LiDAR_Data.md
+msgid "std_msgs/Header"
+msgstr ""
+
+#: ../../source/4.2LiDAR_Data.md
+msgid "header"
+msgstr "header"
+
+#: ../../source/4.2LiDAR_Data.md
+msgid "ROS2 standard message header"
+msgstr "ROS2 标准MSG帧头"
+
+#: ../../source/4.2LiDAR_Data.md
+msgid "10hz"
+msgstr "10hz"
+
+#: ../../source/4.2LiDAR_Data.md
+msgid "uint32"
+msgstr "uint32"
+
+#: ../../source/4.2LiDAR_Data.md
+msgid "height"
+msgstr "height"
+
+#: ../../source/4.2LiDAR_Data.md
+msgid "Vertical height of the point cloud (rows)"
+msgstr "点云的垂直高度（行数）"
+
+#: ../../source/4.2LiDAR_Data.md
+msgid "uint32"
+msgstr "uint32"
+
+#: ../../source/4.2LiDAR_Data.md
+msgid "width"
+msgstr "width"
+
+#: ../../source/4.2LiDAR_Data.md
+msgid "Horizontal width of the point cloud (columns)"
+msgstr "点云的水平方向宽度（列数）"
+
+#: ../../source/4.2LiDAR_Data.md
+msgid "PointField[]"
+msgstr "PointField[]"
+
+#: ../../source/4.2LiDAR_Data.md
+msgid "fields"
+msgstr "fields"
+
+#: ../../source/4.2LiDAR_Data.md
+msgid "Field descriptors for each channel in the point cloud"
+msgstr "点云中每个通道的字段描述"
+
+#: ../../source/4.2LiDAR_Data.md
+msgid "bool"
+msgstr "bool"
+
+#: ../../source/4.2LiDAR_Data.md
+msgid "is_bigendian"
+msgstr "is_bigendian"
+
+#: ../../source/4.2LiDAR_Data.md
+msgid "Whether the data is in big‑endian byte order"
+msgstr "是否是大端字节序"
+
+#: ../../source/4.2LiDAR_Data.md
+msgid "uint32"
+msgstr "uint32"
+
+#: ../../source/4.2LiDAR_Data.md
+msgid "point_step"
+msgstr "point_step"
+
+#: ../../source/4.2LiDAR_Data.md
+msgid "Number of bytes per point"
+msgstr "每个点所占字节数"
+
+#: ../../source/4.2LiDAR_Data.md
+msgid "uint32"
+msgstr "uint32"
+
+#: ../../source/4.2LiDAR_Data.md
+msgid "row_step"
+msgstr "row_step"
+
+#: ../../source/4.2LiDAR_Data.md
+msgid "Number of bytes per row of point data"
+msgstr "一行点数据占用的字节数"
+
+#: ../../source/4.2LiDAR_Data.md
+msgid "uint8[]"
+msgstr "uint8[]"
+
+#: ../../source/4.2LiDAR_Data.md
+msgid "data"
+msgstr "data"
+
+#: ../../source/4.2LiDAR_Data.md
+msgid "Raw binary point cloud data as a 1D array"
+msgstr "点云的原始二进制数据，是一维数组"
+
+#: ../../source/4.2LiDAR_Data.md
+msgid "is_dense"
+msgstr "is_dense"
+
+#: ../../source/4.2LiDAR_Data.md
+msgid "Whether the point cloud is dense (i.e., contains no invalid points)"
+msgstr "是否为稠密点云（即没有无效点）"
+
+#: ../../source/4.2LiDAR_Data.md:19
+msgid "**Front LiDAR IP: 192.168.1.102**<br> **Rear LiDAR IP: 192.168.2.102**"
+msgstr "**前激光雷达IP: 192.168.1.102**<br>**后激光雷达IP: 192.168.2.102**"
+
+#: ../../source/4.2LiDAR_Data.md:22
+msgid "4.2.2 Retrieving LiDAR Data"
+msgstr "4.2.2 获取激光雷达数据"
+

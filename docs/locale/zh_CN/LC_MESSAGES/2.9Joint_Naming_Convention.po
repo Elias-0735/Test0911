@@ -1,0 +1,83 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Agibot
+# This file is distributed under the same license as the D1_Max package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: D1_Max \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-03 09:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/2.9Joint_Naming_Convention.md:1
+msgid "2.9 Joint Naming Convention"
+msgstr "2.9 关节命名规范"
+
+#: ../../source/2.9Joint_Naming_Convention.md:4
+msgid ""
+"For ease of identification and debugging, this device adopts the "
+"following naming conventions:"
+msgstr "为便于识别与调试，本设备采用如下命名规则："
+
+#: ../../source/2.9Joint_Naming_Convention.md:5
+msgid "**Direction Abbreviations**"
+msgstr "**方向缩写**"
+
+#: ../../source/2.9Joint_Naming_Convention.md:6
+msgid "f = front"
+msgstr "f = front"
+
+#: ../../source/2.9Joint_Naming_Convention.md:7
+msgid "b = back"
+msgstr "b = back"
+
+#: ../../source/2.9Joint_Naming_Convention.md:8
+msgid "l = left"
+msgstr "l = left"
+
+#: ../../source/2.9Joint_Naming_Convention.md:9
+msgid "r = right"
+msgstr "r = right"
+
+#: ../../source/2.9Joint_Naming_Convention.md:10
+msgid "**Number Meanings**"
+msgstr "**编号含义**"
+
+#: ../../source/2.9Joint_Naming_Convention.md:11
+msgid "1 = hip_roll"
+msgstr "1 = hip_roll"
+
+#: ../../source/2.9Joint_Naming_Convention.md:12
+msgid "2 = hip_pitch"
+msgstr "2 = hip_pitch"
+
+#: ../../source/2.9Joint_Naming_Convention.md:13
+msgid "3 = knee_pitch"
+msgstr "3 = knee_pitch"
+
+#: ../../source/2.9Joint_Naming_Convention.md:14
+msgid "4 = foot"
+msgstr "4 = foot"
+
+#: ../../source/2.9Joint_Naming_Convention.md:15
+msgid "**Example Names**"
+msgstr "**示例命名**"
+
+#: ../../source/2.9Joint_Naming_Convention.md:16
+msgid "fr1_hip_roll：Right front leg, joint No. 1 (hip roll)"
+msgstr "fr1_hip_roll：右前腿1号关节(髋部滚转)"
+
+#: ../../source/2.9Joint_Naming_Convention.md:17
+msgid "bl3_knee_pitch：Left back leg, joint No. 3 (knee pitch)"
+msgstr "bl3_knee_pitch：左后腿3号关节(膝部俯仰)"
+

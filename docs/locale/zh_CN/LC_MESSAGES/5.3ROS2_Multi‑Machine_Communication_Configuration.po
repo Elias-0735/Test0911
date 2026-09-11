@@ -1,0 +1,102 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Agibot
+# This file is distributed under the same license as the D1_Max package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: D1_Max \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-03 09:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/5.3ROS2_Multi‑Machine_Communication_Configuration.md:1
+msgid "5.3 ROS2 Multi‑Machine Communication Configuration"
+msgstr "5.3 ROS2多机通信配置"
+
+#: ../../source/5.3ROS2_Multi‑Machine_Communication_Configuration.md:4
+msgid ""
+"The NX system provides a unified environment configuration file: "
+"`/opt/runtime/env.bash`. This file is automatically sourced in `.bashrc`"
+msgstr "NX系统中有统一配置的环境变量：`/opt/runtime/env.bash`, 这个变量在`.bashrc`中会默认导入"
+
+#: ../../source/5.3ROS2_Multi‑Machine_Communication_Configuration.md:6
+msgid "![图片](images/ROS2_Communication_Config.png)"
+msgstr "![图片](images/ROS2_Communication_Config.png)"
+
+#: ../../source/5.3ROS2_Multi‑Machine_Communication_Configuration.md:6
+#: ../../source/5.3ROS2_Multi‑Machine_Communication_Configuration.md:23
+msgid "图片"
+msgstr "图片"
+
+#: ../../source/5.3ROS2_Multi‑Machine_Communication_Configuration.md:8
+msgid ""
+"As shown above, `ROS_DOMAIN_ID=24`. The robot currently uses the ROS2 "
+"Zenoh middleware to provide ROS2 topic services externally. Users are "
+"required to install the corresponding environment on their own laptops."
+msgstr "由上图可见，`ROS_DOMAIN_ID=24` ，目前机器狗使用 ros2 的 zenoh 中间件对外提供 ros2 topic 服务，需要用户在自己的笔记本安装相关环境。"
+
+#: ../../source/5.3ROS2_Multi‑Machine_Communication_Configuration.md:10
+msgid ""
+"IP Configuration<br> Set the user laptop IP to: 192.168.168.xxx (xxx "
+"cannot be 100, 168, or 255)"
+msgstr "IP配置<br>配置用户笔记本 ip 为：`192.168.168.xxx`（xxx不能为100或者168或者255）"
+
+#: ../../source/5.3ROS2_Multi‑Machine_Communication_Configuration.md:12
+msgid "User Laptop Environment Configuration"
+msgstr "用户笔记本环境配置"
+
+#: ../../source/5.3ROS2_Multi‑Machine_Communication_Configuration.md:13
+msgid "Ubuntu22.04"
+msgstr "Ubuntu22.04"
+
+#: ../../source/5.3ROS2_Multi‑Machine_Communication_Configuration.md:14
+msgid "Ros2 humble"
+msgstr "Ros2 humble"
+
+#: ../../source/5.3ROS2_Multi‑Machine_Communication_Configuration.md:15
+msgid "Zenoh rmw"
+msgstr "Zenoh rmw"
+
+#: ../../source/5.3ROS2_Multi‑Machine_Communication_Configuration.md:16
+msgid "Install Zenoh"
+msgstr "安装zenoh"
+
+#: ../../source/5.3ROS2_Multi‑Machine_Communication_Configuration.md:20
+msgid ""
+"Modify the Configuration File<br> Open the following file with an "
+"editor`/opt/ros/humble/share/rmw_zenoh_cpp/config/DEFAULT_RMW_ZENOH_ROUTER_CONFIG.json5`Locate"
+" the `connect/endpoints` field and add the robot NX's IP address: "
+"`\"tcp/192.168.168.100:7447\"`"
+msgstr "修改配置文件<br>使用编辑器打开下面文件`/opt/ros/humble/share/rmw_zenoh_cpp/config/DEFAULT_RMW_ZENOH_ROUTER_CONFIG.json5`找到`connect/endpoints`字段，将机器狗NX的IP写入并保存: `"tcp/192.168.168.100:7447"`"
+
+#: ../../source/5.3ROS2_Multi‑Machine_Communication_Configuration.md:23
+msgid "![图片](images/Modify_Config_File.png)"
+msgstr "![图片](images/Modify_Config_File.png)"
+
+#: ../../source/5.3ROS2_Multi‑Machine_Communication_Configuration.md:25
+msgid ""
+"On the PC, open a new terminal 1 and set the middleware environment "
+"variables and ROS2 Domain ID"
+msgstr "在pc端新建终端1，设置中间件切换的环境变量以及 ROS2 的 Domain ID"
+
+#: ../../source/5.3ROS2_Multi‑Machine_Communication_Configuration.md:32
+msgid "Reset the ROS2 daemon"
+msgstr "重置 ROS2 后台守护进程"
+
+#: ../../source/5.3ROS2_Multi‑Machine_Communication_Configuration.md:37
+msgid ""
+"With the above environment variables set, you can use RViz for "
+"visualization, record bag files, or launch your own ROS2 programs to "
+"interact with the robot's drivers."
+msgstr "在上述的环境变量生效的前提下即可使用 rviz 可视化，录包，或者启动自己的 ros2 程序与狗中的驱动交互。"
+

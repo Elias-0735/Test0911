@@ -1,0 +1,598 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Agibot
+# This file is distributed under the same license as the D1_Max package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: D1_Max \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-03 09:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/1.3Product_Specifications.md:1
+msgid "1.3 Product Specifications"
+msgstr "1.3 产品参数"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Category"
+msgstr "分类"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Specification"
+msgstr "规格"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Description"
+msgstr "说明"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Basic Information"
+msgstr "基础信息"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Standing Dimensions"
+msgstr "站立尺寸"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "930mm * 480mm * 585mm"
+msgstr "930mm * 480mm * 585mm"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Prone Dimensions"
+msgstr "趴下尺寸"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "930mm * 630mm * 200mm"
+msgstr "930mm * 630mm * 200mm"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Total Weight (including battery)"
+msgstr "整机重量(含电池)"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "41kg"
+msgstr "41kg"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Operating Temperature"
+msgstr "工作温度"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "-20°~55°"
+msgstr "-20°~55°"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Ingress Protection Rating"
+msgstr "防护等级"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "IP67"
+msgstr "IP67"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Battery Module"
+msgstr "电池模组"
+
+#: ../../source/1.3Product_Specifications.md
+msgid ""
+"504.9Wh * 2, dual batteries, supports quick‑release/quick-swap and "
+"hot‑swapping"
+msgstr "504.9Wh * 2，双电池，支持快拆快换，支持热插拔"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Charging Time"
+msgstr "充电时长"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "<1.5h"
+msgstr "<1.5h"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Battery Life"
+msgstr "续航时间"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Unloaded: 5 ± 0.5h; Full load: 3.5 ± 0.5h"
+msgstr "空载5±0.5h,满载3.5±0.5h"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Performance Parameters"
+msgstr "性能参数"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Maximum Speed"
+msgstr "最大速度"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "6m/s"
+msgstr "6m/s"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Rated Stable Payload"
+msgstr "稳定负载"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "25kg"
+msgstr "25kg"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Continuous Step‑Climbing Height"
+msgstr "连续攀爬台阶高度"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "25cm"
+msgstr "25cm"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Maximum Obstacle Clearance Height"
+msgstr "极限跨越障碍高度"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "80cm"
+msgstr "80cm"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Maximum Gap Crossing Width"
+msgstr "极限跨越沟壑宽度"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "80cm"
+msgstr "80cm"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Payload Crossing Height"
+msgstr "带负载跨越高度"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "50cm"
+msgstr "50cm"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Minimum Passage Width"
+msgstr "最窄通过宽度"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "50cm"
+msgstr "50cm"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Maximum Climbing Angle"
+msgstr "最大爬坡角度"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "45°"
+msgstr "45°"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Minimum Turning Width"
+msgstr "最窄掉头宽度"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Supports in‑place turning and forward/backward direction switching"
+msgstr "支持原地掉头，支持前后向切换"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Main Control Compute"
+msgstr "算力主控"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "157 Tops/Nvidia Orin NX 16GB"
+msgstr "157 Tops/Nvidia Orin NX 16GB"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Sensing Units"
+msgstr "传感单元"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "LiDAR"
+msgstr "激光雷达"
+
+#: ../../source/1.3Product_Specifications.md
+msgid ""
+"One 96‑channel LiDAR (Airy 96‑channel) each front and rear, 360° × 90° "
+"coverage, 120m detection range"
+msgstr "前后各1个96线激光雷达(Airy96线)、覆盖角度360°*90°、覆盖直径范围120m"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Wide-Angle Camera"
+msgstr "广角相机"
+
+#: ../../source/1.3Product_Specifications.md
+msgid ""
+"FPV Camera Configuration: Front x1, Rear x1, industrial-grade 8 MP, Field"
+" of view: DFOV 122°, HFOV 111°, VFOV 70°"
+msgstr "前后各1个FPV相机，工业级800万像素，视场角：DFOV122°，HFOV111°，VFOV70°"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Fill Light"
+msgstr "补光灯"
+
+#: ../../source/1.3Product_Specifications.md
+msgid ""
+"Fill light * 4, 2 on each side, paired with the FPV camera. Illumination "
+"distance ≥ 3m"
+msgstr "补光灯*4，FPV相机左右各1个。照射距离≥3m"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "IMU"
+msgstr "IMU"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Automotive-grade IMU * 1"
+msgstr "车规级IMU * 1"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Ultrasonic Sensor"
+msgstr "超声波传感器"
+
+#: ../../source/1.3Product_Specifications.md
+msgid ""
+"One ultrasonic sensor each on the left and right sides; supports obstacle"
+" detection within 5m"
+msgstr "左右各一个超声波，支持5m以内的障碍物识别"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "RTK Module"
+msgstr "RTK模块"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "GNSS RTK * 1"
+msgstr "GNSS RTK * 1"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Microphone & Speaker"
+msgstr "麦克风扬声器"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Supported on select versions"
+msgstr "部分版本支持"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Ambient Light Sensor"
+msgstr "光照传感器"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Supported on select versions"
+msgstr "部分版本支持"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Function List"
+msgstr "功能列表"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Locomotion Performance"
+msgstr "运动性能"
+
+#: ../../source/1.3Product_Specifications.md
+msgid ""
+"Supports stepping, gliding, and crawling gaits; capable of straight-line "
+"movement forward/backward/left/right, in‑place rotation, etc; supports "
+"knee-joint posture transitions.<br>Operates on various terrains such as "
+"gravel, asphalt, grass, sandy soil, forest floor, and rubble;"
+msgstr "具备踏步、滑行、匍匐等姿态，能够前后左右直线移动、原地旋转等，支持膝关节姿态变换；
+支持在砂石路面、柏油路面、草地、沙土地面、森林地面、建筑废墟等各类路面行走；"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Wheel/Foot Quick‑Swap"
+msgstr "轮\足快换"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Supports quick‑swapping between wheeled-leg and point‑foot modes"
+msgstr "支持轮足、点足快换"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Real-Time Image Transmission"
+msgstr "实时图像传输"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Supported"
+msgstr "支持"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "OTA Upgrades"
+msgstr "OTA升级"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Supported"
+msgstr "支持"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Secondary Development"
+msgstr "二次开发"
+
+#: ../../source/1.3Product_Specifications.md
+msgid ""
+"Supported; provides SDK development packages; robot model includes 3D CAD"
+" and URDF files for simulation"
+msgstr "支持，提供SDK开发包，机器人模型提供3D数模和urdf文件用于仿真"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Power Output Interfaces"
+msgstr "供电接口"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "5V, 12V, 24V, 48V; maximum output power 480W"
+msgstr "5V、12V、24V、48V，最大输出功率480W"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Communication Interface"
+msgstr "通讯接口"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Gigabit Ethernet port * 2, USB 3.0 * 2, Serial port * 1"
+msgstr "千兆网口 * 2、USB3.0 * 2、串口 * 1"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Communication"
+msgstr "通信"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Wi-Fi"
+msgstr "WIFI通信"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Supported"
+msgstr "支持"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Bluetooth"
+msgstr "蓝牙"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Supported"
+msgstr "支持"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "RF Communication"
+msgstr "射频通信"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Supported"
+msgstr "支持"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Accessories"
+msgstr "配件"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Adapter Charging Dock"
+msgstr "适配器充电座"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Standard"
+msgstr "标配"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Remote Controller with Integrated Display"
+msgstr "带屏遥控器"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Standard; control range 700-1000m"
+msgstr "标配，遥控距离700-1000m"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Autonomous Charging Dock"
+msgstr "自主充电桩"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Optional"
+msgstr "选配"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Aviation‑Grade Shipping Case"
+msgstr "航空包装箱"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Standard"
+msgstr "标配"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Other"
+msgstr "其他"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Warranty Period"
+msgstr "保修期"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "1 year"
+msgstr "1年"
+
+#: ../../source/1.3Product_Specifications.md:48
+msgid ""
+"**Note: The above parameters are laboratory test data. Actual performance"
+" may vary depending on factors such as the operating environment and "
+"usage methods; please refer to the actual product performance.**"
+msgstr "**注：以上参数为实验室测试数据，实际表现可能因使用环境、操作方式等因素有所差异，请以实际为准**"
+
+#: ../../source/1.3Product_Specifications.md:50
+msgid "![image](images/Product_Parameters1.png)"
+msgstr "![image](images/Product_Parameters1.png)"
+
+#: ../../source/1.3Product_Specifications.md:50
+#: ../../source/1.3Product_Specifications.md:52
+msgid "image"
+msgstr "image"
+
+#: ../../source/1.3Product_Specifications.md:52
+msgid "![image](images/Product_Parameters2.png)"
+msgstr "![image](images/Product_Parameters2.png)"
+
+#: ../../source/1.3Product_Specifications.md:54
+msgid "Joint Parameters"
+msgstr "关节参数"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Part"
+msgstr "部位"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Parameters"
+msgstr "参数"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Value"
+msgstr "数值"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Hip Roll"
+msgstr "髋部滚转关节(hip_roll)"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Max Torque"
+msgstr "最大扭矩"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "150N.m"
+msgstr "150N.m"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Max Speed"
+msgstr "最大转速"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "190RPM"
+msgstr "190RPM"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Weight"
+msgstr "重量"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "0.93kg"
+msgstr "0.93kg"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Joint Limits"
+msgstr "关节限位"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "-39.9°~30°"
+msgstr "-39.9°~30°"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Hip Pitch"
+msgstr "髋部俯仰关节(hip_pitch)"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Max Torque"
+msgstr "最大扭矩"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "150N.m"
+msgstr "150N.m"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Max Speed"
+msgstr "最大转速"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "190RPM"
+msgstr "190RPM"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Weight"
+msgstr "重量"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "0.93kg"
+msgstr "0.93kg"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Joint Limits"
+msgstr "关节限位"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "-140°~140°"
+msgstr "-140°~140°"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Knee Pitch"
+msgstr "膝部俯仰(knee_pitch)"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Max Torque"
+msgstr "最大扭矩"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "150N.m"
+msgstr "150N.m"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Max Speed"
+msgstr "最大转速"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "190RPM"
+msgstr "190RPM"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Weight"
+msgstr "重量"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "0.93kg"
+msgstr "0.93kg"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Joint Limits"
+msgstr "关节限位"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "-160°~160°"
+msgstr "-160°~160°"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Foot"
+msgstr "足端(foot)"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Max Torque"
+msgstr "最大扭矩"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "33N.m"
+msgstr "33N.m"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Max Speed"
+msgstr "最大转速"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "1200RPM"
+msgstr "1200RPM"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Weight"
+msgstr "重量"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "1.275kg"
+msgstr "1.275kg"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Radius"
+msgstr "半径"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "9cm"
+msgstr "9cm"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "Joint Limits"
+msgstr "关节限位"
+
+#: ../../source/1.3Product_Specifications.md
+msgid "-180°~180°"
+msgstr "-180°~180°"
+

@@ -1,0 +1,1454 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Agibot
+# This file is distributed under the same license as the D1_Max package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: D1_Max \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-03 09:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/3.2SDK_Type.md:1
+msgid "3.2 SDK Type"
+msgstr "3.2 数据类型"
+
+#: ../../source/3.2SDK_Type.md:4
+msgid "Overview"
+msgstr "概述"
+
+#: ../../source/3.2SDK_Type.md:6
+msgid ""
+"This document describes all data types, enumerations, and structure "
+"definitions used in Robot SDK."
+msgstr "本文档描述 Robot SDK 中使用的所有数据类型、枚举和结构体定义。"
+
+#: ../../source/3.2SDK_Type.md:10
+msgid "Namespace"
+msgstr "命名空间"
+
+#: ../../source/3.2SDK_Type.md:18
+msgid "Transport Protocol"
+msgstr "传输协议"
+
+#: ../../source/3.2SDK_Type.md:20
+msgid "TransportProtocol"
+msgstr "TransportProtocol"
+
+#: ../../source/3.2SDK_Type.md:26
+msgid "**Description:**   Transport protocol types supported by the SDK."
+msgstr ""
+"**说明：**  <br>"
+"SDK 支持的传输协议类型。"
+
+#: ../../source/3.2SDK_Type.md
+msgid "Enum Value"
+msgstr "枚举值"
+
+#: ../../source/3.2SDK_Type.md
+msgid "Description"
+msgstr "说明"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`WebSocket`"
+msgstr "`WebSocket`"
+
+#: ../../source/3.2SDK_Type.md
+msgid "WebSocket protocol (default recommended)"
+msgstr "WebSocket 协议（默认推荐）"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`Udp`"
+msgstr "`Udp`"
+
+#: ../../source/3.2SDK_Type.md
+msgid "UDP protocol"
+msgstr "UDP 协议"
+
+#: ../../source/3.2SDK_Type.md:36
+msgid "Fault-Related"
+msgstr "故障相关"
+
+#: ../../source/3.2SDK_Type.md:38
+msgid "FaultCode"
+msgstr "FaultCode"
+
+#: ../../source/3.2SDK_Type.md:44
+msgid ""
+"**Description:**   Possible fault codes that may occur in the robot "
+"system."
+msgstr ""
+"**说明：**  <br>"
+"机器人系统中可能出现的故障码。"
+"机器人系统中可能出现的故障码。"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`Unknown`"
+msgstr "`Unknown`"
+
+#: ../../source/3.2SDK_Type.md
+msgid "Unknown exception"
+msgstr "异常未知"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`ActuatorDisabled`"
+msgstr "`ActuatorDisabled`"
+
+#: ../../source/3.2SDK_Type.md
+msgid "Actuator disabled"
+msgstr "执行器失能"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`ActuatorEncoderError`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Actuator encoder error"
+msgstr "执行器编码器错误"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`ActuatorOffline`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Actuator offline"
+msgstr "执行器掉线"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`ActuatorOverVoltage`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Actuator overvoltage"
+msgstr "执行器过压"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`ActuatorOverheat`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Actuator overheating"
+msgstr "执行器过温"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`ActuatorTempWarn`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Actuator overheating warning"
+msgstr "执行器过温预警"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`ActuatorTimeout`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Actuator control timeout"
+msgstr "执行器控制超时"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`ActuatorUndervolt`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Actuator undervoltage"
+msgstr "执行器欠压"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`PowerControlOverTemp`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Single battery overheating warning"
+msgstr "单电池过温预警"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`PowerControlPowerEmpty`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Single battery power below 10%"
+msgstr "单电池电量低于10%"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`PowerControlPowerLow`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Single battery power below 20%, above 10%"
+msgstr "单电池电量低于20%，高于10%"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`PowerControlOffline`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Power control board MCU connection failed"
+msgstr "电源控制板MCU连接失败"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`CANBroken`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "CAN communication error"
+msgstr "CAN通信异常"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`RobotRemoteKeepAliveFailure`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Remote control disconnected"
+msgstr "遥控器断链"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`SystemClockSanityError`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "System time jump detected"
+msgstr "系统时间跳变"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`SystemRobotStatusError`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Robot status abnormal"
+msgstr "机器人状态异常"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`IMUConnectError`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "IMU connection error"
+msgstr "IMU连接异常"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`IMUDataNotUpdated`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "IMU data not updating"
+msgstr "IMU数据不更新"
+
+#: ../../source/3.2SDK_Type.md:71
+msgid "FaultLevel"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md:77
+msgid "**Description:**   Fault level definition."
+msgstr ""
+"**说明：**  <br>"
+"故障等级定义。"
+
+#: ../../source/3.2SDK_Type.md
+msgid "Integer Value"
+msgstr "整数值"
+
+#: ../../source/3.2SDK_Type.md
+msgid "0"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Unknown"
+msgstr "未知"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`FatalError`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "1"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Fatal error"
+msgstr "致命错误"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`Error`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "2"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "General error"
+msgstr "一般错误"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`Warn`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "3"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Warning"
+msgstr "警告"
+
+#: ../../source/3.2SDK_Type.md:89
+msgid "IMU Data"
+msgstr "IMU 数据"
+
+#: ../../source/3.2SDK_Type.md:91
+msgid "ImuData"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md:97
+msgid "**Description:**   IMU (Inertial Measurement Unit) data structure."
+msgstr ""
+"**说明：**  <br>"
+"IMU（惯性测量单元）数据结构体。"
+
+#: ../../source/3.2SDK_Type.md
+msgid "Member"
+msgstr "成员"
+
+#: ../../source/3.2SDK_Type.md
+msgid "Type"
+msgstr "类型"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`acc_x`, `acc_y`, `acc_z`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "`float`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Accelerometer three-axis data (m/s²)"
+msgstr "加速度计三轴数据 (m/s²)"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`gyro_x`, `gyro_y`, `gyro_z`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Gyroscope three-axis data (rad/s)"
+msgstr "陀螺仪三轴数据 (rad/s)"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`quat_x`, `quat_y`, `quat_z`, `quat_w`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Quaternion"
+msgstr "四元数"
+
+#: ../../source/3.2SDK_Type.md:108
+msgid "Fault Data"
+msgstr "故障数据"
+
+#: ../../source/3.2SDK_Type.md:110
+msgid "FaultData"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md:116
+msgid "**Description:**   Fault information structure."
+msgstr ""
+"**说明：**  <br>"
+"故障信息结构体。"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`code`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "`FaultCode`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Fault code"
+msgstr "故障码"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`level`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "`FaultLevel`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Fault level"
+msgstr "故障等级"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`message`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "`std::string`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Fault information text"
+msgstr "故障信息文本"
+
+#: ../../source/3.2SDK_Type.md:127
+msgid "Power-Related"
+msgstr "电源相关"
+
+#: ../../source/3.2SDK_Type.md:129
+msgid "PowerSupplyStatus"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md:135
+msgid "**Description:**   Battery power supply status enumeration."
+msgstr ""
+"**说明：**  <br>"
+"电池电源状态枚举。"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`UNKNOWN`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Power supply status unknown"
+msgstr "电源状态未知"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`CHARGING`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Charging"
+msgstr "正在充电"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`DISCHARGING`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Discharging"
+msgstr "放电中"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`FULL`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "4"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Fully charged"
+msgstr "已满电"
+
+#: ../../source/3.2SDK_Type.md:147
+msgid "BatteryData"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md:153
+msgid "**Description:**   Dual battery data structure."
+msgstr ""
+"**说明：**  <br>"
+"双电池数据结构体。"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`power1`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Battery 1 charge capacity (percentage 0-100)"
+msgstr "电池1 电量（百分比 0-100）"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`power2`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Battery 2 charge capacity (percentage 0-100)"
+msgstr "电池2 电量（百分比 0-100）"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`present1`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "`bool`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Battery 1 present"
+msgstr "电池1 是否在位"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`present2`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Battery 2 present"
+msgstr "电池2 是否在位"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`voltage1`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Battery 1 voltage (V)"
+msgstr "电池1 电压 (V)"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`voltage2`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Battery 2 voltage (V)"
+msgstr "电池2 电压 (V)"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`temperature1`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Battery 1 temperature (°C)"
+msgstr "电池1 温度 (°C)"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`temperature2`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Battery 2 temperature (°C)"
+msgstr "电池2 温度 (°C)"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`current1`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Battery 1 current (A)"
+msgstr "电池1 电流 (A)"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`current2`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Battery 2 current (A)"
+msgstr "电池2 电流 (A)"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`power_supply_status1`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "`PowerSupplyStatus`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Battery 1 power supply status"
+msgstr "电池1 电源状态"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`power_supply_status2`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Battery 2 power supply status"
+msgstr "电池2 电源状态"
+
+#: ../../source/3.2SDK_Type.md:173
+msgid "Sensor Data"
+msgstr "传感器数据"
+
+#: ../../source/3.2SDK_Type.md:175
+msgid "LuxData"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md:181
+msgid "**Description:**   Light intensity sensor data."
+msgstr ""
+"**说明：**  <br>"
+"光强传感器数据。"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`lux`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Light intensity value"
+msgstr "光强值"
+
+#: ../../source/3.2SDK_Type.md:190
+msgid "Robot State Enumerations"
+msgstr "机器人状态枚举"
+
+#: ../../source/3.2SDK_Type.md:192
+msgid "FillLightStatus"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md:198
+msgid "**Description:**   Fill light status enumeration."
+msgstr ""
+"**说明：**  <br>"
+"补光灯状态枚举。"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`FILL_LIGHT_STATUS_UNKNOWN`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Unknown status"
+msgstr "未知状态"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`FILL_LIGHT_STATUS_ON`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Fill light on"
+msgstr "补光灯打开"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`FILL_LIGHT_STATUS_OFF`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Fill light off"
+msgstr "补光灯关闭"
+
+#: ../../source/3.2SDK_Type.md:209
+msgid "SpeedLevel"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md:215
+msgid ""
+"**Description:**   Speed level enumeration, affecting speed limits for "
+"the `Move` command."
+msgstr ""
+"**说明：**  <br>"
+"速度等级枚举，影响 `Move` 命令的速度限制。"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`SPEED_LEVEL_UNKNOWN`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "`SPEED_LEVEL_SLOW`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Low speed"
+msgstr "低速"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`SPEED_LEVEL_MEDIUM`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Medium speed"
+msgstr "中速"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`SPEED_LEVEL_HIGH`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "High speed"
+msgstr "高速"
+
+#: ../../source/3.2SDK_Type.md:225
+msgid "**Speed Limit Specifications:**"
+msgstr "**速度限制说明：**"
+
+#: ../../source/3.2SDK_Type.md
+msgid "Level"
+msgstr "等级"
+
+#: ../../source/3.2SDK_Type.md
+msgid "vx (forward/back)"
+msgstr "vx (前后)"
+
+#: ../../source/3.2SDK_Type.md
+msgid "vy (left/right)"
+msgstr "vy (左右)"
+
+#: ../../source/3.2SDK_Type.md
+msgid "vyaw (rotation)"
+msgstr "vyaw (旋转)"
+
+#: ../../source/3.2SDK_Type.md
+msgid "-0.5 ~ +0.5 m/s"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "-1.0 ~ +1.0 m/s"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "-2.0 ~ +2.0 rad/s"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "0 m/s"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "-2.0 ~ +2.0 m/s"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "-1.5 ~ +1.5 rad/s"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "-3.0 ~ +3.0 m/s"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "-1.0 ~ +1.0 rad/s"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md:235
+msgid "EmergencyStatus"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md:241
+msgid "**Description:**   Emergency stop status enumeration."
+msgstr ""
+"**说明：**  <br>"
+"急停状态枚举。"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`EMERGENCY_STATUS_UNKNOWN`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "`EMERGENCY_STATUS_RECOVER`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Emergency stop released"
+msgstr "急停解除"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`EMERGENCY_STATUS_STOP`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Emergency stop activated"
+msgstr "急停触发"
+
+#: ../../source/3.2SDK_Type.md:252
+msgid "HeadDirection"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md:258
+msgid "**Description:**   Robot head/tail direction enumeration."
+msgstr ""
+"**说明：**  <br>"
+"机器人头尾方向枚举。"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`HEAD_DIRECTION_UNKNOWN`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "`HEAD_DIRECTION_HEAD`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Robot head facing forward"
+msgstr "狗头方向为前"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`HEAD_DIRECTION_TAIL`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Robot tail facing forward"
+msgstr "狗尾方向为前"
+
+#: ../../source/3.2SDK_Type.md:269
+msgid "SportMode"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md:275
+msgid "**Description:**   Robot motion mode enumeration."
+msgstr ""
+"**说明：**  <br>"
+"机器人运动模式枚举。"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`SPORT_MODE_UNKNOWN`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "`SPORT_MODE_GENERAL`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "General mode (mobile and some posture transformations)"
+msgstr "通用模式（可移动与一些姿态变换）"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`SPORT_MODE_IN_PLACE`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "In-place mode (in-place actions)"
+msgstr "原地模式（原地动作）"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`SPORT_MODE_STAIR`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Stair-climbing mode (mobile only)"
+msgstr "登阶模式（仅支持移动）"
+
+#: ../../source/3.2SDK_Type.md:287
+msgid "MotionStatus"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md:293
+msgid "**Description:**   Robot motion state enumeration."
+msgstr ""
+"**说明：**  <br>"
+"机器人运动状态枚举。"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`MOTION_STATUS_UNKNOWN`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "`MOTION_STATUS_STAND_UP`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Standing"
+msgstr "站立中"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`MOTION_STATUS_LIE_DOWN`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Lying down"
+msgstr "卧倒状态"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`MOTION_STATUS_CRAWL`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Crawling"
+msgstr "匍匐状态"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`MOTION_STATUS_LOCKED`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Locked"
+msgstr "锁定状态"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`MOTION_STATUS_GENERAL`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "5"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "General mode motion state"
+msgstr "通用模式运动状态"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`MOTION_STATUS_IN_PLACE`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "6"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "In-place mode motion state"
+msgstr "原地模式运动状态"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`MOTION_STATUS_STAIR`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "7"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Stair-climbing mode motion state"
+msgstr "登阶模式运动状态"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`MOTION_STATUS_CLIMB`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "8"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Climbing high platform state"
+msgstr "爬高台状态"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`MOTION_STATUS_SLIM`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "9"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Slim (body compress) state"
+msgstr "瘦身状态"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`MOTION_STATUS_GAIT`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "10"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Gait state"
+msgstr "步态状态"
+
+#: ../../source/3.2SDK_Type.md:312
+msgid "Control-Related"
+msgstr "控制相关"
+
+#: ../../source/3.2SDK_Type.md:314
+msgid "CtrlSource"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md:320
+msgid "**Description:**   Robot control source enumeration."
+msgstr ""
+"**说明：**  <br>"
+"机器人控制来源枚举。"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`CTRL_SOURCE_UNKNOWN`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "`CTRL_SOURCE_APP`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "APP control"
+msgstr "APP 控制"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`CTRL_SOURCE_SDK`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "SDK control"
+msgstr "SDK 控制"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`CTRL_SOURCE_OTHER`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Other control"
+msgstr "其他控制"
+
+#: ../../source/3.2SDK_Type.md:332
+msgid "ControlLostInfo"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md:338
+msgid "**Description:**   Control lost information structure."
+msgstr ""
+"**说明：**  <br>"
+"控制权丢失信息结构体。"
+
+#: ../../source/3.2SDK_Type.md:343
+msgid "ControlAvailableInfo"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md:349
+msgid "**Description:**   Control available information structure."
+msgstr ""
+"**说明：**  <br>"
+"控制权可用信息结构体。"
+
+#: ../../source/3.2SDK_Type.md:354
+msgid "TakeControlAck"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md:360
+msgid "**Description:**   Take control command acknowledgment information."
+msgstr ""
+"**说明：**  <br>"
+"获取控制权命令应答信息。"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`error_code`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "`uint32_t`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Error code (0 indicates success, non-zero indicates failure)"
+msgstr "错误码（0 表示成功，非 0 表示失败）"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`reason`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Failure reason description"
+msgstr "失败原因描述"
+
+#: ../../source/3.2SDK_Type.md:370
+msgid "ReleaseControlAck"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md:376
+msgid "**Description:**   Release control command acknowledgment information."
+msgstr ""
+"**说明：**  <br>"
+"释放控制权命令应答信息。"
+
+#: ../../source/3.2SDK_Type.md:386
+msgid "CameraBitrateCmd"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md:392
+msgid "**Description:**   Camera bitrate configuration parameters."
+msgstr ""
+"**说明：**  <br>"
+"摄像头码率配置参数。"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`camera_name`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid ""
+"Camera name: \"camera_front\" for front camera, \"camera_back\" for back "
+"camera"
+msgstr "摄像头名称:前摄 "camera_front"，后摄 "camera_back""
+
+#: ../../source/3.2SDK_Type.md
+msgid "`camera_bps`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Camera bitrate in bps (bit/s), range 50000-100000000"
+msgstr "摄像头码率，单位bps(bit/s)，范围50000-100000000"
+
+#: ../../source/3.2SDK_Type.md:402
+msgid "CameraBitrateAck"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md:408
+msgid "**Description:**   Camera bitrate configuration acknowledgment."
+msgstr ""
+"**说明：**  <br>"
+"摄像头码率配置参数。"
+
+#: ../../source/3.2SDK_Type.md:418
+msgid "Speed"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md:424
+msgid "**Description:**   Robot current velocity information."
+msgstr ""
+"**说明：**  <br>"
+"机器人当前速度信息。"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`line`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "`double`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Forward/backward velocity (m/s)"
+msgstr "前进/后退速度 (m/s)"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`translation`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Left/right lateral velocity (m/s)"
+msgstr "左右平移速度 (m/s)"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`angle`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Rotation velocity (angular velocity) (rad/s)"
+msgstr "转向角速度 (rad/s)"
+
+#: ../../source/3.2SDK_Type.md:435
+msgid "Joint temperature description"
+msgstr "关节温度说明"
+
+#: ../../source/3.2SDK_Type.md:441
+msgid ""
+"**说明：**  <br> A mapping table between robot joint names and joint temperature"
+" information."
+msgstr ""
+"**说明：**  <br>"
+"机器人关节名字与关节温度信息映射表。"
+
+#: ../../source/3.2SDK_Type.md:444
+msgid "The names of the joints of the wheeled robot are shown in the table below."
+msgstr "轮足关节名字如下表"
+
+#: ../../source/3.2SDK_Type.md
+msgid "Name"
+msgstr "名字"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`fl1`, `fl2`, `fl3`, `fl4`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "FL Joints 1–4 (Front Left)"
+msgstr "左前腿 1-4 号关节"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`fr1`, `fr2`, `fr3`, `fr4`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "FR Joints 1–4 (Front Right)"
+msgstr "右前腿 1-4 号关节"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`bl1`, `bl2`, `bl3`, `bl4`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "BL Joints 1–4 (Back Left)"
+msgstr "左后腿 1-4 号关节"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`br1`, `br2`, `br3`, `br4`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "BR Joints 1–4 (Back Right)"
+msgstr "右后腿 1-4 号关节"
+
+#: ../../source/3.2SDK_Type.md:455
+msgid "RobotState"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md:461
+msgid "**Description:**   Robot comprehensive state information."
+msgstr ""
+"**说明：**  <br>"
+"机器人综合状态信息。"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`head_angle`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Head angle (rad)"
+msgstr "头部角度 (rad)"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`front_fill_light`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "`FillLightStatus`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Front fill light status"
+msgstr "前补光灯状态"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`back_fill_light`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Back fill light status"
+msgstr "后补光灯状态"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`auto_mode_light`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Whether in automatic light mode"
+msgstr "是否为自动灯光模式"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`speed_level`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "`SpeedLevel`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Current speed level"
+msgstr "当前速度等级"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`software_emergency_status`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "`EmergencyStatus`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Software emergency stop status"
+msgstr "软件急停状态"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`hardware_emergency_status`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Hardware emergency stop status"
+msgstr "硬件急停状态"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`head_direction`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "`HeadDirection`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Current head/tail direction"
+msgstr "当前头尾方向"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`motion_status`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "`MotionStatus`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Current motion state"
+msgstr "当前运动状态"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`battery`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "`BatteryData`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Battery information"
+msgstr "电池信息"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`speed`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "`Speed`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Current velocity"
+msgstr "当前速度"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`mile_data`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Cumulative mileage data (m)"
+msgstr "里程累积数据 (m)"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`joint_temps`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "`std::unordered_map<std::string, double>`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Joint temperature<Joint name, Joint temperature> unit: °C"
+msgstr "关节温度<关节名称,关节温度> 单位：°C"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`sport_mode`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "`SportMode`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Motion mode"
+msgstr "运动模式"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`control_source`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "`CtrlSource`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Control source"
+msgstr "控制来源"
+
+#: ../../source/3.2SDK_Type.md:484
+msgid "MotionData"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md:490
+msgid "**Description:**   Motion control detailed data information."
+msgstr ""
+"**说明：**  "
+"运动控制详细数据信息。"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`quat[4]`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Quaternion [w, x, y, z]"
+msgstr "四元数 [w, x, y, z]"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`v_world[3]`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Velocity in world coordinate system [x, y, z] (m/s)"
+msgstr "世界坐标系下速度 [x, y, z] (m/s)"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`position[3]`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Position in world coordinate system [x, y, z] (m)"
+msgstr "世界坐标系下位置 [x, y, z] (m)"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`omega_world[3]`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Angular velocity in world coordinate system [x, y, z] (rad/s)"
+msgstr "世界坐标系角速度 [x, y, z] (rad/s)"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`v_body[3]`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Velocity in body coordinate system [x, y, z] (m/s)"
+msgstr "自身坐标系下速度 [x, y, z] (m/s)"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`omega_body[3]`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "Angular velocity in body coordinate system [x, y, z] (rad/s)"
+msgstr "自身坐标系下角速度 [x, y, z] (rad/s)"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`time_stamp`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "`uint64_t`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "time stamp (ns)"
+msgstr "时间戳 (ns)"
+
+#: ../../source/3.2SDK_Type.md:503
+msgid "SpeedData"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md:509
+msgid "**Description:**   Speed ​​description information."
+msgstr ""
+"**说明：**  <br>"
+"速度信息说明。"
+
+#: ../../source/3.2SDK_Type.md
+msgid "`x`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "`y`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md
+msgid "`yaw`"
+msgstr ""
+
+#: ../../source/3.2SDK_Type.md:520
+msgid "Related documentation"
+msgstr "相关文档"
+
+#: ../../source/3.2SDK_Type.md:522
+msgid ""
+"[SDKClient API ](3.3SDK_Client_API.md) - Detailed Description of Client "
+"Interfaces"
+msgstr "[SDKClient API 文档](3.3SDK_Client_API.md) - 客户端接口详细说明"
+
+#: ../../source/3.2SDK_Type.md:523
+msgid ""
+"[Connection config](3.1SDK_Connection.md) - Connection Parameters and Status"
+" Description"
+msgstr "[连接配置文档](3.1SDK_Connection.md) - 连接参数和状态说明"
+
+#: ../../source/3.2SDK_Type.md:524
+msgid "[Callback](3.4SDK_Callback.md) - Definition of the callback interface"
+msgstr "[Callback 回调接口](3.4SDK_Callback.md) - 回调接口定义"
+
+#: ../../source/3.2SDK_Type.md:525
+msgid ""
+"[State define](3.6SDK_State.md) - Detailed Explanation of Connection Status "
+"and Motion State"
+msgstr "[状态定义文档](3.6SDK_State.md) - 连接状态和运动状态详解"
+

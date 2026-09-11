@@ -1,0 +1,39 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Agibot
+# This file is distributed under the same license as the D1_Max package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: D1_Max \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-03 09:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/4.6Camera_Data.md:1
+msgid "4.6 Camera Data"
+msgstr "4.6 相机数据"
+
+#: ../../source/4.6Camera_Data.md:4
+msgid ""
+"Camera data originates from the RK3588 and is published under the "
+"following topics:<br>"
+msgstr "相机数据来源于RK3588, topic名称如下:<br>"
+
+#: ../../source/4.6Camera_Data.md:5
+msgid "Front:`/front_camera/image_compressed`"
+msgstr "前:`/front_camera/image_compressed`"
+
+#: ../../source/4.6Camera_Data.md:6
+msgid "Rear:`/rear_camera/image_compressed`"
+msgstr "后:`/rear_camera/image_compressed`"
+

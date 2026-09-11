@@ -1,0 +1,48 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Agibot
+# This file is distributed under the same license as the D1_Max package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: D1_Max \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-03 09:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/1.6D1_Max_Hardware_Architecture_Diagram.md:1
+msgid "1.6 D1 Max Hardware Architecture Diagram"
+msgstr "1.6 D1 Max硬件架构图"
+
+#: ../../source/1.6D1_Max_Hardware_Architecture_Diagram.md:4
+msgid "![image](./images/Hardware_Architecture_Diagram.png)"
+msgstr "![image](./images/Hardware_Architecture_Diagram.png)"
+
+#: ../../source/1.6D1_Max_Hardware_Architecture_Diagram.md:4
+msgid "image"
+msgstr "image"
+
+#: ../../source/1.6D1_Max_Hardware_Architecture_Diagram.md:6
+msgid ""
+"**Note: The main control board is an RK3588, dedicated to quadruped "
+"motion control. Development or deployment on this board is not "
+"supported.**"
+msgstr "**RK3588算力板负责运动控制和系统监控等功能，勿在此板开发应用程序**"
+
+#: ../../source/1.6D1_Max_Hardware_Architecture_Diagram.md:7
+msgid ""
+"**The compute board is an Orin NX, dedicated to perception and control of"
+" the quadruped robot. Development and deployment may be performed on this"
+" compute board. Ensure proper backup management, as flashing or Over-The-"
+"Air (OTA) upgrades may overwrite the system.**"
+msgstr "**Orin NX算力板负责建图、定位、导航等业务功能，用户可在此算力板开发轻量化的应用程序，需做好备份管理，刷机或OTA升级可能会被刷新**"
+

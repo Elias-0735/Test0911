@@ -1,0 +1,1305 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Agibot
+# This file is distributed under the same license as the D1_Max package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: D1_Max \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-03 09:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/3.3SDK_Client_API.md:1
+msgid "3.3 SDK Client API"
+msgstr "3.3 SDKClient类接口"
+
+#: ../../source/3.3SDK_Client_API.md:4
+msgid "Overview"
+msgstr "概述"
+
+#: ../../source/3.3SDK_Client_API.md:6
+msgid ""
+"`SDKClient` is the core communication class of the Robot SDK, providing "
+"connection, disconnection, and command sending interfaces.   Developers "
+"can use this class to implement robot motion control, mode switching, "
+"emergency stop, light control, data reporting configuration, and other "
+"functions."
+msgstr "`SDKClient` 是机器人 SDK 的核心通信类，提供连接、断开和命令发送接口。  <br>开发者通过该类可实现机器人运动控制、模式切换、急停、灯光控制、数据上报配置等功能。"
+
+#: ../../source/3.3SDK_Client_API.md:9
+msgid "**Working Modes:**"
+msgstr "**工作模式：**"
+
+#: ../../source/3.3SDK_Client_API.md:10
+msgid ""
+"**Synchronous Mode (Blocking)**: `timeout_ms > 0`, function blocks "
+"waiting for operation completion or returns after timeout"
+msgstr "**同步模式（阻塞）**：`timeout_ms > 0`，函数阻塞等待操作完成或超时后返回结果"
+
+#: ../../source/3.3SDK_Client_API.md:11
+msgid ""
+"**Asynchronous Mode (Non-blocking)**: `timeout_ms = 0`, function returns "
+"immediately, operation result notified through callback function"
+msgstr "**异步模式（非阻塞）**：`timeout_ms = 0`，函数立即返回，通过回调函数通知操作结果"
+
+#: ../../source/3.3SDK_Client_API.md:13
+msgid ""
+"**Note:** The `block` parameter is only used for `Connect` and "
+"`Disconnect` functions. Other control functions use the `timeout_ms` "
+"parameter to distinguish between synchronous/asynchronous modes."
+msgstr "**注意：**`block` 参数仅用于 `Connect` 和 `Disconnect` 函数，其他控制函数通过 `timeout_ms` 参数区分同步/异步模式。"
+
+#: ../../source/3.3SDK_Client_API.md:17
+msgid "Namespace"
+msgstr "命名空间"
+
+#: ../../source/3.3SDK_Client_API.md:25
+msgid "Class Definition"
+msgstr "类定义"
+
+#: ../../source/3.3SDK_Client_API.md:33
+msgid "Error Code Mechanism"
+msgstr "错误码机制"
+
+#: ../../source/3.3SDK_Client_API.md:35
+msgid ""
+"All interfaces return `std::error_code` type to indicate operation "
+"results:"
+msgstr "所有接口均返回 `std::error_code` 类型表示操作结果："
+
+#: ../../source/3.3SDK_Client_API.md:36
+msgid "**Success**: `ec.value() == 0` or `!ec`"
+msgstr "**成功**：`ec.value() == 0` 或 `!ec`"
+
+#: ../../source/3.3SDK_Client_API.md:37
+msgid "**Failure**: `ec.value() != 0` or `ec` is true"
+msgstr "**失败**：`ec.value() != 0` 或 `ec` 为 true"
+
+#: ../../source/3.3SDK_Client_API.md:38
+msgid "Use `ec.message()` to obtain human-readable error description"
+msgstr "通过 `ec.message()` 获取人类可读的错误描述"
+
+#: ../../source/3.3SDK_Client_API.md:40
+msgid "**Example:**"
+msgstr "**示例：**"
+
+#: ../../source/3.3SDK_Client_API.md:51
+msgid "SDK Common Error Codes"
+msgstr "SDK 常用错误码"
+
+#: ../../source/3.3SDK_Client_API.md:53
+msgid "Standard Error Codes"
+msgstr "标准错误码"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "Error Code Enum"
+msgstr "错误码枚举"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "Integer Value"
+msgstr "整数值"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "Meaning"
+msgstr "含义"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`std::errc::success`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "0"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "Operation successful"
+msgstr "操作成功"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`std::errc::invalid_argument`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "22"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "Invalid argument"
+msgstr "参数无效"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`std::errc::already_connected`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "106"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "Already connected"
+msgstr "已连接"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`std::errc::not_connected`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "107"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "Not connected"
+msgstr "未连接"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`std::errc::timed_out`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "110"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "Operation timeout"
+msgstr "操作超时"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`std::errc::connection_refused`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "111"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "Connection refused"
+msgstr "连接被拒绝"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`std::errc::connection_already_in_progress`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "114"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "Connection already in progress"
+msgstr "连接正在进行中"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`std::errc::operation_in_progress`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "115"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "Operation in progress"
+msgstr "操作正在进行中"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`std::errc::operation_canceled`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "125"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "Operation canceled"
+msgstr "操作被取消"
+
+#: ../../source/3.3SDK_Client_API.md:67
+msgid "SDK Internal Extended Error Codes"
+msgstr "SDK内部扩展错误码"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`robot_sdk::errc::ShakeHandFailed`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "10000"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid ""
+"Handshake failed, commonly seen when internal handshake message not "
+"received during connection"
+msgstr "握手失败，常见于连接时内部未收到握手消息"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`robot_sdk::errc::ProtocolMismatch`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "10001"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "Protocol mismatch, commonly seen when connecting to older robot versions"
+msgstr "协议不匹配，常见于操作旧版本机器"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`robot_sdk::errc::ControlledDenial`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "10002"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "Control denied, commonly seen when multiple clients connect to the robot"
+msgstr "控制拒绝，常见于多客户端连接到机器"
+
+#: ../../source/3.3SDK_Client_API.md:77
+msgid "Type Definitions"
+msgstr "类型定义"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "Type Name"
+msgstr "类型名"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "Definition"
+msgstr "定义"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "Description"
+msgstr "说明"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`ConnectHandler`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`std::function<void(const std::error_code&)>`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "Connection completion callback function"
+msgstr "连接完成回调函数"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`DisConnectHandler`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "Disconnection completion callback function"
+msgstr "断开连接完成回调函数"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`ErrorHandler`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "SDK internal error callback function"
+msgstr "SDK 内部错误回调函数"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`WriteHandler`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`std::function<void(const std::error_code&, std::size_t)>`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "Command sending completion callback function"
+msgstr "命令发送完成回调函数"
+
+#: ../../source/3.3SDK_Client_API.md:88
+msgid "Constructor and Destructor"
+msgstr "构造与析构"
+
+#: ../../source/3.3SDK_Client_API.md:90
+msgid "Constructor"
+msgstr "构造函数"
+
+#: ../../source/3.3SDK_Client_API.md:98
+msgid "**Description:**   Construct an SDK client object."
+msgstr ""
+"**说明：**  <br>"
+"构造一个 SDK 客户端对象。"
+
+#: ../../source/3.3SDK_Client_API.md:101 ../../source/3.3SDK_Client_API.md:144
+#: ../../source/3.3SDK_Client_API.md:174 ../../source/3.3SDK_Client_API.md:232
+#: ../../source/3.3SDK_Client_API.md:251 ../../source/3.3SDK_Client_API.md:273
+#: ../../source/3.3SDK_Client_API.md:303 ../../source/3.3SDK_Client_API.md:453
+#: ../../source/3.3SDK_Client_API.md:513 ../../source/3.3SDK_Client_API.md:558
+#: ../../source/3.3SDK_Client_API.md:621 ../../source/3.3SDK_Client_API.md:654
+#: ../../source/3.3SDK_Client_API.md:684 ../../source/3.3SDK_Client_API.md:716
+#: ../../source/3.3SDK_Client_API.md:749 ../../source/3.3SDK_Client_API.md:779
+#: ../../source/3.3SDK_Client_API.md:809 ../../source/3.3SDK_Client_API.md:839
+#: ../../source/3.3SDK_Client_API.md:870 ../../source/3.3SDK_Client_API.md:899
+#: ../../source/3.3SDK_Client_API.md:929
+msgid "**Parameters:**"
+msgstr "**参数：**"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "Parameter Name"
+msgstr "参数名"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "Type"
+msgstr "类型"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "Default Value"
+msgstr "默认值"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`error_callback`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "Empty callback"
+msgstr "空回调"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "SDK internal communication exception callback function"
+msgstr "SDK 内部通信异常回调函数"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`connection_config`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`ConnectionConfig`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "Default config"
+msgstr "默认配置"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "Connection configuration parameters"
+msgstr "连接配置参数"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`type`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`TransportProtocol`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`Udp`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "Transport protocol type"
+msgstr "传输协议类型"
+
+#: ../../source/3.3SDK_Client_API.md:108
+msgid "**Related Types:**"
+msgstr "**相关类型：**"
+
+#: ../../source/3.3SDK_Client_API.md:109
+msgid ""
+"`ConnectionConfig`: Connection configuration, see [Connection "
+"Configuration Documentation](3.1SDK_Connection.md)"
+msgstr ""
+"`ConnectionConfig`: 连接配置，详见 [连接配置文档](3.1SDK_Connection.md)"
+
+#: ../../source/3.3SDK_Client_API.md:110
+msgid ""
+"`TransportProtocol`: Transport protocol type, see [Connection "
+"Configuration Documentation](3.1SDK_Connection.md)"
+msgstr ""
+"`TransportProtocol`: 传输协议类型，详见 [连接配置文档](3.1SDK_Connection.md)"
+
+#: ../../source/3.3SDK_Client_API.md:114
+msgid "Destructor"
+msgstr "析构函数"
+
+#: ../../source/3.3SDK_Client_API.md:120
+msgid ""
+"**Description:**   Destructor, automatically releases resources and "
+"disconnects."
+msgstr ""
+"**说明：**  <br>"
+"析构函数，自动释放资源并断开连接。"
+
+#: ../../source/3.3SDK_Client_API.md:125
+msgid "Connection Management"
+msgstr "连接管理"
+
+#: ../../source/3.3SDK_Client_API.md:127
+msgid "Connect - Connect to Robot"
+msgstr "Connect - 连接机器人"
+
+#: ../../source/3.3SDK_Client_API.md:135
+msgid "**Description:**   Connect to the robot at the specified IP and port."
+msgstr ""
+"**说明：**  <br>"
+"连接到指定 IP 和端口的机器人。"
+
+#: ../../source/3.3SDK_Client_API.md:138
+msgid ""
+"By default: when using WebSocket, you need to connect to port 8081 of the"
+" machine; when using UDP, you need to connect to port 8082 of the "
+"machine."
+msgstr "默认情况下：当使用WebSocket时，需要连接机器的8081端口；当使用Udp时，需要连接机器的8082端口；"
+
+#: ../../source/3.3SDK_Client_API.md:140
+msgid "⚠️ **Note:**"
+msgstr "⚠️ **注意:** "
+
+#: ../../source/3.3SDK_Client_API.md:142
+msgid ""
+"If the robot is already connected to the App, the SDK will not be able to"
+" control the robot."
+msgstr "机器如果已连接至APP，那SDK将无法对狗进行控制。"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`ip`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`std::string`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "-"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "Target IP address"
+msgstr "目标 IP 地址"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`port`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "Target port number"
+msgstr "目标端口号"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`block`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`bool`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`false`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`false`: asynchronous mode; `true`: synchronous mode"
+msgstr "`false`: 异步模式；`true`: 同步模式"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`handler`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid ""
+"Callback function after connection completion in asynchronous mode; not "
+"used in synchronous mode"
+msgstr "异步模式下连接完成后的回调函数；同步模式不使用"
+
+#: ../../source/3.3SDK_Client_API.md:152 ../../source/3.3SDK_Client_API.md:180
+#: ../../source/3.3SDK_Client_API.md:201 ../../source/3.3SDK_Client_API.md:280
+#: ../../source/3.3SDK_Client_API.md:630 ../../source/3.3SDK_Client_API.md:661
+#: ../../source/3.3SDK_Client_API.md:692 ../../source/3.3SDK_Client_API.md:723
+#: ../../source/3.3SDK_Client_API.md:756 ../../source/3.3SDK_Client_API.md:786
+#: ../../source/3.3SDK_Client_API.md:816 ../../source/3.3SDK_Client_API.md:847
+#: ../../source/3.3SDK_Client_API.md:876 ../../source/3.3SDK_Client_API.md:905
+#: ../../source/3.3SDK_Client_API.md:936
+msgid "**Return Value:**"
+msgstr "**返回值：**  "
+
+#: ../../source/3.3SDK_Client_API.md:153
+msgid ""
+"`std::errc::success`: Operation successful (asynchronous mode means "
+"request sent; synchronous mode means connection completed)"
+msgstr "`std::errc::success`: 操作成功（异步模式表示请求已发出，同步模式表示连接已完成）"
+
+#: ../../source/3.3SDK_Client_API.md:154 ../../source/3.3SDK_Client_API.md:182
+#: ../../source/3.3SDK_Client_API.md:282 ../../source/3.3SDK_Client_API.md:632
+#: ../../source/3.3SDK_Client_API.md:663 ../../source/3.3SDK_Client_API.md:694
+#: ../../source/3.3SDK_Client_API.md:725 ../../source/3.3SDK_Client_API.md:758
+#: ../../source/3.3SDK_Client_API.md:788 ../../source/3.3SDK_Client_API.md:818
+#: ../../source/3.3SDK_Client_API.md:849 ../../source/3.3SDK_Client_API.md:878
+#: ../../source/3.3SDK_Client_API.md:907 ../../source/3.3SDK_Client_API.md:938
+msgid "Common failure error codes:"
+msgstr "常见失败错误码："
+
+#: ../../source/3.3SDK_Client_API.md:155 ../../source/3.3SDK_Client_API.md:183
+msgid "`std::errc::operation_in_progress`: Operation in progress"
+msgstr "`std::errc::operation_in_progress`: 操作正在进行中"
+
+#: ../../source/3.3SDK_Client_API.md:156 ../../source/3.3SDK_Client_API.md:184
+#: ../../source/3.3SDK_Client_API.md:285 ../../source/3.3SDK_Client_API.md:635
+#: ../../source/3.3SDK_Client_API.md:666 ../../source/3.3SDK_Client_API.md:697
+#: ../../source/3.3SDK_Client_API.md:728 ../../source/3.3SDK_Client_API.md:761
+#: ../../source/3.3SDK_Client_API.md:791 ../../source/3.3SDK_Client_API.md:821
+#: ../../source/3.3SDK_Client_API.md:852 ../../source/3.3SDK_Client_API.md:881
+#: ../../source/3.3SDK_Client_API.md:910 ../../source/3.3SDK_Client_API.md:941
+msgid "`std::errc::operation_canceled`: Operation canceled"
+msgstr "`std::errc::operation_canceled`: 操作已取消"
+
+#: ../../source/3.3SDK_Client_API.md:158 ../../source/3.3SDK_Client_API.md:186
+#: ../../source/3.3SDK_Client_API.md:287
+msgid "**Note:**"
+msgstr "**注意：**"
+
+#: ../../source/3.3SDK_Client_API.md:159
+msgid ""
+"Asynchronous mode: Function return only indicates connection request "
+"sent; actual connection result notified through callback"
+msgstr "异步模式：函数返回仅表示连接请求已发出，实际连接结果通过回调函数通知"
+
+#: ../../source/3.3SDK_Client_API.md:160
+msgid "Synchronous mode: Function return indicates connection result"
+msgstr "同步模式：函数返回即表示连接结果"
+
+#: ../../source/3.3SDK_Client_API.md:164
+msgid "Disconnect - Disconnect"
+msgstr "Disconnect - 断开连接"
+
+#: ../../source/3.3SDK_Client_API.md:171
+msgid "**Description:**   Disconnect from the robot."
+msgstr ""
+"**说明：**  <br>"
+"断开与机器人的连接。"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid ""
+"Callback function after disconnection in asynchronous mode; not used in "
+"synchronous mode"
+msgstr "异步模式下断开完成后的回调函数；同步模式不使用"
+
+#: ../../source/3.3SDK_Client_API.md:181 ../../source/3.3SDK_Client_API.md:281
+#: ../../source/3.3SDK_Client_API.md:631 ../../source/3.3SDK_Client_API.md:662
+#: ../../source/3.3SDK_Client_API.md:693 ../../source/3.3SDK_Client_API.md:724
+#: ../../source/3.3SDK_Client_API.md:757 ../../source/3.3SDK_Client_API.md:787
+#: ../../source/3.3SDK_Client_API.md:817 ../../source/3.3SDK_Client_API.md:848
+#: ../../source/3.3SDK_Client_API.md:877 ../../source/3.3SDK_Client_API.md:906
+#: ../../source/3.3SDK_Client_API.md:937
+msgid "`std::errc::success`: Operation successful"
+msgstr "`std::errc::success`: 操作成功"
+
+#: ../../source/3.3SDK_Client_API.md:187
+msgid ""
+"Asynchronous mode: Function return only indicates disconnect request "
+"sent; actual disconnect result notified through callback"
+msgstr "异步模式：函数返回仅表示断开请求已发出，实际断开结果通过回调函数通知"
+
+#: ../../source/3.3SDK_Client_API.md:188
+msgid "Synchronous mode: Function return indicates disconnect result"
+msgstr "同步模式：函数返回即表示断开结果"
+
+#: ../../source/3.3SDK_Client_API.md:192
+msgid "IsConnected - Check Connection Status"
+msgstr "IsConnected - 判断连接状态"
+
+#: ../../source/3.3SDK_Client_API.md:198
+msgid "**Description:**   Check whether currently connected to the robot."
+msgstr ""
+"**说明：**  <br>"
+"判断当前是否已连接机器人。"
+
+#: ../../source/3.3SDK_Client_API.md:202
+msgid "`true`: Connected"
+msgstr "`true`: 已连接"
+
+#: ../../source/3.3SDK_Client_API.md:203
+msgid "`false`: Not connected"
+msgstr "`false`: 未连接"
+
+#: ../../source/3.3SDK_Client_API.md:207
+msgid "GetConnectionState - Get Connection State"
+msgstr "GetConnectionState - 获取连接状态"
+
+#: ../../source/3.3SDK_Client_API.md:213
+msgid "**Description:**   Get current detailed connection state."
+msgstr ""
+"**说明：**  <br>"
+"获取当前详细的连接状态。"
+
+#: ../../source/3.3SDK_Client_API.md:216
+msgid ""
+"**Return Value:**   `ConnectionState` enumeration value, see [Connection "
+"State Documentation](3.1SDK_Connection.md)"
+msgstr "**返回值：**  <br>`ConnectionState` 枚举值，详见 [连接状态文档](3.1SDK_Connection.md)"
+
+#: ../../source/3.3SDK_Client_API.md:221
+msgid "Callback Configuration"
+msgstr "回调设置"
+
+#: ../../source/3.3SDK_Client_API.md:223
+msgid "SetControlCallback - Set Control Callback"
+msgstr "SetControlCallback - 设置控制回调"
+
+#: ../../source/3.3SDK_Client_API.md:229
+msgid ""
+"**Description:**   Set control message notification function to receive "
+"command acknowledgments."
+msgstr ""
+"**说明：**  <br>"
+"设置控制消息通知函数，用于接收控制命令的应答。"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`control_callback`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`std::shared_ptr<IControlCallback>`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "Control callback object"
+msgstr "控制回调对象"
+
+#: ../../source/3.3SDK_Client_API.md:237
+msgid ""
+"**Related Documentation:**   See [Callback Reference](3.4SDK_Callback.md)"
+" for `IControlCallback` class description."
+msgstr "**相关文档：**  <br>详见 [Callback 参考](3.4SDK_Callback.md) 中 `IControlCallback` 类的说明。"
+
+#: ../../source/3.3SDK_Client_API.md:242
+msgid "SetDataCallback - Set Data Callback"
+msgstr "SetDataCallback - 设置数据回调"
+
+#: ../../source/3.3SDK_Client_API.md:248
+msgid ""
+"**Description:**   Set data message notification function, triggered when"
+" robot data is reported."
+msgstr ""
+"**说明：**  <br>"
+"设置数据消息通知函数，当机器人数据上报时触发。"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`data_callback`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`std::shared_ptr<IDataCallback>`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "Data callback object"
+msgstr "数据回调对象"
+
+#: ../../source/3.3SDK_Client_API.md:256
+msgid ""
+"**Related Documentation:**   See [Callback Reference](3.4SDK_Callback.md)"
+" for `IDataCallback` class description."
+msgstr "**相关文档：**  <br>详见 [Callback 参考](3.4SDK_Callback.md) 中 `IDataCallback` 类的说明。"
+
+#: ../../source/3.3SDK_Client_API.md:261
+msgid "Basic Control Interfaces"
+msgstr "基础控制接口"
+
+#: ../../source/3.3SDK_Client_API.md:263
+msgid "SoftEmergencyStop - Emergency Stop"
+msgstr "SoftEmergencyStop - 急停"
+
+#: ../../source/3.3SDK_Client_API.md:270
+msgid ""
+"**Description:**   Emergency stop control. After emergency stop is "
+"enabled, the system will not respond to other motion commands and speed "
+"will be set to 0."
+msgstr ""
+"**说明：**  <br>"
+"急停控制。启用急停后，系统将不响应其他运动命令，并且速度设为 0。"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`on`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`true`: activate emergency stop; `false`: deactivate emergency stop"
+msgstr "`true`: 急停；`false`: 解除急停"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`timeout_ms`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`int`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`0`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid ""
+"`0`: asynchronous mode; `> 0`: synchronous mode, maximum wait time "
+"(milliseconds)"
+msgstr "异步模式；`> 0`: 同步模式，最大等待时间（毫秒）"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid ""
+"Command sending result callback in asynchronous mode; not used in "
+"synchronous mode"
+msgstr "异步模式下命令发送结果回调函数；同步模式不使用"
+
+#: ../../source/3.3SDK_Client_API.md:283 ../../source/3.3SDK_Client_API.md:633
+#: ../../source/3.3SDK_Client_API.md:664 ../../source/3.3SDK_Client_API.md:695
+#: ../../source/3.3SDK_Client_API.md:726 ../../source/3.3SDK_Client_API.md:759
+#: ../../source/3.3SDK_Client_API.md:789 ../../source/3.3SDK_Client_API.md:819
+#: ../../source/3.3SDK_Client_API.md:850 ../../source/3.3SDK_Client_API.md:879
+#: ../../source/3.3SDK_Client_API.md:908 ../../source/3.3SDK_Client_API.md:939
+msgid "`std::errc::timed_out`: Operation timeout"
+msgstr "`std::errc::timed_out`: 操作超时"
+
+#: ../../source/3.3SDK_Client_API.md:284 ../../source/3.3SDK_Client_API.md:634
+#: ../../source/3.3SDK_Client_API.md:665 ../../source/3.3SDK_Client_API.md:696
+#: ../../source/3.3SDK_Client_API.md:727 ../../source/3.3SDK_Client_API.md:760
+#: ../../source/3.3SDK_Client_API.md:790 ../../source/3.3SDK_Client_API.md:820
+#: ../../source/3.3SDK_Client_API.md:851 ../../source/3.3SDK_Client_API.md:880
+#: ../../source/3.3SDK_Client_API.md:909 ../../source/3.3SDK_Client_API.md:940
+msgid "`std::errc::not_connected`: Not connected"
+msgstr "`std::errc::not_connected`: 未连接"
+
+#: ../../source/3.3SDK_Client_API.md:288
+msgid ""
+"Asynchronous mode: Function return only indicates command sent; send "
+"result notified through callback"
+msgstr "异步模式：函数返回仅表示命令已发送，发送结果通过回调函数通知"
+
+#: ../../source/3.3SDK_Client_API.md:289
+msgid "Synchronous mode: Function return indicates command send result"
+msgstr "同步模式：函数返回即表示命令发送结果"
+
+#: ../../source/3.3SDK_Client_API.md:293
+msgid "StandUp - Stand Up"
+msgstr "StandUp - 站立"
+
+#: ../../source/3.3SDK_Client_API.md:300
+msgid "**Description:**   Robot stand up action."
+msgstr ""
+"**说明：**  <br>"
+"机器人站立动作。"
+
+#: ../../source/3.3SDK_Client_API.md:309 ../../source/3.3SDK_Client_API.md:330
+#: ../../source/3.3SDK_Client_API.md:348 ../../source/3.3SDK_Client_API.md:366
+#: ../../source/3.3SDK_Client_API.md:384 ../../source/3.3SDK_Client_API.md:402
+#: ../../source/3.3SDK_Client_API.md:420 ../../source/3.3SDK_Client_API.md:438
+#: ../../source/3.3SDK_Client_API.md:460 ../../source/3.3SDK_Client_API.md:520
+#: ../../source/3.3SDK_Client_API.md:538 ../../source/3.3SDK_Client_API.md:565
+#: ../../source/3.3SDK_Client_API.md:583 ../../source/3.3SDK_Client_API.md:601
+msgid "**Return Value:**   Same as `SoftEmergencyStop`"
+msgstr "**返回值：**  <br>同 `SoftEmergencyStop`"
+
+#: ../../source/3.3SDK_Client_API.md:312
+msgid ""
+"**Note:**   After calling stand up, `MOTION_STATUS_STAND_UP` state is "
+"reported during the standing process. After standing completes, it "
+"automatically transitions to `MOTION_STATUS_GENERAL` or "
+"`MOTION_STATUS_IN_PLACE` state based on the current mode."
+msgstr "**注意：**  <br>调用站立后，站立过程中会上报 `MOTION_STATUS_STAND_UP` 状态，站立完成后会根据模式自动进入 `MOTION_STATUS_GENERAL` 或 `MOTION_STATUS_IN_PLACE` 状态。"
+
+#: ../../source/3.3SDK_Client_API.md:317
+msgid "LieDown - Lie Down"
+msgstr "LieDown - 卧倒"
+
+#: ../../source/3.3SDK_Client_API.md:324
+msgid "**Description:**   Robot lie down action."
+msgstr ""
+"**说明：**  <br>"
+"机器人卧倒动作。"
+
+#: ../../source/3.3SDK_Client_API.md:327 ../../source/3.3SDK_Client_API.md:345
+#: ../../source/3.3SDK_Client_API.md:363 ../../source/3.3SDK_Client_API.md:381
+#: ../../source/3.3SDK_Client_API.md:399 ../../source/3.3SDK_Client_API.md:417
+#: ../../source/3.3SDK_Client_API.md:435 ../../source/3.3SDK_Client_API.md:535
+msgid "**Parameters:**   Same as `StandUp`"
+msgstr ""
+"**参数：** <br>" 
+"同 `StandUp`"
+
+#: ../../source/3.3SDK_Client_API.md:335
+msgid "Crawl - Crawl"
+msgstr "Crawl - 匍匐"
+
+#: ../../source/3.3SDK_Client_API.md:342
+msgid "**Description:**   Robot crawl action."
+msgstr ""
+"**说明：**  <br>"
+"机器人匍匐动作。"
+
+#: ../../source/3.3SDK_Client_API.md:353
+msgid "Climb - Climb"
+msgstr "Climb - 爬高台"
+
+#: ../../source/3.3SDK_Client_API.md:360
+msgid ""
+"**Description:**   Climb high platform action, only effective in "
+"**general mode**."
+msgstr ""
+"**说明：**  <br>"
+"爬高台动作，仅在**通用模式**下使用。"
+
+#: ../../source/3.3SDK_Client_API.md:371
+msgid "Slim - Slim"
+msgstr "Slim - 瘦身"
+
+#: ../../source/3.3SDK_Client_API.md:378
+msgid ""
+"**Description:**   Slim (body compress) action, only effective in "
+"**general mode**."
+msgstr ""
+"**说明：**  <br>"
+"瘦身动作，仅在**通用模式**下使用。"
+
+#: ../../source/3.3SDK_Client_API.md:389
+msgid "Gait - Gait"
+msgstr "Gait - 步态"
+
+#: ../../source/3.3SDK_Client_API.md:396
+msgid "**Description:**   Gait posture, only effective in **general mode**."
+msgstr ""
+"**说明：**  <br>"
+"步态姿态，仅在**通用模式**下使用。"
+
+#: ../../source/3.3SDK_Client_API.md:407
+msgid "DSB - Over the mouse barrier posture"
+msgstr "DSB - 过挡鼠板姿态"
+
+#: ../../source/3.3SDK_Client_API.md:414
+msgid ""
+"**Description:**   Over the mouse barrier posture, only effective in "
+"**general mode**."
+msgstr ""
+"**说明：**  <br>"
+"过挡鼠板姿态，仅在**通用模式**下使用。"
+
+#: ../../source/3.3SDK_Client_API.md:425
+msgid "ReverseHeadTail - Reverse Head/Tail"
+msgstr "ReverseHeadTail - 调转头尾"
+
+#: ../../source/3.3SDK_Client_API.md:432
+msgid "**Description:**   Reverse the robot's head and tail direction."
+msgstr ""
+"**说明：**  <br>"
+"调转机器人头尾方向。"
+
+#: ../../source/3.3SDK_Client_API.md:443
+msgid "SetMode - Set Mode"
+msgstr "SetMode - 设置模式"
+
+#: ../../source/3.3SDK_Client_API.md:450
+msgid "**Description:**   Set robot operating mode, default is general mode."
+msgstr ""
+"**说明：**  <br>"
+"设置机器人运行模式，默认为通用模式。"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`mode`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`1`: general mode; `2`: in-place mode; `3`: stair-climbing mode"
+msgstr "`1`: 通用模式；`2`: 原地模式；`3`: 登阶模式"
+
+#: ../../source/3.3SDK_Client_API.md:465
+msgid "SetSpeed - Set Speed Level"
+msgstr "SetSpeed - 设置速度等级"
+
+#: ../../source/3.3SDK_Client_API.md:472
+msgid ""
+"**Description:**   Set speed level, mainly affects the speed of the "
+"`Move` command in general mode, default is low speed."
+msgstr ""
+"**说明：**  <br>"
+"设置速度等级，主要影响通用模式下 `Move` 命令的速度，默认为低速。"
+
+#: ../../source/3.3SDK_Client_API.md:475
+msgid "Low speed effect on Move interface:"
+msgstr "低速对Move接口的影响："
+
+#: ../../source/3.3SDK_Client_API.md:486
+msgid "Medium speed effect on Move interface:"
+msgstr "中速对Move接口的影响："
+
+#: ../../source/3.3SDK_Client_API.md:499
+msgid "High speed effect on Move interface:"
+msgstr "高速对Move接口的影响："
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`speed_level`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`1`: low speed; `2`: medium speed; `3`: high speed (range [1, 3])"
+msgstr "`1`: 低速；`2`: 中速；`3`: 高速（范围 [1, 3]）"
+
+#: ../../source/3.3SDK_Client_API.md:525
+msgid "Locked - Lock"
+msgstr "Locked - 锁定"
+
+#: ../../source/3.3SDK_Client_API.md:532
+msgid ""
+"**Description:**   Lock the robot, keeping all joints at their current "
+"positions without movement."
+msgstr ""
+"**说明：**  <br>"
+"锁定机器人，各个关节保持当前位置不动。"
+
+#: ../../source/3.3SDK_Client_API.md:541
+msgid ""
+"**Note:**   When issuing commands to transition to other motion states "
+"(stand up, crawl, lie down), the lock is automatically released and "
+"transitions to the corresponding action state."
+msgstr ""
+"**注意：**  <br>"
+"当下发切换到其他运动状态（站立、匍匐、卧倒）的命令时，会自动解锁并切换到相应动作状态。"
+
+#: ../../source/3.3SDK_Client_API.md:546
+msgid "Light Control Interfaces"
+msgstr "灯光控制接口"
+
+#: ../../source/3.3SDK_Client_API.md:548
+msgid "FrontLight - Front Fill Light"
+msgstr "FrontLight - 前补光灯"
+
+#: ../../source/3.3SDK_Client_API.md:555
+msgid ""
+"**Description:**   Set front fill light; automatic mode is disabled after"
+" setting."
+msgstr ""
+"**说明：**  <br>"
+"设置前补光灯，设置后自动模式关闭。"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`true`: on; `false`: off"
+msgstr "`true`: 开启；`false`: 关闭"
+
+#: ../../source/3.3SDK_Client_API.md:570
+msgid "BackLight - Back Fill Light"
+msgstr "BackLight - 后补光灯"
+
+#: ../../source/3.3SDK_Client_API.md:577
+msgid ""
+"**Description:**   Set back fill light; automatic mode is disabled after "
+"setting."
+msgstr ""
+"**说明：**  <br>"
+"设置后补光灯，设置后自动模式关闭。"
+
+#: ../../source/3.3SDK_Client_API.md:580 ../../source/3.3SDK_Client_API.md:598
+msgid "**Parameters:**   Same as `FrontLight`"
+msgstr ""
+"**参数：**  <br>"
+"同 `FrontLight`"
+
+#: ../../source/3.3SDK_Client_API.md:588
+msgid "AutoModeLight - Auto Fill Light Mode"
+msgstr "AutoModeLight - 自动补光灯模式"
+
+#: ../../source/3.3SDK_Client_API.md:595
+msgid "**Description:**   Set automatic fill light mode."
+msgstr ""
+"**说明：**  <br>"
+"设置自动补光灯模式。"
+
+#: ../../source/3.3SDK_Client_API.md:606
+msgid "Motion and Posture Control"
+msgstr "运动与姿态控制"
+
+#: ../../source/3.3SDK_Client_API.md:608
+msgid "Move - Move"
+msgstr "Move - 移动"
+
+#: ../../source/3.3SDK_Client_API.md:616
+msgid ""
+"**Description:**   Used in **general mode** to move the robot, unit: "
+"percentage, speed limited by **SpeedLevel**."
+msgstr ""
+"**说明：**  <br>"
+"用在**通用模式**下进行移动，单位：百分比，根据**SpeedLevel**来限速。"
+
+#: ../../source/3.3SDK_Client_API.md:619
+msgid "The latest Move command will last for 1 second."
+msgstr "最新的Move指令会维持1s。"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`left_right`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`float`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid ""
+"Left/right lateral velocity, range [-1.0, 1.0]; positive for left, "
+"negative for right"
+msgstr "左右平移速度，范围 [-1.0, 1.0]；正数左平移，负数右平移"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`forward_back`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid ""
+"Forward/backward velocity, range [-1.0, 1.0]; positive for forward, "
+"negative for backward"
+msgstr "前后移动速度，范围 [-1.0, 1.0]；正数前进，负数后退"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`yaw`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid ""
+"Rotation velocity, range [-1.0, 1.0]; positive for left rotation, "
+"negative for right rotation"
+msgstr "旋转速度，范围 [-1.0, 1.0]；正数左旋转，负数右旋转"
+
+#: ../../source/3.3SDK_Client_API.md:636 ../../source/3.3SDK_Client_API.md:698
+#: ../../source/3.3SDK_Client_API.md:729
+msgid "`std::errc::invalid_argument`: Invalid argument"
+msgstr "`std::errc::invalid_argument`: 参数无效"
+
+#: ../../source/3.3SDK_Client_API.md:638 ../../source/3.3SDK_Client_API.md:668
+#: ../../source/3.3SDK_Client_API.md:700 ../../source/3.3SDK_Client_API.md:731
+#: ../../source/3.3SDK_Client_API.md:763 ../../source/3.3SDK_Client_API.md:793
+#: ../../source/3.3SDK_Client_API.md:823 ../../source/3.3SDK_Client_API.md:854
+#: ../../source/3.3SDK_Client_API.md:883 ../../source/3.3SDK_Client_API.md:912
+#: ../../source/3.3SDK_Client_API.md:943
+msgid ""
+"**Note:**   Asynchronous mode: Function return only indicates command "
+"sent; send result notified through callback   Synchronous mode: Function "
+"return indicates command send result"
+msgstr ""
+"**注意：**  <br>"
+"异步模式：函数返回仅表示命令已发送，发送结果通过回调函数通知  <br>"
+"同步模式：函数返回即表示命令发送结果"
+
+#: ../../source/3.3SDK_Client_API.md:644
+msgid "Turn - Turn"
+msgstr "Turn - 翻滚"
+
+#: ../../source/3.3SDK_Client_API.md:651
+msgid ""
+"**Description:**   In-place left/right roll action (only effective in "
+"**in-place mode**)."
+msgstr ""
+"**说明：**  <br>"
+"原地左右翻滚动作（仅**原地模式**有效）。"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`direction`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "0: recover; 1: left roll; 2: right roll"
+msgstr "0: 恢复；1: 左翻滚；2: 右翻滚"
+
+#: ../../source/3.3SDK_Client_API.md:674
+msgid "ControlHead - Control Head"
+msgstr "ControlHead - 控制头部"
+
+#: ../../source/3.3SDK_Client_API.md:681
+msgid ""
+"**Description:**   Control robot \"left/right head\" and \"head up/down\""
+" actions (only effective in **in-place mode**)."
+msgstr ""
+"**说明：**  <br>"
+"控制机器人"左右探头"与"抬头/低头"动作（仅**原地模式**有效）。"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "Range [-1.0, 1.0]; positive: left head, negative: right head; unit rad/s"
+msgstr "范围 [-1.0, 1.0]；正数：左探头，负数：右探头；单位 rad/s"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`up_down`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "Range [-1.0, 1.0]; positive: head up, negative: head down; unit rad/s"
+msgstr "范围 [-1.0, 1.0]；正数：抬头，负数：低头；单位 rad/s"
+
+#: ../../source/3.3SDK_Client_API.md:706
+msgid "HighLowStance - High/Low Stance"
+msgstr "HighLowStance - 高低站姿"
+
+#: ../../source/3.3SDK_Client_API.md:713
+msgid ""
+"**Description:**   Set high/low stance (only effective in **in-place "
+"mode**)."
+msgstr ""
+"**说明：**  <br>"
+"设置高低站姿（仅**原地模式**有效）。"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`stance`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "0: recover; 1: high stance; 2: low stance"
+msgstr "0: 恢复；1: 高站姿；2: 低站姿"
+
+#: ../../source/3.3SDK_Client_API.md:737
+msgid "Data Configuration Interfaces"
+msgstr "数据配置接口"
+
+#: ../../source/3.3SDK_Client_API.md:739
+msgid "SetImuConfig - Configure IMU"
+msgstr "SetImuConfig - 配置IMU"
+
+#: ../../source/3.3SDK_Client_API.md:746
+msgid "**Description:**   Configure IMU reporting frequency, disabled by default."
+msgstr ""
+"**说明：**  <br>"
+"配置 IMU 上报频率，默认关闭。"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`freq`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "Range [0, 100]; 0 disables reporting"
+msgstr "范围 [0, 100]；0 表示关闭上报"
+
+#: ../../source/3.3SDK_Client_API.md:769
+msgid "SetLuxConfig - Configure Light Intensity"
+msgstr "SetLuxConfig - 配置光强值"
+
+#: ../../source/3.3SDK_Client_API.md:776
+msgid ""
+"**Description:**   Configure light intensity value reporting switch, "
+"disabled by default. After configuration, light intensity value is "
+"reported at 1Hz."
+msgstr ""
+"**说明：**  <br>"
+"配置光强值上报开关，默认关闭。配置后光强值以1Hz上报。"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`true`: enable; `false`: disable"
+msgstr "`true`: 开启；`false`: 关闭"
+
+#: ../../source/3.3SDK_Client_API.md:799
+msgid "SetMcConfig - Configure Motion Data"
+msgstr "SetMcConfig - 配置运动数据"
+
+#: ../../source/3.3SDK_Client_API.md:806
+msgid ""
+"**Description:**   Configure motion data reporting switch, disabled by "
+"default. After configuration, motion data is reported at 50Hz."
+msgstr ""
+"**说明：**  <br>"
+"配置运动数据上报开关，默认关闭。配置后运动数据以50Hz上报。"
+
+#: ../../source/3.3SDK_Client_API.md:829
+msgid "SetSpeedReportConfig - Configure Speed Data"
+msgstr "SetSpeedReportConfig - 配置速度数据"
+
+#: ../../source/3.3SDK_Client_API.md:836
+msgid ""
+"**Description:**   Configure speed data reporting switch, disabled by "
+"default. After configuration, speed data is reported."
+msgstr ""
+"**说明:**  <br>"
+"配置速度数据上报开关，默认关闭。配置完成后，将上报速度数据。"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`frequency`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`uint32_t`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "report frequency. [1hz, 50hz]"
+msgstr "上报频率. [1hz, 50hz]"
+
+#: ../../source/3.3SDK_Client_API.md:860
+msgid "TakeControl - Take Control"
+msgstr "TakeControl - 获取控制权"
+
+#: ../../source/3.3SDK_Client_API.md:867
+msgid ""
+"**Description:**   Take control of the robot. If the APP is currently in "
+"control, you cannot forcibly take over.See "
+"[sdk_control_ownership](3.5SDK_Control_Ownership.md)"
+msgstr ""
+"**说明：**  <br>"
+"获取机器人的控制权。如果当前 APP 在控制，则无法抢占接管。详见 [sdk控制权归属](3.5SDK_Control_Ownership.md)"
+
+#: ../../source/3.3SDK_Client_API.md:889
+msgid "ReleaseControl - Release Control"
+msgstr "ReleaseControl - 释放控制权"
+
+#: ../../source/3.3SDK_Client_API.md:896
+msgid "**Description:**   Release control of the robot."
+msgstr ""
+"**说明：**  <br>"
+"释放机器人的控制权。"
+
+#: ../../source/3.3SDK_Client_API.md:918
+msgid "UpdateCameraBitrate - Update Camera Bitrate"
+msgstr "UpdateCameraBitrate - 更新摄像头码率"
+
+#: ../../source/3.3SDK_Client_API.md:926
+msgid "**Description:**   Update camera bitrate."
+msgstr ""
+"**说明：**  <br>"
+"更新摄像头码率。"
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`cmd`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "`CameraBitrateCmd`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md
+msgid "Configure specific camera bitrate"
+msgstr "配置具体摄像头的码率"
+
+#: ../../source/3.3SDK_Client_API.md:949
+msgid "Version Information"
+msgstr "版本信息"
+
+#: ../../source/3.3SDK_Client_API.md:951
+msgid "`const std::string& Version() const`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md:953
+msgid "Get SDK version string."
+msgstr "获取 SDK 版本号字符串。"
+
+#: ../../source/3.3SDK_Client_API.md:957
+msgid "`const std::string& ProtocolVersion() const`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md:959
+msgid "Get protocol version string."
+msgstr "获取协议版本号字符串。"
+
+#: ../../source/3.3SDK_Client_API.md:963
+msgid "`const std::string& SystemVersion() const`"
+msgstr ""
+
+#: ../../source/3.3SDK_Client_API.md:965
+msgid "Get system version string."
+msgstr "获取系统版本号字符串。"
+
+#: ../../source/3.3SDK_Client_API.md:969
+msgid "Code Examples"
+msgstr "示例代码"
+

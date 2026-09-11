@@ -1,0 +1,67 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Agibot
+# This file is distributed under the same license as the D1_Max package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: D1_Max \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-03 09:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/3.5SDK_Control_Ownership.md:1
+msgid "3.5 SDK Control Ownership"
+msgstr "3.5 SDK控制权归属"
+
+#: ../../source/3.5SDK_Control_Ownership.md:4
+msgid "Control Authority Between SDK and App"
+msgstr "SDK与APP控制权问题详解"
+
+#: ../../source/3.5SDK_Control_Ownership.md:6
+msgid "**Principles**"
+msgstr "**原则**"
+
+#: ../../source/3.5SDK_Control_Ownership.md:8
+msgid "**1.The App is allowed to preempt the SDK's control authority.**"
+msgstr "**1.APP端被允许抢SDK端的控制权；**"
+
+#: ../../source/3.5SDK_Control_Ownership.md:10
+msgid "**2.The SDK is not allowed to preempt the App's control authority.**"
+msgstr "**2.SDK端不允许抢APP端的控制权；**"
+
+#: ../../source/3.5SDK_Control_Ownership.md:12
+msgid ""
+"Scenario 1: The App Connects First, Followed by the SDK. Control "
+"authority is held by the App, and the SDK cannot control the robot."
+msgstr "情况1：APP先连接，SDK后连接。控制权在APP端，SDK无法控制。"
+
+#: ../../source/3.5SDK_Control_Ownership.md:14
+msgid "![image](images/APP-Control1.png)"
+msgstr "![image](images/APP-Control1.png)"
+
+#: ../../source/3.5SDK_Control_Ownership.md:14
+#: ../../source/3.5SDK_Control_Ownership.md:18
+msgid "image"
+msgstr "image"
+
+#: ../../source/3.5SDK_Control_Ownership.md:16
+msgid ""
+"Scenario 2: The SDK Connects First, Followed by the App. Control "
+"authority is held by the SDK. The App cannot control the robot, but it "
+"can forcibly preempt the SDK's control authority."
+msgstr "情况2：SDK先连接，APP后连接。控制权在SDK端，APP无法控制，但是APP可以强行抢夺SDK控制权。"
+
+#: ../../source/3.5SDK_Control_Ownership.md:18
+msgid "![image](images/APP-Control2.png)"
+msgstr "![image](images/APP-Control2.png)"
+

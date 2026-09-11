@@ -1,0 +1,60 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Agibot
+# This file is distributed under the same license as the D1_Max package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: D1_Max \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-03 09:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/5.4Log_Viewing.md:1
+msgid "5.4 Log Viewing"
+msgstr "5.4 日志查看"
+
+#: ../../source/5.4Log_Viewing.md:4
+msgid ""
+"**Viewing Remote Controller Error Messages**<br> Continuously click the "
+"bottom-left corner of the homepage"
+msgstr "**遥控器报错信息查看**<br>连续点击主页左下角位置"
+
+#: ../../source/5.4Log_Viewing.md:7
+msgid "![图片](images/Controler_Error_Log1.png)"
+msgstr "![图片](images/Controler_Error_Log1.png)"
+
+#: ../../source/5.4Log_Viewing.md:7 ../../source/5.4Log_Viewing.md:11
+#: ../../source/5.4Log_Viewing.md:23
+msgid "图片"
+msgstr "图片"
+
+#: ../../source/5.4Log_Viewing.md:9
+msgid "Open the Settings Center to view the device exception logs"
+msgstr "打开设置中心，可查看设备异常日志"
+
+#: ../../source/5.4Log_Viewing.md:11
+msgid "![图片](images/Controler_Error_Log2.png)"
+msgstr "![图片](images/Controler_Error_Log2.png)"
+
+#: ../../source/5.4Log_Viewing.md:13
+msgid ""
+"**Viewing Device Logs**<br> Log path for the most recent device startup "
+"(RK & NX):`/home/robot/robot_launch_log`<br> Log path for the most recent"
+" 6 device startups (RK & NX):`/userdata/log/`<br> Log path for autonomous"
+" docking & recharging (NX):`/tmp/log/alg_data`"
+msgstr "**设备log查看**<br>最近1次设备启动后的log路径(RK&NX)：`/home/robot/robot_launch_log`<br>最近6次设备启动后的log路径(RK&NX)：`/userdata/log/`<br>自主回充日志路径(NX)：`/tmp/log/alg_data`"
+
+#: ../../source/5.4Log_Viewing.md:23
+msgid "![图片](images/Device_Error_Log.png)"
+msgstr "![图片](images/Device_Error_Log.png)"
+

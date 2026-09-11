@@ -1,0 +1,120 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Agibot
+# This file is distributed under the same license as the D1_Max package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: D1_Max \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-03 09:51+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/2.3Safety_Protection_Mechanisms.md:1
+msgid "2.3 Safety Protection Mechanisms"
+msgstr "2.3 安全保护机制"
+
+#: ../../source/2.3Safety_Protection_Mechanisms.md:4
+msgid "2.3.1 Hard Emergency Stop"
+msgstr "2.3.1 硬急停"
+
+#: ../../source/2.3Safety_Protection_Mechanisms.md:7
+msgid "Trigger Method: Press the emergency stop button on the robot body"
+msgstr "触发方式：按下机身急停按钮"
+
+#: ../../source/2.3Safety_Protection_Mechanisms.md:8
+msgid ""
+"Effect: The robot is slowly lowered to the ground, and the red indicator "
+"light illuminates"
+msgstr "效果：机器狗缓慢着地，红灯亮起"
+
+#: ../../source/2.3Safety_Protection_Mechanisms.md:9
+msgid "Indicator Light Status"
+msgstr "指示灯状态"
+
+#: ../../source/2.3Safety_Protection_Mechanisms.md:10
+msgid "When pressed: Red light on"
+msgstr "按下时：红灯亮"
+
+#: ../../source/2.3Safety_Protection_Mechanisms.md:11
+msgid "After release: Green light on"
+msgstr "松开后：绿灯亮"
+
+#: ../../source/2.3Safety_Protection_Mechanisms.md:12
+msgid ""
+"Recovery: Once the system status is reset, the system automatically "
+"recovers (provided no other faults exist)"
+msgstr "恢复：旋开急停按钮后，系统自动恢复(若无其他故障)"
+
+#: ../../source/2.3Safety_Protection_Mechanisms.md:14
+msgid "2.3.2 Soft Emergency Stop"
+msgstr "2.3.2 软急停"
+
+#: ../../source/2.3Safety_Protection_Mechanisms.md:17
+msgid "Trigger Method: Via the remote controller or via the SDK interface"
+msgstr "触发方式：通过遥控器触发或者通过sdk接口触发"
+
+#: ../../source/2.3Safety_Protection_Mechanisms.md:18
+msgid ""
+"Effect: The robot stops immediately and no longer responds to any control"
+" commands"
+msgstr "效果：机器人立即停车，不再响应任何控制指令"
+
+#: ../../source/2.3Safety_Protection_Mechanisms.md:19
+msgid ""
+"Recovery: Normal operation can resume after releasing the soft emergency "
+"stop"
+msgstr "恢复：接触软急停后可恢复正常操作"
+
+#: ../../source/2.3Safety_Protection_Mechanisms.md:21
+msgid ""
+"**Starting from SDK version V0.0.6, the system allows users to switch "
+"between remote controller mode and SDK mode. Before triggering the soft "
+"emergency stop via the remote controller during SDK control, you must "
+"open the App and enable control authority. Once acquired, you can trigger"
+" a soft emergency stop at any time using the red emergency stop button at"
+" the upper right of the remote controller. After the soft emergency stop "
+"is triggered, the robot displays a red light, maintains its current "
+"posture, and does not respond to any control commands. Press the "
+"emergency stop button on the remote controller again to resume "
+"operation.**"
+msgstr "**从V0.0.6版本sdk起，支持遥控器和sdk控制权切换功能，若要实现在sdk控制阶段通过遥控器触发设备软急停，必须得在sdk获取控制权后，点开app，然后便可以随时使用遥控器右上方红色急停按钮触发软急停，触发软急停后，机器狗显示红灯，保持当前姿态，不再响应任何控制指令**"
+
+#: ../../source/2.3Safety_Protection_Mechanisms.md:23
+msgid "2.3.3 Internal Exception Protection (Automatic Trigger)"
+msgstr "2.3.3 内部异常保护(自动触发)"
+
+#: ../../source/2.3Safety_Protection_Mechanisms.md:26
+msgid ""
+"The following conditions will trigger the internal protection mechanism, "
+"causing the robot to automatically stop and lower itself to the ground "
+"slowly:"
+msgstr "以下情况将触发内部保护机制，机器人自动停车并缓慢着地"
+
+#: ../../source/2.3Safety_Protection_Mechanisms.md:27
+msgid ""
+"Remote control signal disconnection (including network congestion); "
+"reconnection via the APP will restore operation"
+msgstr "遥控信号断连(含网络阻塞)，重新连接APP即可恢复"
+
+#: ../../source/2.3Safety_Protection_Mechanisms.md:28
+msgid "Battery present but charge level < 10%"
+msgstr "电池在位但电量<10%"
+
+#: ../../source/2.3Safety_Protection_Mechanisms.md:29
+msgid "Joint fault"
+msgstr "关节故障"
+
+#: ../../source/2.3Safety_Protection_Mechanisms.md:30
+msgid "IMU communication interruption"
+msgstr "IMU(惯性测量单元)通信中断"
+
