@@ -1,24 +1,24 @@
-window.addEventListener('readthedocs-flyout:configure', async () => {
-  await new Promise(r => setTimeout(r, 500));
+// 等待readthedocs-flyout元素挂载，监听它shadow dom内部DOM变动
+function hideRTDFlyoutItems() {
   const flyout = document.querySelector('readthedocs-flyout');
-  if (!flyout) return;
-  const shadow = flyout.shadowRoot;
-  const allDl = shadow.querySelectorAll('dl');
-  for (const dl of allDl) {
-    const dt = dl.querySelector('dt');
-    if (!dt) continue;
-    const text = dt.textContent.trim();
-    // 匹配 On Read the Docs
-    if (text === "On Read the Docs") {
-      dl.style.display = 'none';
-    }
-    // 如果你还想隐藏Versions，把下面这行取消注释
-    // if (text === "Versions") {
-    //   dl.style.display = 'none';
-    // }
-    // 如果你想保留Search，直接删掉下面这一段
-    if (text === "Search") {
-      dl.style.display = 'none';
-    }
+  if (!flyout) {
+    setTimeout(hideRTDFlyoutItems, 300);
+    return;
   }
-});
+  const shadow = flyout.shadowRoot;
+
+  // 监听到DOM变化（点开下拉菜单时触发渲染）
+  const observer = new MutationObserver(() => {
+    const allDl = shadow.querySelectorAll('dl');
+    for (const dl of allDl) {
+      const dt = dl.querySelector('dt');
+      if (!dt) continue;
+      const text = dt.textContent.trim();
+      if (text === "On Read the Docs") {
+        dl.style.display = 'none';
+      }
+    }
+  });
+  observer.observe(shadow, { childList: true, subtree: true });
+}
+hideRTDFlyoutItems();
