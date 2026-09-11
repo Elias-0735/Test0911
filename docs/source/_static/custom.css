@@ -3,8 +3,3 @@
 .rtd-language-selector {
     display: none !important;
 }
-
-/* 隐藏 On Read the Docs 整块区域（旧版非ShadowDOM） */
-.rst-versions .rst-other-versions dl:nth-child(3) {
-    display: none !important;
-}
