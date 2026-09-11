@@ -1,0 +1,1601 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3.3 SDK Client API &mdash; D1_Max V0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=e2b40702"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/js/flyout-hide.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="3.4 SDK Callback" href="3.4SDK_Callback.html" />
+    <link rel="prev" title="3.2 SDK Type" href="3.2SDK_Type.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            D1_Max
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="1.Product_Introduction.html">1.Product Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2.SDK_Development_Guide.html">2.SDK Development Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="3.SDK_Function_Introduction.html">3.SDK Function Introduction</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="3.1SDK_Connection.html">3.1 SDK Connection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.2SDK_Type.html">3.2 SDK Type</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.3 SDK Client API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#namespace">Namespace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#class-definition">Class Definition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#error-code-mechanism">Error Code Mechanism</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sdk-common-error-codes">SDK Common Error Codes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#type-definitions">Type Definitions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#constructor-and-destructor">Constructor and Destructor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#constructor">Constructor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#destructor">Destructor</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#connection-management">Connection Management</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#connect-connect-to-robot">Connect - Connect to Robot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#disconnect-disconnect">Disconnect - Disconnect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#isconnected-check-connection-status">IsConnected - Check Connection Status</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#getconnectionstate-get-connection-state">GetConnectionState - Get Connection State</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#callback-configuration">Callback Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#setcontrolcallback-set-control-callback">SetControlCallback - Set Control Callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#setdatacallback-set-data-callback">SetDataCallback - Set Data Callback</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#basic-control-interfaces">Basic Control Interfaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#softemergencystop-emergency-stop">SoftEmergencyStop - Emergency Stop</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#standup-stand-up">StandUp - Stand Up</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#liedown-lie-down">LieDown - Lie Down</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#crawl-crawl">Crawl - Crawl</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#climb-climb">Climb - Climb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#slim-slim">Slim - Slim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gait-gait">Gait - Gait</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dsb-over-the-mouse-barrier-posture">DSB - Over the mouse barrier posture</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#reverseheadtail-reverse-head-tail">ReverseHeadTail - Reverse Head/Tail</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#setmode-set-mode">SetMode - Set Mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#setspeed-set-speed-level">SetSpeed - Set Speed Level</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#locked-lock">Locked - Lock</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#light-control-interfaces">Light Control Interfaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#frontlight-front-fill-light">FrontLight - Front Fill Light</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#backlight-back-fill-light">BackLight - Back Fill Light</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#automodelight-auto-fill-light-mode">AutoModeLight - Auto Fill Light Mode</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#motion-and-posture-control">Motion and Posture Control</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#move-move">Move - Move</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#turn-turn">Turn - Turn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#controlhead-control-head">ControlHead - Control Head</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#highlowstance-high-low-stance">HighLowStance - High/Low Stance</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#data-configuration-interfaces">Data Configuration Interfaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#setimuconfig-configure-imu">SetImuConfig - Configure IMU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#setluxconfig-configure-light-intensity">SetLuxConfig - Configure Light Intensity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#setmcconfig-configure-motion-data">SetMcConfig - Configure Motion Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#setspeedreportconfig-configure-speed-data">SetSpeedReportConfig - Configure Speed Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#takecontrol-take-control">TakeControl - Take Control</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#releasecontrol-release-control">ReleaseControl - Release Control</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#updatecamerabitrate-update-camera-bitrate">UpdateCameraBitrate - Update Camera Bitrate</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#version-information">Version Information</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#const-std-string-version-const"><code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">std::string&amp;</span> <span class="pre">Version()</span> <span class="pre">const</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#const-std-string-protocolversion-const"><code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">std::string&amp;</span> <span class="pre">ProtocolVersion()</span> <span class="pre">const</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#const-std-string-systemversion-const"><code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">std::string&amp;</span> <span class="pre">SystemVersion()</span> <span class="pre">const</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#code-examples">Code Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="3.4SDK_Callback.html">3.4 SDK Callback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.5SDK_Control_Ownership.html">3.5 SDK Control Ownership</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.6SDK_State.html">3.6 SDK State</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="4.Sensor_Data_Retrieval.html">4.Sensor Data Retrieval</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5.Debugging_Instructions.html">5.Debugging Instructions</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">D1_Max</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="3.SDK_Function_Introduction.html">3.SDK Function Introduction</a></li>
+      <li class="breadcrumb-item active">3.3 SDK Client API</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="sdk-client-api">
+<h1>3.3 SDK Client API<a class="headerlink" href="#sdk-client-api" title="Link to this heading"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">SDKClient</span></code> is the core communication class of the Robot SDK, providing connection, disconnection, and command sending interfaces.<br />
+Developers can use this class to implement robot motion control, mode switching, emergency stop, light control, data reporting configuration, and other functions.</p>
+<p><strong>Working Modes:</strong></p>
+<ul class="simple">
+<li><p><strong>Synchronous Mode (Blocking)</strong>: <code class="docutils literal notranslate"><span class="pre">timeout_ms</span> <span class="pre">&gt;</span> <span class="pre">0</span></code>, function blocks waiting for operation completion or returns after timeout</p></li>
+<li><p><strong>Asynchronous Mode (Non-blocking)</strong>: <code class="docutils literal notranslate"><span class="pre">timeout_ms</span> <span class="pre">=</span> <span class="pre">0</span></code>, function returns immediately, operation result notified through callback function</p></li>
+</ul>
+<p><strong>Note:</strong> The <code class="docutils literal notranslate"><span class="pre">block</span></code> parameter is only used for <code class="docutils literal notranslate"><span class="pre">Connect</span></code> and <code class="docutils literal notranslate"><span class="pre">Disconnect</span></code> functions. Other control functions use the <code class="docutils literal notranslate"><span class="pre">timeout_ms</span></code> parameter to distinguish between synchronous/asynchronous modes.</p>
+</section>
+<hr class="docutils" />
+<section id="namespace">
+<h2>Namespace<a class="headerlink" href="#namespace" title="Link to this heading"></a></h2>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">namespace</span><span class="w"> </span><span class="nn">robot_sdk</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="class-definition">
+<h2>Class Definition<a class="headerlink" href="#class-definition" title="Link to this heading"></a></h2>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">ROBOT_EXPORT_API</span><span class="w"> </span><span class="n">SDKClient</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="error-code-mechanism">
+<h2>Error Code Mechanism<a class="headerlink" href="#error-code-mechanism" title="Link to this heading"></a></h2>
+<p>All interfaces return <code class="docutils literal notranslate"><span class="pre">std::error_code</span></code> type to indicate operation results:</p>
+<ul class="simple">
+<li><p><strong>Success</strong>: <code class="docutils literal notranslate"><span class="pre">ec.value()</span> <span class="pre">==</span> <span class="pre">0</span></code> or <code class="docutils literal notranslate"><span class="pre">!ec</span></code></p></li>
+<li><p><strong>Failure</strong>: <code class="docutils literal notranslate"><span class="pre">ec.value()</span> <span class="pre">!=</span> <span class="pre">0</span></code> or <code class="docutils literal notranslate"><span class="pre">ec</span></code> is true</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">ec.message()</span></code> to obtain human-readable error description</p></li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="w"> </span><span class="n">ec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sdk</span><span class="p">.</span><span class="n">Connect</span><span class="p">(</span><span class="s">&quot;192.168.234.1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;8082&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ec</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Connection failed: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">ec</span><span class="p">.</span><span class="n">message</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Connection successful&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<section id="sdk-common-error-codes">
+<h3>SDK Common Error Codes<a class="headerlink" href="#sdk-common-error-codes" title="Link to this heading"></a></h3>
+<p>Standard Error Codes</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Error Code Enum</p></th>
+<th class="head text-left"><p>Integer Value</p></th>
+<th class="head text-left"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">std::errc::success</span></code></p></td>
+<td class="text-left"><p>0</p></td>
+<td class="text-left"><p>Operation successful</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">std::errc::invalid_argument</span></code></p></td>
+<td class="text-left"><p>22</p></td>
+<td class="text-left"><p>Invalid argument</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">std::errc::already_connected</span></code></p></td>
+<td class="text-left"><p>106</p></td>
+<td class="text-left"><p>Already connected</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">std::errc::not_connected</span></code></p></td>
+<td class="text-left"><p>107</p></td>
+<td class="text-left"><p>Not connected</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">std::errc::timed_out</span></code></p></td>
+<td class="text-left"><p>110</p></td>
+<td class="text-left"><p>Operation timeout</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">std::errc::connection_refused</span></code></p></td>
+<td class="text-left"><p>111</p></td>
+<td class="text-left"><p>Connection refused</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">std::errc::connection_already_in_progress</span></code></p></td>
+<td class="text-left"><p>114</p></td>
+<td class="text-left"><p>Connection already in progress</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">std::errc::operation_in_progress</span></code></p></td>
+<td class="text-left"><p>115</p></td>
+<td class="text-left"><p>Operation in progress</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">std::errc::operation_canceled</span></code></p></td>
+<td class="text-left"><p>125</p></td>
+<td class="text-left"><p>Operation canceled</p></td>
+</tr>
+</tbody>
+</table>
+<p>SDK Internal Extended Error Codes</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Error Code Enum</p></th>
+<th class="head text-left"><p>Integer Value</p></th>
+<th class="head text-left"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">robot_sdk::errc::ShakeHandFailed</span></code></p></td>
+<td class="text-left"><p>10000</p></td>
+<td class="text-left"><p>Handshake failed, commonly seen when internal handshake message not received during connection</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">robot_sdk::errc::ProtocolMismatch</span></code></p></td>
+<td class="text-left"><p>10001</p></td>
+<td class="text-left"><p>Protocol mismatch, commonly seen when connecting to older robot versions</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">robot_sdk::errc::ControlledDenial</span></code></p></td>
+<td class="text-left"><p>10002</p></td>
+<td class="text-left"><p>Control denied, commonly seen when multiple clients connect to the robot</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<hr class="docutils" />
+<section id="type-definitions">
+<h2>Type Definitions<a class="headerlink" href="#type-definitions" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Type Name</p></th>
+<th class="head text-left"><p>Definition</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">ConnectHandler</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">std::function&lt;void(const</span> <span class="pre">std::error_code&amp;)&gt;</span></code></p></td>
+<td class="text-left"><p>Connection completion callback function</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">DisConnectHandler</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">std::function&lt;void(const</span> <span class="pre">std::error_code&amp;)&gt;</span></code></p></td>
+<td class="text-left"><p>Disconnection completion callback function</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">ErrorHandler</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">std::function&lt;void(const</span> <span class="pre">std::error_code&amp;)&gt;</span></code></p></td>
+<td class="text-left"><p>SDK internal error callback function</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">WriteHandler</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">std::function&lt;void(const</span> <span class="pre">std::error_code&amp;,</span> <span class="pre">std::size_t)&gt;</span></code></p></td>
+<td class="text-left"><p>Command sending completion callback function</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<hr class="docutils" />
+<section id="constructor-and-destructor">
+<h2>Constructor and Destructor<a class="headerlink" href="#constructor-and-destructor" title="Link to this heading"></a></h2>
+<section id="constructor">
+<h3>Constructor<a class="headerlink" href="#constructor" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SDKClient</span><span class="p">(</span><span class="n">ErrorHandler</span><span class="w"> </span><span class="n">error_callback</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="o">&amp;</span><span class="p">)</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">          </span><span class="n">ConnectionConfig</span><span class="w"> </span><span class="n">connection_config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ConnectionConfig</span><span class="p">(),</span>
+<span class="w">          </span><span class="n">TransportProtocol</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TransportProtocol</span><span class="o">::</span><span class="n">Udp</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Construct an SDK client object.</p>
+<p><strong>Parameters:</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Parameter Name</p></th>
+<th class="head text-left"><p>Type</p></th>
+<th class="head text-left"><p>Default Value</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">error_callback</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">ErrorHandler</span></code></p></td>
+<td class="text-left"><p>Empty callback</p></td>
+<td class="text-left"><p>SDK internal communication exception callback function</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">connection_config</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">ConnectionConfig</span></code></p></td>
+<td class="text-left"><p>Default config</p></td>
+<td class="text-left"><p>Connection configuration parameters</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">type</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">TransportProtocol</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">Udp</span></code></p></td>
+<td class="text-left"><p>Transport protocol type</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Related Types:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ConnectionConfig</span></code>: Connection configuration, see <a class="reference internal" href="3.1SDK_Connection.html"><span class="std std-doc">Connection Configuration Documentation</span></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">TransportProtocol</span></code>: Transport protocol type, see <a class="reference internal" href="3.1SDK_Connection.html"><span class="std std-doc">Connection Configuration Documentation</span></a></p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="destructor">
+<h3>Destructor<a class="headerlink" href="#destructor" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">~</span><span class="n">SDKClient</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Destructor, automatically releases resources and disconnects.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="connection-management">
+<h2>Connection Management<a class="headerlink" href="#connection-management" title="Link to this heading"></a></h2>
+<section id="connect-connect-to-robot">
+<h3>Connect - Connect to Robot<a class="headerlink" href="#connect-connect-to-robot" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="w"> </span><span class="nf">Connect</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">ip</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">port</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                        </span><span class="kt">bool</span><span class="w"> </span><span class="n">block</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                        </span><span class="n">ConnectHandler</span><span class="w"> </span><span class="n">handler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="o">&amp;</span><span class="p">)</span><span class="w"> </span><span class="p">{})</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Connect to the robot at the specified IP and port.</p>
+<p>By default: when using WebSocket, you need to connect to port 8081 of the machine; when using UDP, you need to connect to port 8082 of the machine.</p>
+<p>⚠️ <strong>Note:</strong></p>
+<p>If the robot is already connected to the App, the SDK will not be able to control the robot.</p>
+<p><strong>Parameters:</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Parameter Name</p></th>
+<th class="head text-left"><p>Type</p></th>
+<th class="head text-left"><p>Default Value</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">ip</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">std::string</span></code></p></td>
+<td class="text-left"><p>-</p></td>
+<td class="text-left"><p>Target IP address</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">port</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">std::string</span></code></p></td>
+<td class="text-left"><p>-</p></td>
+<td class="text-left"><p>Target port number</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">block</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">false</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">false</span></code>: asynchronous mode; <code class="docutils literal notranslate"><span class="pre">true</span></code>: synchronous mode</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">handler</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">ConnectHandler</span></code></p></td>
+<td class="text-left"><p>Empty callback</p></td>
+<td class="text-left"><p>Callback function after connection completion in asynchronous mode; not used in synchronous mode</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Return Value:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::success</span></code>: Operation successful (asynchronous mode means request sent; synchronous mode means connection completed)</p></li>
+<li><p>Common failure error codes:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::operation_in_progress</span></code>: Operation in progress</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::operation_canceled</span></code>: Operation canceled</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Note:</strong></p>
+<ul class="simple">
+<li><p>Asynchronous mode: Function return only indicates connection request sent; actual connection result notified through callback</p></li>
+<li><p>Synchronous mode: Function return indicates connection result</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="disconnect-disconnect">
+<h3>Disconnect - Disconnect<a class="headerlink" href="#disconnect-disconnect" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="w"> </span><span class="nf">Disconnect</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">block</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                           </span><span class="n">DisConnectHandler</span><span class="w"> </span><span class="n">handler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="o">&amp;</span><span class="p">)</span><span class="w"> </span><span class="p">{})</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Disconnect from the robot.</p>
+<p><strong>Parameters:</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Parameter Name</p></th>
+<th class="head text-left"><p>Type</p></th>
+<th class="head text-left"><p>Default Value</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">block</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">false</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">false</span></code>: asynchronous mode; <code class="docutils literal notranslate"><span class="pre">true</span></code>: synchronous mode</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">handler</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">DisConnectHandler</span></code></p></td>
+<td class="text-left"><p>Empty callback</p></td>
+<td class="text-left"><p>Callback function after disconnection in asynchronous mode; not used in synchronous mode</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Return Value:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::success</span></code>: Operation successful</p></li>
+<li><p>Common failure error codes:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::operation_in_progress</span></code>: Operation in progress</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::operation_canceled</span></code>: Operation canceled</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Note:</strong></p>
+<ul class="simple">
+<li><p>Asynchronous mode: Function return only indicates disconnect request sent; actual disconnect result notified through callback</p></li>
+<li><p>Synchronous mode: Function return indicates disconnect result</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="isconnected-check-connection-status">
+<h3>IsConnected - Check Connection Status<a class="headerlink" href="#isconnected-check-connection-status" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="n">IsConnected</span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Check whether currently connected to the robot.</p>
+<p><strong>Return Value:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">true</span></code>: Connected</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">false</span></code>: Not connected</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="getconnectionstate-get-connection-state">
+<h3>GetConnectionState - Get Connection State<a class="headerlink" href="#getconnectionstate-get-connection-state" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ConnectionState</span><span class="w"> </span><span class="n">GetConnectionState</span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Get current detailed connection state.</p>
+<p><strong>Return Value:</strong><br />
+<code class="docutils literal notranslate"><span class="pre">ConnectionState</span></code> enumeration value, see <a class="reference internal" href="3.1SDK_Connection.html"><span class="std std-doc">Connection State Documentation</span></a></p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="callback-configuration">
+<h2>Callback Configuration<a class="headerlink" href="#callback-configuration" title="Link to this heading"></a></h2>
+<section id="setcontrolcallback-set-control-callback">
+<h3>SetControlCallback - Set Control Callback<a class="headerlink" href="#setcontrolcallback-set-control-callback" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="n">SetControlCallback</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">IControlCallback</span><span class="o">&gt;</span><span class="w"> </span><span class="n">control_callback</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Set control message notification function to receive command acknowledgments.</p>
+<p><strong>Parameters:</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Parameter Name</p></th>
+<th class="head text-left"><p>Type</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">control_callback</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">std::shared_ptr&lt;IControlCallback&gt;</span></code></p></td>
+<td class="text-left"><p>Control callback object</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Related Documentation:</strong><br />
+See <a class="reference internal" href="3.4SDK_Callback.html"><span class="std std-doc">Callback Reference</span></a> for <code class="docutils literal notranslate"><span class="pre">IControlCallback</span></code> class description.</p>
+</section>
+<hr class="docutils" />
+<section id="setdatacallback-set-data-callback">
+<h3>SetDataCallback - Set Data Callback<a class="headerlink" href="#setdatacallback-set-data-callback" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="n">SetDataCallback</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">IDataCallback</span><span class="o">&gt;</span><span class="w"> </span><span class="n">data_callback</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Set data message notification function, triggered when robot data is reported.</p>
+<p><strong>Parameters:</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Parameter Name</p></th>
+<th class="head text-left"><p>Type</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">data_callback</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">std::shared_ptr&lt;IDataCallback&gt;</span></code></p></td>
+<td class="text-left"><p>Data callback object</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Related Documentation:</strong><br />
+See <a class="reference internal" href="3.4SDK_Callback.html"><span class="std std-doc">Callback Reference</span></a> for <code class="docutils literal notranslate"><span class="pre">IDataCallback</span></code> class description.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="basic-control-interfaces">
+<h2>Basic Control Interfaces<a class="headerlink" href="#basic-control-interfaces" title="Link to this heading"></a></h2>
+<section id="softemergencystop-emergency-stop">
+<h3>SoftEmergencyStop - Emergency Stop<a class="headerlink" href="#softemergencystop-emergency-stop" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="w"> </span><span class="nf">SoftEmergencyStop</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">on</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">timeout_ms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">                                   </span><span class="n">WriteHandler</span><span class="w"> </span><span class="n">handler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="p">)</span><span class="w"> </span><span class="p">{})</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Emergency stop control. After emergency stop is enabled, the system will not respond to other motion commands and speed will be set to 0.</p>
+<p><strong>Parameters:</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Parameter Name</p></th>
+<th class="head text-left"><p>Type</p></th>
+<th class="head text-left"><p>Default Value</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">on</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p></td>
+<td class="text-left"><p>-</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">true</span></code>: activate emergency stop; <code class="docutils literal notranslate"><span class="pre">false</span></code>: deactivate emergency stop</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">timeout_ms</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">0</span></code>: asynchronous mode; <code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">0</span></code>: synchronous mode, maximum wait time (milliseconds)</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">handler</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">WriteHandler</span></code></p></td>
+<td class="text-left"><p>Empty callback</p></td>
+<td class="text-left"><p>Command sending result callback in asynchronous mode; not used in synchronous mode</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Return Value:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::success</span></code>: Operation successful</p></li>
+<li><p>Common failure error codes:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::timed_out</span></code>: Operation timeout</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::not_connected</span></code>: Not connected</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::operation_canceled</span></code>: Operation canceled</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Note:</strong></p>
+<ul class="simple">
+<li><p>Asynchronous mode: Function return only indicates command sent; send result notified through callback</p></li>
+<li><p>Synchronous mode: Function return indicates command send result</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="standup-stand-up">
+<h3>StandUp - Stand Up<a class="headerlink" href="#standup-stand-up" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="w"> </span><span class="nf">StandUp</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">timeout_ms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">WriteHandler</span><span class="w"> </span><span class="n">handler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="p">)</span><span class="w"> </span><span class="p">{})</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Robot stand up action.</p>
+<p><strong>Parameters:</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Parameter Name</p></th>
+<th class="head text-left"><p>Type</p></th>
+<th class="head text-left"><p>Default Value</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">timeout_ms</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">0</span></code>: asynchronous mode; <code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">0</span></code>: synchronous mode, maximum wait time (milliseconds)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">handler</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">WriteHandler</span></code></p></td>
+<td class="text-left"><p>Empty callback</p></td>
+<td class="text-left"><p>Command sending result callback in asynchronous mode; not used in synchronous mode</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Return Value:</strong><br />
+Same as <code class="docutils literal notranslate"><span class="pre">SoftEmergencyStop</span></code></p>
+<p><strong>Note:</strong><br />
+After calling stand up, <code class="docutils literal notranslate"><span class="pre">MOTION_STATUS_STAND_UP</span></code> state is reported during the standing process. After standing completes, it automatically transitions to <code class="docutils literal notranslate"><span class="pre">MOTION_STATUS_GENERAL</span></code> or <code class="docutils literal notranslate"><span class="pre">MOTION_STATUS_IN_PLACE</span></code> state based on the current mode.</p>
+</section>
+<hr class="docutils" />
+<section id="liedown-lie-down">
+<h3>LieDown - Lie Down<a class="headerlink" href="#liedown-lie-down" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="w"> </span><span class="nf">LieDown</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">timeout_ms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">WriteHandler</span><span class="w"> </span><span class="n">handler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="p">)</span><span class="w"> </span><span class="p">{})</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Robot lie down action.</p>
+<p><strong>Parameters:</strong><br />
+Same as <code class="docutils literal notranslate"><span class="pre">StandUp</span></code></p>
+<p><strong>Return Value:</strong><br />
+Same as <code class="docutils literal notranslate"><span class="pre">SoftEmergencyStop</span></code></p>
+</section>
+<hr class="docutils" />
+<section id="crawl-crawl">
+<h3>Crawl - Crawl<a class="headerlink" href="#crawl-crawl" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="w"> </span><span class="nf">Crawl</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">timeout_ms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">                      </span><span class="n">WriteHandler</span><span class="w"> </span><span class="n">handler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="p">)</span><span class="w"> </span><span class="p">{})</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Robot crawl action.</p>
+<p><strong>Parameters:</strong><br />
+Same as <code class="docutils literal notranslate"><span class="pre">StandUp</span></code></p>
+<p><strong>Return Value:</strong><br />
+Same as <code class="docutils literal notranslate"><span class="pre">SoftEmergencyStop</span></code></p>
+</section>
+<hr class="docutils" />
+<section id="climb-climb">
+<h3>Climb - Climb<a class="headerlink" href="#climb-climb" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="w"> </span><span class="nf">Climb</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">timeout_ms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">                      </span><span class="n">WriteHandler</span><span class="w"> </span><span class="n">handler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="p">)</span><span class="w"> </span><span class="p">{})</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Climb high platform action, only effective in <strong>general mode</strong>.</p>
+<p><strong>Parameters:</strong><br />
+Same as <code class="docutils literal notranslate"><span class="pre">StandUp</span></code></p>
+<p><strong>Return Value:</strong><br />
+Same as <code class="docutils literal notranslate"><span class="pre">SoftEmergencyStop</span></code></p>
+</section>
+<hr class="docutils" />
+<section id="slim-slim">
+<h3>Slim - Slim<a class="headerlink" href="#slim-slim" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="w"> </span><span class="nf">Slim</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">timeout_ms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">                     </span><span class="n">WriteHandler</span><span class="w"> </span><span class="n">handler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="p">)</span><span class="w"> </span><span class="p">{})</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Slim (body compress) action, only effective in <strong>general mode</strong>.</p>
+<p><strong>Parameters:</strong><br />
+Same as <code class="docutils literal notranslate"><span class="pre">StandUp</span></code></p>
+<p><strong>Return Value:</strong><br />
+Same as <code class="docutils literal notranslate"><span class="pre">SoftEmergencyStop</span></code></p>
+</section>
+<hr class="docutils" />
+<section id="gait-gait">
+<h3>Gait - Gait<a class="headerlink" href="#gait-gait" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="w"> </span><span class="nf">Gait</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">timeout_ms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">                     </span><span class="n">WriteHandler</span><span class="w"> </span><span class="n">handler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="p">)</span><span class="w"> </span><span class="p">{})</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Gait posture, only effective in <strong>general mode</strong>.</p>
+<p><strong>Parameters:</strong><br />
+Same as <code class="docutils literal notranslate"><span class="pre">StandUp</span></code></p>
+<p><strong>Return Value:</strong><br />
+Same as <code class="docutils literal notranslate"><span class="pre">SoftEmergencyStop</span></code></p>
+</section>
+<hr class="docutils" />
+<section id="dsb-over-the-mouse-barrier-posture">
+<h3>DSB - Over the mouse barrier posture<a class="headerlink" href="#dsb-over-the-mouse-barrier-posture" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="w"> </span><span class="nf">DSB</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">timeout_ms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">                     </span><span class="n">WriteHandler</span><span class="w"> </span><span class="n">handler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="p">)</span><span class="w"> </span><span class="p">{})</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Over the mouse barrier posture, only effective in <strong>general mode</strong>.</p>
+<p><strong>Parameters:</strong><br />
+Same as <code class="docutils literal notranslate"><span class="pre">StandUp</span></code></p>
+<p><strong>Return Value:</strong><br />
+Same as <code class="docutils literal notranslate"><span class="pre">SoftEmergencyStop</span></code></p>
+</section>
+<hr class="docutils" />
+<section id="reverseheadtail-reverse-head-tail">
+<h3>ReverseHeadTail - Reverse Head/Tail<a class="headerlink" href="#reverseheadtail-reverse-head-tail" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="w"> </span><span class="nf">ReverseHeadTail</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">timeout_ms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">                                 </span><span class="n">WriteHandler</span><span class="w"> </span><span class="n">handler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="p">)</span><span class="w"> </span><span class="p">{})</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Reverse the robot’s head and tail direction.</p>
+<p><strong>Parameters:</strong><br />
+Same as <code class="docutils literal notranslate"><span class="pre">StandUp</span></code></p>
+<p><strong>Return Value:</strong><br />
+Same as <code class="docutils literal notranslate"><span class="pre">SoftEmergencyStop</span></code></p>
+</section>
+<hr class="docutils" />
+<section id="setmode-set-mode">
+<h3>SetMode - Set Mode<a class="headerlink" href="#setmode-set-mode" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="w"> </span><span class="nf">SetMode</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">mode</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">timeout_ms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">WriteHandler</span><span class="w"> </span><span class="n">handler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="p">)</span><span class="w"> </span><span class="p">{})</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Set robot operating mode, default is general mode.</p>
+<p><strong>Parameters:</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Parameter Name</p></th>
+<th class="head text-left"><p>Type</p></th>
+<th class="head text-left"><p>Default Value</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">mode</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
+<td class="text-left"><p>-</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">1</span></code>: general mode; <code class="docutils literal notranslate"><span class="pre">2</span></code>: in-place mode; <code class="docutils literal notranslate"><span class="pre">3</span></code>: stair-climbing mode</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">timeout_ms</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">0</span></code>: asynchronous mode; <code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">0</span></code>: synchronous mode, maximum wait time (milliseconds)</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">handler</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">WriteHandler</span></code></p></td>
+<td class="text-left"><p>Empty callback</p></td>
+<td class="text-left"><p>Command sending result callback in asynchronous mode; not used in synchronous mode</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Return Value:</strong><br />
+Same as <code class="docutils literal notranslate"><span class="pre">SoftEmergencyStop</span></code></p>
+</section>
+<hr class="docutils" />
+<section id="setspeed-set-speed-level">
+<h3>SetSpeed - Set Speed Level<a class="headerlink" href="#setspeed-set-speed-level" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="w"> </span><span class="nf">SetSpeed</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">speed_level</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">timeout_ms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">                         </span><span class="n">WriteHandler</span><span class="w"> </span><span class="n">handler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="p">)</span><span class="w"> </span><span class="p">{})</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Set speed level, mainly affects the speed of the <code class="docutils literal notranslate"><span class="pre">Move</span></code> command in general mode, default is low speed.</p>
+<p>Low speed effect on Move interface:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>forward_back:
+    [-1.0, 1.0] maps to [-1.0m/s, +1.0m/s]
+
+left_right:
+    [-1.0, 1.0] maps to [-0.5m/s, +0.5m/s]
+
+yaw:
+    [-1.0, 1.0] maps to [-1.5rad/s, +1.5rad/s]
+</pre></div>
+</div>
+<p>Medium speed effect on Move interface:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>forward_back:
+    [-1.0, 1.0] maps to [-2.0m/s, +2.0m/s]
+
+left_right:
+    When -1.0m/s &lt; forward_back &lt; 1.0m/s, [-1.0, 1.0] maps to [-0.5m/s, +0.5m/s]
+    When forward_back &gt; 1.0m/s or forward_back &lt; -1.0m/s, limited to 0m/s
+
+yaw:
+    When -1.0m/s &lt; forward_back &lt; 1.0m/s, [-1.0, 1.0] maps to [-1.5rad/s, +1.5rad/s]
+    When forward_back &gt; 1.0m/s or forward_back &lt; -1.0m/s, [-1.0, 1.0] maps to [-1.0rad/s, +1.0rad/s]
+</pre></div>
+</div>
+<p>High speed effect on Move interface:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>forward_back:
+    [-1.0, 1.0] maps to [-3.0m/s, +3.0m/s]
+
+left_right:
+    When -1.0m/s &lt; forward_back &lt; 1.0m/s, [-1.0, 1.0] maps to [-0.5m/s, +0.5m/s]
+    When forward_back &gt; 1.0m/s or forward_back &lt; -1.0m/s, limited to 0m/s
+
+yaw:
+    When -1.0m/s &lt; forward_back &lt; 1.0m/s, [-1.0, 1.0] maps to [-1.5rad/s, +1.5rad/s]
+    When forward_back &gt; 1.0m/s or forward_back &lt; -1.0m/s, [-1.0, 1.0] maps to [-1.0rad/s, +1.0rad/s]
+    When forward_back &gt; 2.0m/s or forward_back &lt; -2.0m/s, [-1.0, 1.0] maps to [-0.5rad/s, +0.5rad/s]
+</pre></div>
+</div>
+<p><strong>Parameters:</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Parameter Name</p></th>
+<th class="head text-left"><p>Type</p></th>
+<th class="head text-left"><p>Default Value</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">speed_level</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
+<td class="text-left"><p>-</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">1</span></code>: low speed; <code class="docutils literal notranslate"><span class="pre">2</span></code>: medium speed; <code class="docutils literal notranslate"><span class="pre">3</span></code>: high speed (range [1, 3])</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">timeout_ms</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">0</span></code>: asynchronous mode; <code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">0</span></code>: synchronous mode, maximum wait time (milliseconds)</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">handler</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">WriteHandler</span></code></p></td>
+<td class="text-left"><p>Empty callback</p></td>
+<td class="text-left"><p>Command sending result callback in asynchronous mode; not used in synchronous mode</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Return Value:</strong><br />
+Same as <code class="docutils literal notranslate"><span class="pre">SoftEmergencyStop</span></code></p>
+</section>
+<hr class="docutils" />
+<section id="locked-lock">
+<h3>Locked - Lock<a class="headerlink" href="#locked-lock" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="w"> </span><span class="nf">Locked</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">timeout_ms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">                       </span><span class="n">WriteHandler</span><span class="w"> </span><span class="n">handler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="p">)</span><span class="w"> </span><span class="p">{})</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Lock the robot, keeping all joints at their current positions without movement.</p>
+<p><strong>Parameters:</strong><br />
+Same as <code class="docutils literal notranslate"><span class="pre">StandUp</span></code></p>
+<p><strong>Return Value:</strong><br />
+Same as <code class="docutils literal notranslate"><span class="pre">SoftEmergencyStop</span></code></p>
+<p><strong>Note:</strong><br />
+When issuing commands to transition to other motion states (stand up, crawl, lie down), the lock is automatically released and transitions to the corresponding action state.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="light-control-interfaces">
+<h2>Light Control Interfaces<a class="headerlink" href="#light-control-interfaces" title="Link to this heading"></a></h2>
+<section id="frontlight-front-fill-light">
+<h3>FrontLight - Front Fill Light<a class="headerlink" href="#frontlight-front-fill-light" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="w"> </span><span class="nf">FrontLight</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">on</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">timeout_ms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">                           </span><span class="n">WriteHandler</span><span class="w"> </span><span class="n">handler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="p">)</span><span class="w"> </span><span class="p">{})</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Set front fill light; automatic mode is disabled after setting.</p>
+<p><strong>Parameters:</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Parameter Name</p></th>
+<th class="head text-left"><p>Type</p></th>
+<th class="head text-left"><p>Default Value</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">on</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p></td>
+<td class="text-left"><p>-</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">true</span></code>: on; <code class="docutils literal notranslate"><span class="pre">false</span></code>: off</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">timeout_ms</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">0</span></code>: asynchronous mode; <code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">0</span></code>: synchronous mode, maximum wait time (milliseconds)</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">handler</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">WriteHandler</span></code></p></td>
+<td class="text-left"><p>Empty callback</p></td>
+<td class="text-left"><p>Command sending result callback in asynchronous mode; not used in synchronous mode</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Return Value:</strong><br />
+Same as <code class="docutils literal notranslate"><span class="pre">SoftEmergencyStop</span></code></p>
+</section>
+<hr class="docutils" />
+<section id="backlight-back-fill-light">
+<h3>BackLight - Back Fill Light<a class="headerlink" href="#backlight-back-fill-light" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="w"> </span><span class="nf">BackLight</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">on</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">timeout_ms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">                          </span><span class="n">WriteHandler</span><span class="w"> </span><span class="n">handler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="p">)</span><span class="w"> </span><span class="p">{})</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Set back fill light; automatic mode is disabled after setting.</p>
+<p><strong>Parameters:</strong><br />
+Same as <code class="docutils literal notranslate"><span class="pre">FrontLight</span></code></p>
+<p><strong>Return Value:</strong><br />
+Same as <code class="docutils literal notranslate"><span class="pre">SoftEmergencyStop</span></code></p>
+</section>
+<hr class="docutils" />
+<section id="automodelight-auto-fill-light-mode">
+<h3>AutoModeLight - Auto Fill Light Mode<a class="headerlink" href="#automodelight-auto-fill-light-mode" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="w"> </span><span class="nf">AutoModeLight</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">on</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">timeout_ms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">                              </span><span class="n">WriteHandler</span><span class="w"> </span><span class="n">handler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="p">)</span><span class="w"> </span><span class="p">{})</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Set automatic fill light mode.</p>
+<p><strong>Parameters:</strong><br />
+Same as <code class="docutils literal notranslate"><span class="pre">FrontLight</span></code></p>
+<p><strong>Return Value:</strong><br />
+Same as <code class="docutils literal notranslate"><span class="pre">SoftEmergencyStop</span></code></p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="motion-and-posture-control">
+<h2>Motion and Posture Control<a class="headerlink" href="#motion-and-posture-control" title="Link to this heading"></a></h2>
+<section id="move-move">
+<h3>Move - Move<a class="headerlink" href="#move-move" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="w"> </span><span class="nf">Move</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">left_right</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">forward_back</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">yaw</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                     </span><span class="kt">int</span><span class="w"> </span><span class="n">timeout_ms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">                     </span><span class="n">WriteHandler</span><span class="w"> </span><span class="n">handler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="p">)</span><span class="w"> </span><span class="p">{})</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Used in <strong>general mode</strong> to move the robot, unit: percentage, speed limited by <strong>SpeedLevel</strong>.</p>
+<p>The latest Move command will last for 1 second.</p>
+<p><strong>Parameters:</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Parameter Name</p></th>
+<th class="head text-left"><p>Type</p></th>
+<th class="head text-left"><p>Default Value</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">left_right</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">float</span></code></p></td>
+<td class="text-left"><p>-</p></td>
+<td class="text-left"><p>Left/right lateral velocity, range [-1.0, 1.0]; positive for left, negative for right</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">forward_back</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">float</span></code></p></td>
+<td class="text-left"><p>-</p></td>
+<td class="text-left"><p>Forward/backward velocity, range [-1.0, 1.0]; positive for forward, negative for backward</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">yaw</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">float</span></code></p></td>
+<td class="text-left"><p>-</p></td>
+<td class="text-left"><p>Rotation velocity, range [-1.0, 1.0]; positive for left rotation, negative for right rotation</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">timeout_ms</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">0</span></code>: asynchronous mode; <code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">0</span></code>: synchronous mode, maximum wait time (milliseconds)</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">handler</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">WriteHandler</span></code></p></td>
+<td class="text-left"><p>Empty callback</p></td>
+<td class="text-left"><p>Command sending result callback in asynchronous mode; not used in synchronous mode</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Return Value:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::success</span></code>: Operation successful</p></li>
+<li><p>Common failure error codes:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::timed_out</span></code>: Operation timeout</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::not_connected</span></code>: Not connected</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::operation_canceled</span></code>: Operation canceled</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::invalid_argument</span></code>: Invalid argument</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Note:</strong><br />
+Asynchronous mode: Function return only indicates command sent; send result notified through callback<br />
+Synchronous mode: Function return indicates command send result</p>
+</section>
+<hr class="docutils" />
+<section id="turn-turn">
+<h3>Turn - Turn<a class="headerlink" href="#turn-turn" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="w"> </span><span class="nf">Turn</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">direction</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">timeout_ms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">                     </span><span class="n">WriteHandler</span><span class="w"> </span><span class="n">handler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="p">)</span><span class="w"> </span><span class="p">{})</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+In-place left/right roll action (only effective in <strong>in-place mode</strong>).</p>
+<p><strong>Parameters:</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Parameter Name</p></th>
+<th class="head text-left"><p>Type</p></th>
+<th class="head text-left"><p>Default Value</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">direction</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
+<td class="text-left"><p>-</p></td>
+<td class="text-left"><p>0: recover; 1: left roll; 2: right roll</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">timeout_ms</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">0</span></code>: asynchronous mode; <code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">0</span></code>: synchronous mode, maximum wait time (milliseconds)</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">handler</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">WriteHandler</span></code></p></td>
+<td class="text-left"><p>Empty callback</p></td>
+<td class="text-left"><p>Command sending result callback in asynchronous mode; not used in synchronous mode</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Return Value:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::success</span></code>: Operation successful</p></li>
+<li><p>Common failure error codes:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::timed_out</span></code>: Operation timeout</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::not_connected</span></code>: Not connected</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::operation_canceled</span></code>: Operation canceled</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Note:</strong><br />
+Asynchronous mode: Function return only indicates command sent; send result notified through callback<br />
+Synchronous mode: Function return indicates command send result</p>
+</section>
+<hr class="docutils" />
+<section id="controlhead-control-head">
+<h3>ControlHead - Control Head<a class="headerlink" href="#controlhead-control-head" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="w"> </span><span class="nf">ControlHead</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">left_right</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">up_down</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">timeout_ms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">                            </span><span class="n">WriteHandler</span><span class="w"> </span><span class="n">handler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="p">)</span><span class="w"> </span><span class="p">{})</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Control robot “left/right head” and “head up/down” actions (only effective in <strong>in-place mode</strong>).</p>
+<p><strong>Parameters:</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Parameter Name</p></th>
+<th class="head text-left"><p>Type</p></th>
+<th class="head text-left"><p>Default Value</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">left_right</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">float</span></code></p></td>
+<td class="text-left"><p>-</p></td>
+<td class="text-left"><p>Range [-1.0, 1.0]; positive: left head, negative: right head; unit rad/s</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">up_down</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">float</span></code></p></td>
+<td class="text-left"><p>-</p></td>
+<td class="text-left"><p>Range [-1.0, 1.0]; positive: head up, negative: head down; unit rad/s</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">timeout_ms</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">0</span></code>: asynchronous mode; <code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">0</span></code>: synchronous mode, maximum wait time (milliseconds)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">handler</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">WriteHandler</span></code></p></td>
+<td class="text-left"><p>Empty callback</p></td>
+<td class="text-left"><p>Command sending result callback in asynchronous mode; not used in synchronous mode</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Return Value:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::success</span></code>: Operation successful</p></li>
+<li><p>Common failure error codes:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::timed_out</span></code>: Operation timeout</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::not_connected</span></code>: Not connected</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::operation_canceled</span></code>: Operation canceled</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::invalid_argument</span></code>: Invalid argument</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Note:</strong><br />
+Asynchronous mode: Function return only indicates command sent; send result notified through callback<br />
+Synchronous mode: Function return indicates command send result</p>
+</section>
+<hr class="docutils" />
+<section id="highlowstance-high-low-stance">
+<h3>HighLowStance - High/Low Stance<a class="headerlink" href="#highlowstance-high-low-stance" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="w"> </span><span class="nf">HighLowStance</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">stance</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">timeout_ms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">                              </span><span class="n">WriteHandler</span><span class="w"> </span><span class="n">handler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="p">)</span><span class="w"> </span><span class="p">{})</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Set high/low stance (only effective in <strong>in-place mode</strong>).</p>
+<p><strong>Parameters:</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Parameter Name</p></th>
+<th class="head text-left"><p>Type</p></th>
+<th class="head text-left"><p>Default Value</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">stance</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
+<td class="text-left"><p>-</p></td>
+<td class="text-left"><p>0: recover; 1: high stance; 2: low stance</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">timeout_ms</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">0</span></code>: asynchronous mode; <code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">0</span></code>: synchronous mode, maximum wait time (milliseconds)</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">handler</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">WriteHandler</span></code></p></td>
+<td class="text-left"><p>Empty callback</p></td>
+<td class="text-left"><p>Command sending result callback in asynchronous mode; not used in synchronous mode</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Return Value:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::success</span></code>: Operation successful</p></li>
+<li><p>Common failure error codes:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::timed_out</span></code>: Operation timeout</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::not_connected</span></code>: Not connected</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::operation_canceled</span></code>: Operation canceled</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::invalid_argument</span></code>: Invalid argument</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Note:</strong><br />
+Asynchronous mode: Function return only indicates command sent; send result notified through callback<br />
+Synchronous mode: Function return indicates command send result</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="data-configuration-interfaces">
+<h2>Data Configuration Interfaces<a class="headerlink" href="#data-configuration-interfaces" title="Link to this heading"></a></h2>
+<section id="setimuconfig-configure-imu">
+<h3>SetImuConfig - Configure IMU<a class="headerlink" href="#setimuconfig-configure-imu" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="w"> </span><span class="nf">SetImuConfig</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">freq</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">timeout_ms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">                             </span><span class="n">WriteHandler</span><span class="w"> </span><span class="n">handler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="p">)</span><span class="w"> </span><span class="p">{})</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Configure IMU reporting frequency, disabled by default.</p>
+<p><strong>Parameters:</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Parameter Name</p></th>
+<th class="head text-left"><p>Type</p></th>
+<th class="head text-left"><p>Default Value</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">freq</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
+<td class="text-left"><p>-</p></td>
+<td class="text-left"><p>Range [0, 100]; 0 disables reporting</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">timeout_ms</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">0</span></code>: asynchronous mode; <code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">0</span></code>: synchronous mode, maximum wait time (milliseconds)</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">handler</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">WriteHandler</span></code></p></td>
+<td class="text-left"><p>Empty callback</p></td>
+<td class="text-left"><p>Command sending result callback in asynchronous mode; not used in synchronous mode</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Return Value:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::success</span></code>: Operation successful</p></li>
+<li><p>Common failure error codes:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::timed_out</span></code>: Operation timeout</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::not_connected</span></code>: Not connected</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::operation_canceled</span></code>: Operation canceled</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Note:</strong><br />
+Asynchronous mode: Function return only indicates command sent; send result notified through callback<br />
+Synchronous mode: Function return indicates command send result</p>
+</section>
+<hr class="docutils" />
+<section id="setluxconfig-configure-light-intensity">
+<h3>SetLuxConfig - Configure Light Intensity<a class="headerlink" href="#setluxconfig-configure-light-intensity" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="w"> </span><span class="nf">SetLuxConfig</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">on</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">timeout_ms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">                             </span><span class="n">WriteHandler</span><span class="w"> </span><span class="n">handler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="p">)</span><span class="w"> </span><span class="p">{})</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Configure light intensity value reporting switch, disabled by default. After configuration, light intensity value is reported at 1Hz.</p>
+<p><strong>Parameters:</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Parameter Name</p></th>
+<th class="head text-left"><p>Type</p></th>
+<th class="head text-left"><p>Default Value</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">on</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p></td>
+<td class="text-left"><p>-</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">true</span></code>: enable; <code class="docutils literal notranslate"><span class="pre">false</span></code>: disable</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">timeout_ms</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">0</span></code>: asynchronous mode; <code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">0</span></code>: synchronous mode, maximum wait time (milliseconds)</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">handler</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">WriteHandler</span></code></p></td>
+<td class="text-left"><p>Empty callback</p></td>
+<td class="text-left"><p>Command sending result callback in asynchronous mode; not used in synchronous mode</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Return Value:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::success</span></code>: Operation successful</p></li>
+<li><p>Common failure error codes:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::timed_out</span></code>: Operation timeout</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::not_connected</span></code>: Not connected</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::operation_canceled</span></code>: Operation canceled</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Note:</strong><br />
+Asynchronous mode: Function return only indicates command sent; send result notified through callback<br />
+Synchronous mode: Function return indicates command send result</p>
+</section>
+<hr class="docutils" />
+<section id="setmcconfig-configure-motion-data">
+<h3>SetMcConfig - Configure Motion Data<a class="headerlink" href="#setmcconfig-configure-motion-data" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="w"> </span><span class="nf">SetMcConfig</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">on</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">timeout_ms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">                            </span><span class="n">WriteHandler</span><span class="w"> </span><span class="n">handler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="p">)</span><span class="w"> </span><span class="p">{})</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Configure motion data reporting switch, disabled by default. After configuration, motion data is reported at 50Hz.</p>
+<p><strong>Parameters:</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Parameter Name</p></th>
+<th class="head text-left"><p>Type</p></th>
+<th class="head text-left"><p>Default Value</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">on</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p></td>
+<td class="text-left"><p>-</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">true</span></code>: enable; <code class="docutils literal notranslate"><span class="pre">false</span></code>: disable</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">timeout_ms</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">0</span></code>: asynchronous mode; <code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">0</span></code>: synchronous mode, maximum wait time (milliseconds)</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">handler</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">WriteHandler</span></code></p></td>
+<td class="text-left"><p>Empty callback</p></td>
+<td class="text-left"><p>Command sending result callback in asynchronous mode; not used in synchronous mode</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Return Value:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::success</span></code>: Operation successful</p></li>
+<li><p>Common failure error codes:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::timed_out</span></code>: Operation timeout</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::not_connected</span></code>: Not connected</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::operation_canceled</span></code>: Operation canceled</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Note:</strong><br />
+Asynchronous mode: Function return only indicates command sent; send result notified through callback<br />
+Synchronous mode: Function return indicates command send result</p>
+</section>
+<hr class="docutils" />
+<section id="setspeedreportconfig-configure-speed-data">
+<h3>SetSpeedReportConfig - Configure Speed Data<a class="headerlink" href="#setspeedreportconfig-configure-speed-data" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="w"> </span><span class="nf">SetSpeedReportConfig</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">on</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">frequency</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">timeout_ms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">                            </span><span class="n">WriteHandler</span><span class="w"> </span><span class="n">handler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="p">)</span><span class="w"> </span><span class="p">{})</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Configure speed data reporting switch, disabled by default. After configuration, speed data is reported.</p>
+<p><strong>Parameters:</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Parameter Name</p></th>
+<th class="head text-left"><p>Type</p></th>
+<th class="head text-left"><p>Default Value</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">on</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p></td>
+<td class="text-left"><p>-</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">true</span></code>: enable; <code class="docutils literal notranslate"><span class="pre">false</span></code>: disable</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">frequency</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">uint32_t</span></code></p></td>
+<td class="text-left"><p>-</p></td>
+<td class="text-left"><p>report frequency. [1hz, 50hz]</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">timeout_ms</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">0</span></code>: asynchronous mode; <code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">0</span></code>: synchronous mode, maximum wait time (milliseconds)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">handler</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">WriteHandler</span></code></p></td>
+<td class="text-left"><p>Empty callback</p></td>
+<td class="text-left"><p>Command sending result callback in asynchronous mode; not used in synchronous mode</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Return Value:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::success</span></code>: Operation successful</p></li>
+<li><p>Common failure error codes:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::timed_out</span></code>: Operation timeout</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::not_connected</span></code>: Not connected</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::operation_canceled</span></code>: Operation canceled</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Note:</strong><br />
+Asynchronous mode: Function return only indicates command sent; send result notified through callback<br />
+Synchronous mode: Function return indicates command send result</p>
+</section>
+<hr class="docutils" />
+<section id="takecontrol-take-control">
+<h3>TakeControl - Take Control<a class="headerlink" href="#takecontrol-take-control" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="w"> </span><span class="nf">TakeControl</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">timeout_ms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">                            </span><span class="n">WriteHandler</span><span class="w"> </span><span class="n">handler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="p">)</span><span class="w"> </span><span class="p">{})</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Take control of the robot. If the APP is currently in control, you cannot forcibly take over.See <a class="reference internal" href="3.5SDK_Control_Ownership.html"><span class="std std-doc">sdk_control_ownership</span></a></p>
+<p><strong>Parameters:</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Parameter Name</p></th>
+<th class="head text-left"><p>Type</p></th>
+<th class="head text-left"><p>Default Value</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">timeout_ms</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">0</span></code>: asynchronous mode; <code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">0</span></code>: synchronous mode, maximum wait time (milliseconds)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">handler</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">WriteHandler</span></code></p></td>
+<td class="text-left"><p>Empty callback</p></td>
+<td class="text-left"><p>Command sending result callback in asynchronous mode; not used in synchronous mode</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Return Value:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::success</span></code>: Operation successful</p></li>
+<li><p>Common failure error codes:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::timed_out</span></code>: Operation timeout</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::not_connected</span></code>: Not connected</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::operation_canceled</span></code>: Operation canceled</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Note:</strong><br />
+Asynchronous mode: Function return only indicates command sent; send result notified through callback<br />
+Synchronous mode: Function return indicates command send result</p>
+</section>
+<hr class="docutils" />
+<section id="releasecontrol-release-control">
+<h3>ReleaseControl - Release Control<a class="headerlink" href="#releasecontrol-release-control" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="w"> </span><span class="nf">ReleaseControl</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">timeout_ms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">                               </span><span class="n">WriteHandler</span><span class="w"> </span><span class="n">handler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="p">)</span><span class="w"> </span><span class="p">{})</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Release control of the robot.</p>
+<p><strong>Parameters:</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Parameter Name</p></th>
+<th class="head text-left"><p>Type</p></th>
+<th class="head text-left"><p>Default Value</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">timeout_ms</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">0</span></code>: asynchronous mode; <code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">0</span></code>: synchronous mode, maximum wait time (milliseconds)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">handler</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">WriteHandler</span></code></p></td>
+<td class="text-left"><p>Empty callback</p></td>
+<td class="text-left"><p>Command sending result callback in asynchronous mode; not used in synchronous mode</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Return Value:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::success</span></code>: Operation successful</p></li>
+<li><p>Common failure error codes:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::timed_out</span></code>: Operation timeout</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::not_connected</span></code>: Not connected</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::operation_canceled</span></code>: Operation canceled</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Note:</strong><br />
+Asynchronous mode: Function return only indicates command sent; send result notified through callback<br />
+Synchronous mode: Function return indicates command send result</p>
+</section>
+<hr class="docutils" />
+<section id="updatecamerabitrate-update-camera-bitrate">
+<h3>UpdateCameraBitrate - Update Camera Bitrate<a class="headerlink" href="#updatecamerabitrate-update-camera-bitrate" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="w"> </span><span class="nf">UpdateCameraBitrate</span><span class="p">(</span>
+<span class="w">    </span><span class="n">CameraBitrateCmd</span><span class="w"> </span><span class="n">cmd</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">timeout_ms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">    </span><span class="n">WriteHandler</span><span class="w"> </span><span class="n">handler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="p">)</span><span class="w"> </span><span class="p">{});</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Update camera bitrate.</p>
+<p><strong>Parameters:</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Parameter Name</p></th>
+<th class="head text-left"><p>Type</p></th>
+<th class="head text-left"><p>Default Value</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">cmd</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">CameraBitrateCmd</span></code></p></td>
+<td class="text-left"><p>-</p></td>
+<td class="text-left"><p>Configure specific camera bitrate</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">timeout_ms</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">0</span></code>: asynchronous mode; <code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">0</span></code>: synchronous mode, maximum wait time (milliseconds)</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">handler</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">WriteHandler</span></code></p></td>
+<td class="text-left"><p>Empty callback</p></td>
+<td class="text-left"><p>Command sending result callback in asynchronous mode; not used in synchronous mode</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Return Value:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::success</span></code>: Operation successful</p></li>
+<li><p>Common failure error codes:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::timed_out</span></code>: Operation timeout</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::not_connected</span></code>: Not connected</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">std::errc::operation_canceled</span></code>: Operation canceled</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Note:</strong><br />
+Asynchronous mode: Function return only indicates command sent; send result notified through callback<br />
+Synchronous mode: Function return indicates command send result</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="version-information">
+<h2>Version Information<a class="headerlink" href="#version-information" title="Link to this heading"></a></h2>
+<section id="const-std-string-version-const">
+<h3><code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">std::string&amp;</span> <span class="pre">Version()</span> <span class="pre">const</span></code><a class="headerlink" href="#const-std-string-version-const" title="Link to this heading"></a></h3>
+<p>Get SDK version string.</p>
+</section>
+<hr class="docutils" />
+<section id="const-std-string-protocolversion-const">
+<h3><code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">std::string&amp;</span> <span class="pre">ProtocolVersion()</span> <span class="pre">const</span></code><a class="headerlink" href="#const-std-string-protocolversion-const" title="Link to this heading"></a></h3>
+<p>Get protocol version string.</p>
+</section>
+<hr class="docutils" />
+<section id="const-std-string-systemversion-const">
+<h3><code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">std::string&amp;</span> <span class="pre">SystemVersion()</span> <span class="pre">const</span></code><a class="headerlink" href="#const-std-string-systemversion-const" title="Link to this heading"></a></h3>
+<p>Get system version string.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="code-examples">
+<h2>Code Examples<a class="headerlink" href="#code-examples" title="Link to this heading"></a></h2>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;robot_sdk/sdk_client.hpp&quot;</span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">robot_sdk</span><span class="p">;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">SDKClient</span><span class="w"> </span><span class="n">client</span><span class="p">([](</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="o">&amp;</span><span class="w"> </span><span class="n">ec</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ec</span><span class="p">)</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;SDK Error: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">ec</span><span class="p">.</span><span class="n">message</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="p">});</span>
+
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">ec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="n">Connect</span><span class="p">(</span><span class="s">&quot;192.168.234.1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;8082&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ec</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Connect failed: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">ec</span><span class="p">.</span><span class="n">message</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">client</span><span class="p">.</span><span class="n">StandUp</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span>
+<span class="w">    </span><span class="n">client</span><span class="p">.</span><span class="n">Move</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">    </span><span class="n">client</span><span class="p">.</span><span class="n">Disconnect</span><span class="p">(</span><span class="nb">true</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="3.2SDK_Type.html" class="btn btn-neutral float-left" title="3.2 SDK Type" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="3.4SDK_Callback.html" class="btn btn-neutral float-right" title="3.4 SDK Callback" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Agibot.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

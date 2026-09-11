@@ -1,0 +1,161 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AGIQUAD D1 Max Quadruped Robot SDK Development Guide &mdash; D1_Max V0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=e2b40702"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/js/flyout-hide.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="1.Product Introduction" href="1.Product_Introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            D1_Max
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="1.Product_Introduction.html">1.Product Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2.SDK_Development_Guide.html">2.SDK Development Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3.SDK_Function_Introduction.html">3.SDK Function Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4.Sensor_Data_Retrieval.html">4.Sensor Data Retrieval</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5.Debugging_Instructions.html">5.Debugging Instructions</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">D1_Max</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">AGIQUAD D1 Max Quadruped Robot SDK Development Guide</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="agiquad-d1-max-quadruped-robot-sdk-development-guide">
+<h1>AGIQUAD D1 Max Quadruped Robot SDK Development Guide<a class="headerlink" href="#agiquad-d1-max-quadruped-robot-sdk-development-guide" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="1.Product_Introduction.html">1.Product Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="1.1Product_Overview.html">1.1 Product Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.2Product_Checklist.html">1.2 Product Checklist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.3Product_Specifications.html">1.3 Product Specifications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.4Rear-Mount_Payload_Installation.html">1.4 Rear-Mount Payload Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.5Electrical_Expansion_Interfaces.html">1.5 Electrical Expansion Interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.6D1_Max_Hardware_Architecture_Diagram.html">1.6 D1 Max Hardware Architecture Diagram</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="2.SDK_Development_Guide.html">2.SDK Development Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="2.1SDK_Introduction.html">2.1 SDK Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2SDK_Software_Service_Interface_List.html">2.2 SDK Software Service Interface List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.3Safety_Protection_Mechanisms.html">2.3 Safety Protection Mechanisms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.4Environment_Dependencies.html">2.4 Environment Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.5Device_Login.html">2.5 Device Login</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.6Obtaining_the_SDK.html">2.6 Obtaining the SDK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.7Demo_Execution.html">2.7 Demo Execution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.8SDK_Control_Instructions.html">2.8 SDK Control Instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.9Joint_Naming_Convention.html">2.9 Joint Naming Convention</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.10Sensor_Device_Coordinate_Definitions.html">2.10 Sensor Device Coordinate Definitions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="3.SDK_Function_Introduction.html">3.SDK Function Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="3.1SDK_Connection.html">3.1 SDK Connection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.2SDK_Type.html">3.2 SDK Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.3SDK_Client_API.html">3.3 SDK Client API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.4SDK_Callback.html">3.4 SDK Callback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.5SDK_Control_Ownership.html">3.5 SDK Control Ownership</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.6SDK_State.html">3.6 SDK State</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="4.Sensor_Data_Retrieval.html">4.Sensor Data Retrieval</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="4.1Video_Stream_Data.html">4.1 Video Stream Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.2LiDAR_Data.html">4.2 LiDAR Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.3Ultrasonic_Radar_Data.html">4.3 Ultrasonic Radar Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.4RTK_Data.html">4.4 RTK Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.5IMU_Data.html">4.5 IMU Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.6Camera_Data.html">4.6 Camera Data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="5.Debugging_Instructions.html">5.Debugging Instructions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="5.1Control_Authority_Switching_Instructions.html">5.1 Control Authority Switching Instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.2Autonomous_Docking%26Recharging_Instructions.html">5.2 Autonomous Docking &amp; Recharging Instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.3ROS2_Multi%E2%80%91Machine_Communication_Configuration.html">5.3 ROS2 Multi‑Machine Communication Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.4Log_Viewing.html">5.4 Log Viewing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.5Device_Process_Utility_Usage.html">5.5 Device Process Utility Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.6Connecting_to_an_External_Wi%E2%80%91Fi_Network.html">5.6 Connecting to an External Wi‑Fi Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.7Accessing_the_Wired_Ethernet_Port_While_Connected_to_Wi%E2%80%91Fi.html">5.7 Accessing the Wired Ethernet Port While Connected to Wi‑Fi</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="1.Product_Introduction.html" class="btn btn-neutral float-right" title="1.Product Introduction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Agibot.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

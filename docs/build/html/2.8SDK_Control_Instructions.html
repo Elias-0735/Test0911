@@ -1,0 +1,133 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2.8 SDK Control Instructions &mdash; D1_Max V0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=e2b40702"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/js/flyout-hide.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="2.9 Joint Naming Convention" href="2.9Joint_Naming_Convention.html" />
+    <link rel="prev" title="2.7 Demo Execution" href="2.7Demo_Execution.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            D1_Max
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="1.Product_Introduction.html">1.Product Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="2.SDK_Development_Guide.html">2.SDK Development Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="2.1SDK_Introduction.html">2.1 SDK Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2SDK_Software_Service_Interface_List.html">2.2 SDK Software Service Interface List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.3Safety_Protection_Mechanisms.html">2.3 Safety Protection Mechanisms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.4Environment_Dependencies.html">2.4 Environment Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.5Device_Login.html">2.5 Device Login</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.6Obtaining_the_SDK.html">2.6 Obtaining the SDK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.7Demo_Execution.html">2.7 Demo Execution</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.8 SDK Control Instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.9Joint_Naming_Convention.html">2.9 Joint Naming Convention</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.10Sensor_Device_Coordinate_Definitions.html">2.10 Sensor Device Coordinate Definitions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="3.SDK_Function_Introduction.html">3.SDK Function Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4.Sensor_Data_Retrieval.html">4.Sensor Data Retrieval</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5.Debugging_Instructions.html">5.Debugging Instructions</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">D1_Max</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="2.SDK_Development_Guide.html">2.SDK Development Guide</a></li>
+      <li class="breadcrumb-item active">2.8 SDK Control Instructions</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="sdk-control-instructions">
+<h1>2.8 SDK Control Instructions<a class="headerlink" href="#sdk-control-instructions" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p><strong>SDK commands must be issued following the state transition logic illustrated below. Failure to do so may result in abnormal conditions such as the robot falling over, malfunctioning, or becoming unresponsive.</strong></p></li>
+</ul>
+<p><img alt="image" src="_images/SDK_Control_Instruction.png" /></p>
+<p><strong>Notes:</strong><br>
+1.When a “Stand” command is issued, upon completion of the standing motion, the robot will automatically transition to the general state or the in‑place state depending on the current mode<br>
+2.Switching from the locked state to any other state will release the lock</p>
+<ul class="simple">
+<li><p><strong>The SDK command issuance workflow is as follows</strong></p></li>
+</ul>
+<p><img alt="image" src="_images/Command_Issuing_Flow.png" /></p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="2.7Demo_Execution.html" class="btn btn-neutral float-left" title="2.7 Demo Execution" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="2.9Joint_Naming_Convention.html" class="btn btn-neutral float-right" title="2.9 Joint Naming Convention" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Agibot.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

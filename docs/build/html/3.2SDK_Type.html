@@ -1,0 +1,1171 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3.2 SDK Type &mdash; D1_Max V0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=e2b40702"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/js/flyout-hide.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="3.3 SDK Client API" href="3.3SDK_Client_API.html" />
+    <link rel="prev" title="3.1 SDK Connection" href="3.1SDK_Connection.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            D1_Max
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="1.Product_Introduction.html">1.Product Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2.SDK_Development_Guide.html">2.SDK Development Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="3.SDK_Function_Introduction.html">3.SDK Function Introduction</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="3.1SDK_Connection.html">3.1 SDK Connection</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.2 SDK Type</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#namespace">Namespace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#transport-protocol">Transport Protocol</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#transportprotocol">TransportProtocol</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#fault-related">Fault-Related</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#faultcode">FaultCode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#faultlevel">FaultLevel</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#imu-data">IMU Data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#imudata">ImuData</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#fault-data">Fault Data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#faultdata">FaultData</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#power-related">Power-Related</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#powersupplystatus">PowerSupplyStatus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#batterydata">BatteryData</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#sensor-data">Sensor Data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#luxdata">LuxData</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#robot-state-enumerations">Robot State Enumerations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#filllightstatus">FillLightStatus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#speedlevel">SpeedLevel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#emergencystatus">EmergencyStatus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#headdirection">HeadDirection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sportmode">SportMode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#motionstatus">MotionStatus</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#control-related">Control-Related</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ctrlsource">CtrlSource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#controllostinfo">ControlLostInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#controlavailableinfo">ControlAvailableInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#takecontrolack">TakeControlAck</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#releasecontrolack">ReleaseControlAck</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#camerabitratecmd">CameraBitrateCmd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#camerabitrateack">CameraBitrateAck</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#speed">Speed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#joint-temperature-description">Joint temperature description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#robotstate">RobotState</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#motiondata">MotionData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#speeddata">SpeedData</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#related-documentation">Related documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="3.3SDK_Client_API.html">3.3 SDK Client API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.4SDK_Callback.html">3.4 SDK Callback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.5SDK_Control_Ownership.html">3.5 SDK Control Ownership</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.6SDK_State.html">3.6 SDK State</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="4.Sensor_Data_Retrieval.html">4.Sensor Data Retrieval</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5.Debugging_Instructions.html">5.Debugging Instructions</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">D1_Max</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="3.SDK_Function_Introduction.html">3.SDK Function Introduction</a></li>
+      <li class="breadcrumb-item active">3.2 SDK Type</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="sdk-type">
+<h1>3.2 SDK Type<a class="headerlink" href="#sdk-type" title="Link to this heading"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>This document describes all data types, enumerations, and structure definitions used in Robot SDK.</p>
+</section>
+<hr class="docutils" />
+<section id="namespace">
+<h2>Namespace<a class="headerlink" href="#namespace" title="Link to this heading"></a></h2>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">namespace</span><span class="w"> </span><span class="nn">robot_sdk</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="transport-protocol">
+<h2>Transport Protocol<a class="headerlink" href="#transport-protocol" title="Link to this heading"></a></h2>
+<section id="transportprotocol">
+<h3>TransportProtocol<a class="headerlink" href="#transportprotocol" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">TransportProtocol</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Transport protocol types supported by the SDK.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Enum Value</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">WebSocket</span></code></p></td>
+<td class="text-left"><p>WebSocket protocol (default recommended)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">Udp</span></code></p></td>
+<td class="text-left"><p>UDP protocol</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<hr class="docutils" />
+<section id="fault-related">
+<h2>Fault-Related<a class="headerlink" href="#fault-related" title="Link to this heading"></a></h2>
+<section id="faultcode">
+<h3>FaultCode<a class="headerlink" href="#faultcode" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">FaultCode</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Possible fault codes that may occur in the robot system.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Enum Value</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">Unknown</span></code></p></td>
+<td class="text-left"><p>Unknown exception</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">ActuatorDisabled</span></code></p></td>
+<td class="text-left"><p>Actuator disabled</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">ActuatorEncoderError</span></code></p></td>
+<td class="text-left"><p>Actuator encoder error</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">ActuatorOffline</span></code></p></td>
+<td class="text-left"><p>Actuator offline</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">ActuatorOverVoltage</span></code></p></td>
+<td class="text-left"><p>Actuator overvoltage</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">ActuatorOverheat</span></code></p></td>
+<td class="text-left"><p>Actuator overheating</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">ActuatorTempWarn</span></code></p></td>
+<td class="text-left"><p>Actuator overheating warning</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">ActuatorTimeout</span></code></p></td>
+<td class="text-left"><p>Actuator control timeout</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">ActuatorUndervolt</span></code></p></td>
+<td class="text-left"><p>Actuator undervoltage</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">PowerControlOverTemp</span></code></p></td>
+<td class="text-left"><p>Single battery overheating warning</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">PowerControlPowerEmpty</span></code></p></td>
+<td class="text-left"><p>Single battery power below 10%</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">PowerControlPowerLow</span></code></p></td>
+<td class="text-left"><p>Single battery power below 20%, above 10%</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">PowerControlOffline</span></code></p></td>
+<td class="text-left"><p>Power control board MCU connection failed</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">CANBroken</span></code></p></td>
+<td class="text-left"><p>CAN communication error</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">RobotRemoteKeepAliveFailure</span></code></p></td>
+<td class="text-left"><p>Remote control disconnected</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">SystemClockSanityError</span></code></p></td>
+<td class="text-left"><p>System time jump detected</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">SystemRobotStatusError</span></code></p></td>
+<td class="text-left"><p>Robot status abnormal</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">IMUConnectError</span></code></p></td>
+<td class="text-left"><p>IMU connection error</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">IMUDataNotUpdated</span></code></p></td>
+<td class="text-left"><p>IMU data not updating</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<hr class="docutils" />
+<section id="faultlevel">
+<h3>FaultLevel<a class="headerlink" href="#faultlevel" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">FaultLevel</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Fault level definition.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Enum Value</p></th>
+<th class="head text-left"><p>Integer Value</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">Unknown</span></code></p></td>
+<td class="text-left"><p>0</p></td>
+<td class="text-left"><p>Unknown</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">FatalError</span></code></p></td>
+<td class="text-left"><p>1</p></td>
+<td class="text-left"><p>Fatal error</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">Error</span></code></p></td>
+<td class="text-left"><p>2</p></td>
+<td class="text-left"><p>General error</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">Warn</span></code></p></td>
+<td class="text-left"><p>3</p></td>
+<td class="text-left"><p>Warning</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<hr class="docutils" />
+<section id="imu-data">
+<h2>IMU Data<a class="headerlink" href="#imu-data" title="Link to this heading"></a></h2>
+<section id="imudata">
+<h3>ImuData<a class="headerlink" href="#imudata" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">ImuData</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+IMU (Inertial Measurement Unit) data structure.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Member</p></th>
+<th class="head text-left"><p>Type</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">acc_x</span></code>, <code class="docutils literal notranslate"><span class="pre">acc_y</span></code>, <code class="docutils literal notranslate"><span class="pre">acc_z</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">float</span></code></p></td>
+<td class="text-left"><p>Accelerometer three-axis data (m/s²)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">gyro_x</span></code>, <code class="docutils literal notranslate"><span class="pre">gyro_y</span></code>, <code class="docutils literal notranslate"><span class="pre">gyro_z</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">float</span></code></p></td>
+<td class="text-left"><p>Gyroscope three-axis data (rad/s)</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">quat_x</span></code>, <code class="docutils literal notranslate"><span class="pre">quat_y</span></code>, <code class="docutils literal notranslate"><span class="pre">quat_z</span></code>, <code class="docutils literal notranslate"><span class="pre">quat_w</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">float</span></code></p></td>
+<td class="text-left"><p>Quaternion</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<hr class="docutils" />
+<section id="fault-data">
+<h2>Fault Data<a class="headerlink" href="#fault-data" title="Link to this heading"></a></h2>
+<section id="faultdata">
+<h3>FaultData<a class="headerlink" href="#faultdata" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">FaultData</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Fault information structure.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Member</p></th>
+<th class="head text-left"><p>Type</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">code</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">FaultCode</span></code></p></td>
+<td class="text-left"><p>Fault code</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">level</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">FaultLevel</span></code></p></td>
+<td class="text-left"><p>Fault level</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">message</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">std::string</span></code></p></td>
+<td class="text-left"><p>Fault information text</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<hr class="docutils" />
+<section id="power-related">
+<h2>Power-Related<a class="headerlink" href="#power-related" title="Link to this heading"></a></h2>
+<section id="powersupplystatus">
+<h3>PowerSupplyStatus<a class="headerlink" href="#powersupplystatus" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">PowerSupplyStatus</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Battery power supply status enumeration.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Enum Value</p></th>
+<th class="head text-left"><p>Integer Value</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">UNKNOWN</span></code></p></td>
+<td class="text-left"><p>0</p></td>
+<td class="text-left"><p>Power supply status unknown</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">CHARGING</span></code></p></td>
+<td class="text-left"><p>1</p></td>
+<td class="text-left"><p>Charging</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">DISCHARGING</span></code></p></td>
+<td class="text-left"><p>2</p></td>
+<td class="text-left"><p>Discharging</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">FULL</span></code></p></td>
+<td class="text-left"><p>4</p></td>
+<td class="text-left"><p>Fully charged</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<hr class="docutils" />
+<section id="batterydata">
+<h3>BatteryData<a class="headerlink" href="#batterydata" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">BatteryData</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Dual battery data structure.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Member</p></th>
+<th class="head text-left"><p>Type</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">power1</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">float</span></code></p></td>
+<td class="text-left"><p>Battery 1 charge capacity (percentage 0-100)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">power2</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">float</span></code></p></td>
+<td class="text-left"><p>Battery 2 charge capacity (percentage 0-100)</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">present1</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p></td>
+<td class="text-left"><p>Battery 1 present</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">present2</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p></td>
+<td class="text-left"><p>Battery 2 present</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">voltage1</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">float</span></code></p></td>
+<td class="text-left"><p>Battery 1 voltage (V)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">voltage2</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">float</span></code></p></td>
+<td class="text-left"><p>Battery 2 voltage (V)</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">temperature1</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">float</span></code></p></td>
+<td class="text-left"><p>Battery 1 temperature (°C)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">temperature2</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">float</span></code></p></td>
+<td class="text-left"><p>Battery 2 temperature (°C)</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">current1</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">float</span></code></p></td>
+<td class="text-left"><p>Battery 1 current (A)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">current2</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">float</span></code></p></td>
+<td class="text-left"><p>Battery 2 current (A)</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">power_supply_status1</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">PowerSupplyStatus</span></code></p></td>
+<td class="text-left"><p>Battery 1 power supply status</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">power_supply_status2</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">PowerSupplyStatus</span></code></p></td>
+<td class="text-left"><p>Battery 2 power supply status</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<hr class="docutils" />
+<section id="sensor-data">
+<h2>Sensor Data<a class="headerlink" href="#sensor-data" title="Link to this heading"></a></h2>
+<section id="luxdata">
+<h3>LuxData<a class="headerlink" href="#luxdata" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">LuxData</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Light intensity sensor data.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Member</p></th>
+<th class="head text-left"><p>Type</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">lux</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">float</span></code></p></td>
+<td class="text-left"><p>Light intensity value</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<hr class="docutils" />
+<section id="robot-state-enumerations">
+<h2>Robot State Enumerations<a class="headerlink" href="#robot-state-enumerations" title="Link to this heading"></a></h2>
+<section id="filllightstatus">
+<h3>FillLightStatus<a class="headerlink" href="#filllightstatus" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">FillLightStatus</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Fill light status enumeration.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Enum Value</p></th>
+<th class="head text-left"><p>Integer Value</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">FILL_LIGHT_STATUS_UNKNOWN</span></code></p></td>
+<td class="text-left"><p>0</p></td>
+<td class="text-left"><p>Unknown status</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">FILL_LIGHT_STATUS_ON</span></code></p></td>
+<td class="text-left"><p>1</p></td>
+<td class="text-left"><p>Fill light on</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">FILL_LIGHT_STATUS_OFF</span></code></p></td>
+<td class="text-left"><p>2</p></td>
+<td class="text-left"><p>Fill light off</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<hr class="docutils" />
+<section id="speedlevel">
+<h3>SpeedLevel<a class="headerlink" href="#speedlevel" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">SpeedLevel</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Speed level enumeration, affecting speed limits for the <code class="docutils literal notranslate"><span class="pre">Move</span></code> command.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Enum Value</p></th>
+<th class="head text-left"><p>Integer Value</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">SPEED_LEVEL_UNKNOWN</span></code></p></td>
+<td class="text-left"><p>0</p></td>
+<td class="text-left"><p>Unknown</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">SPEED_LEVEL_SLOW</span></code></p></td>
+<td class="text-left"><p>1</p></td>
+<td class="text-left"><p>Low speed</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">SPEED_LEVEL_MEDIUM</span></code></p></td>
+<td class="text-left"><p>2</p></td>
+<td class="text-left"><p>Medium speed</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">SPEED_LEVEL_HIGH</span></code></p></td>
+<td class="text-left"><p>3</p></td>
+<td class="text-left"><p>High speed</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Speed Limit Specifications:</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Level</p></th>
+<th class="head text-left"><p>vx (forward/back)</p></th>
+<th class="head text-left"><p>vy (left/right)</p></th>
+<th class="head text-left"><p>vyaw (rotation)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>Low speed</p></td>
+<td class="text-left"><p>-0.5 ~ +0.5 m/s</p></td>
+<td class="text-left"><p>-1.0 ~ +1.0 m/s</p></td>
+<td class="text-left"><p>-2.0 ~ +2.0 rad/s</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Medium speed</p></td>
+<td class="text-left"><p>0 m/s</p></td>
+<td class="text-left"><p>-2.0 ~ +2.0 m/s</p></td>
+<td class="text-left"><p>-1.5 ~ +1.5 rad/s</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>High speed</p></td>
+<td class="text-left"><p>0 m/s</p></td>
+<td class="text-left"><p>-3.0 ~ +3.0 m/s</p></td>
+<td class="text-left"><p>-1.0 ~ +1.0 rad/s</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<hr class="docutils" />
+<section id="emergencystatus">
+<h3>EmergencyStatus<a class="headerlink" href="#emergencystatus" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">EmergencyStatus</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Emergency stop status enumeration.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Enum Value</p></th>
+<th class="head text-left"><p>Integer Value</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">EMERGENCY_STATUS_UNKNOWN</span></code></p></td>
+<td class="text-left"><p>0</p></td>
+<td class="text-left"><p>Unknown</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">EMERGENCY_STATUS_RECOVER</span></code></p></td>
+<td class="text-left"><p>1</p></td>
+<td class="text-left"><p>Emergency stop released</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">EMERGENCY_STATUS_STOP</span></code></p></td>
+<td class="text-left"><p>2</p></td>
+<td class="text-left"><p>Emergency stop activated</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<hr class="docutils" />
+<section id="headdirection">
+<h3>HeadDirection<a class="headerlink" href="#headdirection" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">HeadDirection</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Robot head/tail direction enumeration.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Enum Value</p></th>
+<th class="head text-left"><p>Integer Value</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">HEAD_DIRECTION_UNKNOWN</span></code></p></td>
+<td class="text-left"><p>0</p></td>
+<td class="text-left"><p>Unknown</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">HEAD_DIRECTION_HEAD</span></code></p></td>
+<td class="text-left"><p>1</p></td>
+<td class="text-left"><p>Robot head facing forward</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">HEAD_DIRECTION_TAIL</span></code></p></td>
+<td class="text-left"><p>2</p></td>
+<td class="text-left"><p>Robot tail facing forward</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<hr class="docutils" />
+<section id="sportmode">
+<h3>SportMode<a class="headerlink" href="#sportmode" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">SportMode</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Robot motion mode enumeration.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Enum Value</p></th>
+<th class="head text-left"><p>Integer Value</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">SPORT_MODE_UNKNOWN</span></code></p></td>
+<td class="text-left"><p>0</p></td>
+<td class="text-left"><p>Unknown</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">SPORT_MODE_GENERAL</span></code></p></td>
+<td class="text-left"><p>1</p></td>
+<td class="text-left"><p>General mode (mobile and some posture transformations)</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">SPORT_MODE_IN_PLACE</span></code></p></td>
+<td class="text-left"><p>2</p></td>
+<td class="text-left"><p>In-place mode (in-place actions)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">SPORT_MODE_STAIR</span></code></p></td>
+<td class="text-left"><p>3</p></td>
+<td class="text-left"><p>Stair-climbing mode (mobile only)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<hr class="docutils" />
+<section id="motionstatus">
+<h3>MotionStatus<a class="headerlink" href="#motionstatus" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">MotionStatus</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Robot motion state enumeration.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Enum Value</p></th>
+<th class="head text-left"><p>Integer Value</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">MOTION_STATUS_UNKNOWN</span></code></p></td>
+<td class="text-left"><p>0</p></td>
+<td class="text-left"><p>Unknown</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">MOTION_STATUS_STAND_UP</span></code></p></td>
+<td class="text-left"><p>1</p></td>
+<td class="text-left"><p>Standing</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">MOTION_STATUS_LIE_DOWN</span></code></p></td>
+<td class="text-left"><p>2</p></td>
+<td class="text-left"><p>Lying down</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">MOTION_STATUS_CRAWL</span></code></p></td>
+<td class="text-left"><p>3</p></td>
+<td class="text-left"><p>Crawling</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">MOTION_STATUS_LOCKED</span></code></p></td>
+<td class="text-left"><p>4</p></td>
+<td class="text-left"><p>Locked</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">MOTION_STATUS_GENERAL</span></code></p></td>
+<td class="text-left"><p>5</p></td>
+<td class="text-left"><p>General mode motion state</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">MOTION_STATUS_IN_PLACE</span></code></p></td>
+<td class="text-left"><p>6</p></td>
+<td class="text-left"><p>In-place mode motion state</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">MOTION_STATUS_STAIR</span></code></p></td>
+<td class="text-left"><p>7</p></td>
+<td class="text-left"><p>Stair-climbing mode motion state</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">MOTION_STATUS_CLIMB</span></code></p></td>
+<td class="text-left"><p>8</p></td>
+<td class="text-left"><p>Climbing high platform state</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">MOTION_STATUS_SLIM</span></code></p></td>
+<td class="text-left"><p>9</p></td>
+<td class="text-left"><p>Slim (body compress) state</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">MOTION_STATUS_GAIT</span></code></p></td>
+<td class="text-left"><p>10</p></td>
+<td class="text-left"><p>Gait state</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<hr class="docutils" />
+<section id="control-related">
+<h2>Control-Related<a class="headerlink" href="#control-related" title="Link to this heading"></a></h2>
+<section id="ctrlsource">
+<h3>CtrlSource<a class="headerlink" href="#ctrlsource" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">CtrlSource</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Robot control source enumeration.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Enum Value</p></th>
+<th class="head text-left"><p>Integer Value</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">CTRL_SOURCE_UNKNOWN</span></code></p></td>
+<td class="text-left"><p>0</p></td>
+<td class="text-left"><p>Unknown</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">CTRL_SOURCE_APP</span></code></p></td>
+<td class="text-left"><p>1</p></td>
+<td class="text-left"><p>APP control</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">CTRL_SOURCE_SDK</span></code></p></td>
+<td class="text-left"><p>2</p></td>
+<td class="text-left"><p>SDK control</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">CTRL_SOURCE_OTHER</span></code></p></td>
+<td class="text-left"><p>3</p></td>
+<td class="text-left"><p>Other control</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<hr class="docutils" />
+<section id="controllostinfo">
+<h3>ControlLostInfo<a class="headerlink" href="#controllostinfo" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">ControlLostInfo</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Control lost information structure.</p>
+</section>
+<hr class="docutils" />
+<section id="controlavailableinfo">
+<h3>ControlAvailableInfo<a class="headerlink" href="#controlavailableinfo" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">ControlAvailableInfo</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Control available information structure.</p>
+</section>
+<hr class="docutils" />
+<section id="takecontrolack">
+<h3>TakeControlAck<a class="headerlink" href="#takecontrolack" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">TakeControlAck</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Take control command acknowledgment information.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Member</p></th>
+<th class="head text-left"><p>Type</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">error_code</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">uint32_t</span></code></p></td>
+<td class="text-left"><p>Error code (0 indicates success, non-zero indicates failure)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">reason</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">std::string</span></code></p></td>
+<td class="text-left"><p>Failure reason description</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<hr class="docutils" />
+<section id="releasecontrolack">
+<h3>ReleaseControlAck<a class="headerlink" href="#releasecontrolack" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">ReleaseControlAck</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Release control command acknowledgment information.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Member</p></th>
+<th class="head text-left"><p>Type</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">error_code</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">uint32_t</span></code></p></td>
+<td class="text-left"><p>Error code (0 indicates success, non-zero indicates failure)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">reason</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">std::string</span></code></p></td>
+<td class="text-left"><p>Failure reason description</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<hr class="docutils" />
+<section id="camerabitratecmd">
+<h3>CameraBitrateCmd<a class="headerlink" href="#camerabitratecmd" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">CameraBitrateCmd</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Camera bitrate configuration parameters.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Member</p></th>
+<th class="head text-left"><p>Type</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">camera_name</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">std::string</span></code></p></td>
+<td class="text-left"><p>Camera name: “camera_front” for front camera, “camera_back” for back camera</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">camera_bps</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">uint32_t</span></code></p></td>
+<td class="text-left"><p>Camera bitrate in bps (bit/s), range 50000-100000000</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<hr class="docutils" />
+<section id="camerabitrateack">
+<h3>CameraBitrateAck<a class="headerlink" href="#camerabitrateack" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">CameraBitrateAck</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Camera bitrate configuration acknowledgment.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Member</p></th>
+<th class="head text-left"><p>Type</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">camera_name</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">std::string</span></code></p></td>
+<td class="text-left"><p>Camera name: “camera_front” for front camera, “camera_back” for back camera</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">camera_bps</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">uint32_t</span></code></p></td>
+<td class="text-left"><p>Camera bitrate in bps (bit/s), range 50000-100000000</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<hr class="docutils" />
+<section id="speed">
+<h3>Speed<a class="headerlink" href="#speed" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">Speed</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Robot current velocity information.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Member</p></th>
+<th class="head text-left"><p>Type</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">line</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">double</span></code></p></td>
+<td class="text-left"><p>Forward/backward velocity (m/s)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">translation</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">double</span></code></p></td>
+<td class="text-left"><p>Left/right lateral velocity (m/s)</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">angle</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">double</span></code></p></td>
+<td class="text-left"><p>Rotation velocity (angular velocity) (rad/s)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<hr class="docutils" />
+<section id="joint-temperature-description">
+<h3>Joint temperature description<a class="headerlink" href="#joint-temperature-description" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p><strong>说明：</strong><br />
+A mapping table between robot joint names and joint temperature information.</p>
+<p>The names of the joints of the wheeled robot are shown in the table below.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Name</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">fl1</span></code>, <code class="docutils literal notranslate"><span class="pre">fl2</span></code>, <code class="docutils literal notranslate"><span class="pre">fl3</span></code>, <code class="docutils literal notranslate"><span class="pre">fl4</span></code></p></td>
+<td class="text-left"><p>FL Joints 1–4 (Front Left)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">fr1</span></code>, <code class="docutils literal notranslate"><span class="pre">fr2</span></code>, <code class="docutils literal notranslate"><span class="pre">fr3</span></code>, <code class="docutils literal notranslate"><span class="pre">fr4</span></code></p></td>
+<td class="text-left"><p>FR Joints 1–4 (Front Right)</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">bl1</span></code>, <code class="docutils literal notranslate"><span class="pre">bl2</span></code>, <code class="docutils literal notranslate"><span class="pre">bl3</span></code>, <code class="docutils literal notranslate"><span class="pre">bl4</span></code></p></td>
+<td class="text-left"><p>BL Joints 1–4 (Back Left)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">br1</span></code>, <code class="docutils literal notranslate"><span class="pre">br2</span></code>, <code class="docutils literal notranslate"><span class="pre">br3</span></code>, <code class="docutils literal notranslate"><span class="pre">br4</span></code></p></td>
+<td class="text-left"><p>BR Joints 1–4 (Back Right)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<hr class="docutils" />
+<section id="robotstate">
+<h3>RobotState<a class="headerlink" href="#robotstate" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">RobotState</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Robot comprehensive state information.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Member</p></th>
+<th class="head text-left"><p>Type</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">head_angle</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">double</span></code></p></td>
+<td class="text-left"><p>Head angle (rad)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">front_fill_light</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">FillLightStatus</span></code></p></td>
+<td class="text-left"><p>Front fill light status</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">back_fill_light</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">FillLightStatus</span></code></p></td>
+<td class="text-left"><p>Back fill light status</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">auto_mode_light</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p></td>
+<td class="text-left"><p>Whether in automatic light mode</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">speed_level</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">SpeedLevel</span></code></p></td>
+<td class="text-left"><p>Current speed level</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">software_emergency_status</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">EmergencyStatus</span></code></p></td>
+<td class="text-left"><p>Software emergency stop status</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">hardware_emergency_status</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">EmergencyStatus</span></code></p></td>
+<td class="text-left"><p>Hardware emergency stop status</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">head_direction</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">HeadDirection</span></code></p></td>
+<td class="text-left"><p>Current head/tail direction</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">motion_status</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">MotionStatus</span></code></p></td>
+<td class="text-left"><p>Current motion state</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">battery</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">BatteryData</span></code></p></td>
+<td class="text-left"><p>Battery information</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">speed</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">Speed</span></code></p></td>
+<td class="text-left"><p>Current velocity</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">mile_data</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">float</span></code></p></td>
+<td class="text-left"><p>Cumulative mileage data (m)</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">joint_temps</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">std::unordered_map&lt;std::string,</span> <span class="pre">double&gt;</span></code></p></td>
+<td class="text-left"><p>Joint temperature&lt;Joint name, Joint temperature&gt; unit: °C</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">sport_mode</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">SportMode</span></code></p></td>
+<td class="text-left"><p>Motion mode</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">control_source</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">CtrlSource</span></code></p></td>
+<td class="text-left"><p>Control source</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<hr class="docutils" />
+<section id="motiondata">
+<h3>MotionData<a class="headerlink" href="#motiondata" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">MotionData</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Motion control detailed data information.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Member</p></th>
+<th class="head text-left"><p>Type</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">quat[4]</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">float</span></code></p></td>
+<td class="text-left"><p>Quaternion [w, x, y, z]</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">v_world[3]</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">float</span></code></p></td>
+<td class="text-left"><p>Velocity in world coordinate system [x, y, z] (m/s)</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">position[3]</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">float</span></code></p></td>
+<td class="text-left"><p>Position in world coordinate system [x, y, z] (m)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">omega_world[3]</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">float</span></code></p></td>
+<td class="text-left"><p>Angular velocity in world coordinate system [x, y, z] (rad/s)</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">v_body[3]</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">float</span></code></p></td>
+<td class="text-left"><p>Velocity in body coordinate system [x, y, z] (m/s)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">omega_body[3]</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">float</span></code></p></td>
+<td class="text-left"><p>Angular velocity in body coordinate system [x, y, z] (rad/s)</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">time_stamp</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">uint64_t</span></code></p></td>
+<td class="text-left"><p>time stamp (ns)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="speeddata">
+<h3>SpeedData<a class="headerlink" href="#speeddata" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">SpeedData</span>
+</pre></div>
+</div>
+<p><strong>Description:</strong><br />
+Speed ​​description information.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Member</p></th>
+<th class="head text-left"><p>Type</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">x</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">float</span></code></p></td>
+<td class="text-left"><p>Forward/backward velocity (m/s)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">y</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">float</span></code></p></td>
+<td class="text-left"><p>Left/right lateral velocity (m/s)</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">yaw</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">float</span></code></p></td>
+<td class="text-left"><p>Rotation velocity (angular velocity) (rad/s)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<hr class="docutils" />
+<section id="related-documentation">
+<h2>Related documentation<a class="headerlink" href="#related-documentation" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="3.3SDK_Client_API.html"><span class="std std-doc">SDKClient API </span></a> - Detailed Description of Client Interfaces</p></li>
+<li><p><a class="reference internal" href="3.1SDK_Connection.html"><span class="std std-doc">Connection config</span></a> - Connection Parameters and Status Description</p></li>
+<li><p><a class="reference internal" href="3.4SDK_Callback.html"><span class="std std-doc">Callback</span></a> - Definition of the callback interface</p></li>
+<li><p><a class="reference internal" href="3.6SDK_State.html"><span class="std std-doc">State define</span></a> - Detailed Explanation of Connection Status and Motion State</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="3.1SDK_Connection.html" class="btn btn-neutral float-left" title="3.1 SDK Connection" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="3.3SDK_Client_API.html" class="btn btn-neutral float-right" title="3.3 SDK Client API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Agibot.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

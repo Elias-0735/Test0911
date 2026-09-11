@@ -1,0 +1,448 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1.5 Electrical Expansion Interfaces &mdash; D1_Max V0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=e2b40702"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/js/flyout-hide.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="1.6 D1 Max Hardware Architecture Diagram" href="1.6D1_Max_Hardware_Architecture_Diagram.html" />
+    <link rel="prev" title="1.4 Rear-Mount Payload Installation" href="1.4Rear-Mount_Payload_Installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            D1_Max
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="1.Product_Introduction.html">1.Product Introduction</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="1.1Product_Overview.html">1.1 Product Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.2Product_Checklist.html">1.2 Product Checklist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.3Product_Specifications.html">1.3 Product Specifications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.4Rear-Mount_Payload_Installation.html">1.4 Rear-Mount Payload Installation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.5 Electrical Expansion Interfaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#power-port-48v-10a">1.5.1 Power Port – 48V(10A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#power-port-24v-20a">1.5.2 Power Port – 24V(20A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ethernet-port-24v">1.5.3 Ethernet Port(24V)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ethernet-port-12v">1.5.4 Ethernet Port(12V)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#serial-port">1.5.5 Serial Port</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#usb-port">1.5.6 USB Port</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="1.6D1_Max_Hardware_Architecture_Diagram.html">1.6 D1 Max Hardware Architecture Diagram</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="2.SDK_Development_Guide.html">2.SDK Development Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3.SDK_Function_Introduction.html">3.SDK Function Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4.Sensor_Data_Retrieval.html">4.Sensor Data Retrieval</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5.Debugging_Instructions.html">5.Debugging Instructions</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">D1_Max</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="1.Product_Introduction.html">1.Product Introduction</a></li>
+      <li class="breadcrumb-item active">1.5 Electrical Expansion Interfaces</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="electrical-expansion-interfaces">
+<h1>1.5 Electrical Expansion Interfaces<a class="headerlink" href="#electrical-expansion-interfaces" title="Link to this heading"></a></h1>
+<p><img alt="image" src="_images/Electrical_Expansion_Interface.png" /></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>No.</p></th>
+<th class="head"><p>Interface Name</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>48V(10A)</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>24V(20A)</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>24V(3A) + Ethernet Port</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>12V(5A) + Ethernet Port</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>Serial Port(RS232 * 1, RS485 * 1, SBUS * 2, PPS * 1)</p></td>
+</tr>
+<tr class="row-odd"><td><p>6、7</p></td>
+<td><p>USB3.0（5V、1A）</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>RTK Antenna Interface</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>Expansion Bay Button</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>The combined power output of all power interfaces shall not exceed 480W;</p></li>
+<li><p>All aviation connectors are equipped with protective caps to achieve IP67 rating. Ensure that protective caps are properly fitted on any unused aviation connectors;</p></li>
+<li><p>The expansion bay button controls power delivery to the expansion interfaces. Before connecting any payload wiring, be sure to turn off the expansion bay power supply.</p></li>
+</ul>
+<p><strong>Aviation Connector Expansion Function Interface Description:</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Device Name</p></th>
+<th class="head"><p>Device Path</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>RS232</p></td>
+<td><p>/dev/ttyCH9344USB4</p></td>
+</tr>
+<tr class="row-odd"><td><p>RS485</p></td>
+<td><p>/dev/ttyCH9344USB5</p></td>
+</tr>
+<tr class="row-even"><td><p>SBUS1</p></td>
+<td><p>/dev/ttyCH9344USB2</p></td>
+</tr>
+<tr class="row-odd"><td><p>SBUS2</p></td>
+<td><p>/dev/ttyCH9344USB3</p></td>
+</tr>
+</tbody>
+</table>
+<section id="power-port-48v-10a">
+<h2>1.5.1 Power Port – 48V(10A)<a class="headerlink" href="#power-port-48v-10a" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Female Aviation Connector</p></li>
+</ul>
+<p><img alt="image" src="_images/Female_Aviation_Connector1.png" /></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Connector Name</p></th>
+<th class="head"><p>48V 10A</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Board‑End Connector Model</p></td>
+<td><p>M12-S4S-GPFM16-135-CS24044</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pin Assignment 1(Brown)</p></td>
+<td><p>GND</p></td>
+</tr>
+<tr class="row-even"><td><p>Pin Assignment 2(Red)</p></td>
+<td><p>48V</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pin Assignment 3(Blue)</p></td>
+<td><p>48V</p></td>
+</tr>
+<tr class="row-even"><td><p>Pin Assignment 4(Yellow-Green)</p></td>
+<td><p>GND</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>Mating Cable Harness</p></li>
+</ul>
+<p><img alt="image" src="_images/Mating_Cable_Harness1.png" /></p>
+</section>
+<section id="power-port-24v-20a">
+<h2>1.5.2 Power Port – 24V(20A)<a class="headerlink" href="#power-port-24v-20a" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Female Aviation Connector</p></li>
+</ul>
+<p><img alt="image" src="_images/Female_Aviation_Connector2.png" /></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Connector Name</p></th>
+<th class="head"><p>24V 20A</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Board‑End Connector Model</p></td>
+<td><p>M12-S4S-GPFM16-135-CS24044</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pin Assignment 1(Brown)</p></td>
+<td><p>GND</p></td>
+</tr>
+<tr class="row-even"><td><p>Pin Assignment 2(Red)</p></td>
+<td><p>24V</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pin Assignment 3(Blue)</p></td>
+<td><p>24V</p></td>
+</tr>
+<tr class="row-even"><td><p>Pin Assignment 4(Yellow-Green)</p></td>
+<td><p>GND</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>Mating Cable Harness</p></li>
+</ul>
+<p><img alt="image" src="_images/Mating_Cable_Harness2.png" /></p>
+</section>
+<section id="ethernet-port-24v">
+<h2>1.5.3 Ethernet Port(24V)<a class="headerlink" href="#ethernet-port-24v" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Female Aviation Connector</p></li>
+</ul>
+<p><img alt="image" src="_images/Female_Aviation_Connector3.png" /></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Connector Name</p></th>
+<th class="head"><p>Ethernet + 24V</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Board‑End Connector Model</p></td>
+<td><p>M12-P12A-GPFM12</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pin Assignment 1(Brown)</p></td>
+<td><p>GND</p></td>
+</tr>
+<tr class="row-even"><td><p>Pin Assignment 2(Blue)</p></td>
+<td><p>24V</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pin Assignment 3(White)</p></td>
+<td><p>24V</p></td>
+</tr>
+<tr class="row-even"><td><p>Pin Assignment 4(Green)</p></td>
+<td><p>Ethernet A+</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pin Assignment 5(Pink)</p></td>
+<td><p>Ethernet A-</p></td>
+</tr>
+<tr class="row-even"><td><p>Pin Assignment 6(Yellow)</p></td>
+<td><p>Ethernet B+</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pin Assignment 7(Black)</p></td>
+<td><p>Ethernet B-</p></td>
+</tr>
+<tr class="row-even"><td><p>Pin Assignment 8(Gray)</p></td>
+<td><p>Ethernet C+</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pin Assignment 9(Red)</p></td>
+<td><p>Ethernet C-</p></td>
+</tr>
+<tr class="row-even"><td><p>Pin Assignment 10(Purple)</p></td>
+<td><p>GND</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pin Assignment 11(Orange)</p></td>
+<td><p>Ethernet D+</p></td>
+</tr>
+<tr class="row-even"><td><p>Pin Assignment 12(Light Green)</p></td>
+<td><p>Ethernet D-</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>Mating Cable Harness</p></li>
+</ul>
+<p><img alt="image" src="_images/Mating_Cable_Harness3.png" /></p>
+</section>
+<section id="ethernet-port-12v">
+<h2>1.5.4 Ethernet Port(12V)<a class="headerlink" href="#ethernet-port-12v" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Female Aviation Connector</p></li>
+</ul>
+<p><img alt="image" src="_images/Female_Aviation_Connector4.png" /></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Connector Name</p></th>
+<th class="head"><p>Ethernet +12V</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Board‑End Connector Model</p></td>
+<td><p>M12-P12A-GPFM12</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pin Assignment 1(Brown)</p></td>
+<td><p>GND</p></td>
+</tr>
+<tr class="row-even"><td><p>Pin Assignment 2(Blue)</p></td>
+<td><p>12V</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pin Assignment 3(White)</p></td>
+<td><p>12V</p></td>
+</tr>
+<tr class="row-even"><td><p>Pin Assignment 4(Green)</p></td>
+<td><p>Ethernet A+</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pin Assignment 5(Pink)</p></td>
+<td><p>Ethernet A-</p></td>
+</tr>
+<tr class="row-even"><td><p>Pin Assignment 6(Yellow)</p></td>
+<td><p>Ethernet B+</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pin Assignment 7(Black)</p></td>
+<td><p>Ethernet B-</p></td>
+</tr>
+<tr class="row-even"><td><p>Pin Assignment 8(Gray)</p></td>
+<td><p>Ethernet C+</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pin Assignment 9(Red)</p></td>
+<td><p>Ethernet C-</p></td>
+</tr>
+<tr class="row-even"><td><p>Pin Assignment 10(Purple)</p></td>
+<td><p>GND</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pin Assignment 11(Orange)</p></td>
+<td><p>Ethernet D+</p></td>
+</tr>
+<tr class="row-even"><td><p>Pin Assignment 12(Light Green)</p></td>
+<td><p>Ethernet D-</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>Mating Cable Harness</p></li>
+</ul>
+<p><img alt="image" src="_images/Mating_Cable_Harness4.png" /></p>
+</section>
+<section id="serial-port">
+<h2>1.5.5 Serial Port<a class="headerlink" href="#serial-port" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Female Aviation Connector</p></li>
+</ul>
+<p><img alt="image" src="_images/Female_Aviation_Connector5.png" /></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Connector Name</p></th>
+<th class="head"><p>Serial Port (RS232, RS485, SBUS * 2, PPS)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Board‑End Connector Model</p></td>
+<td><p>M12-P8A-GPFM12</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pin Assignment 1(White)</p></td>
+<td><p>PPS</p></td>
+</tr>
+<tr class="row-even"><td><p>Pin Assignment 2(Brown)</p></td>
+<td><p>SBUS1</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pin Assignment 3(Green)</p></td>
+<td><p>SBUS2</p></td>
+</tr>
+<tr class="row-even"><td><p>Pin Assignment 4(Yellow)</p></td>
+<td><p>RS485A</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pin Assignment 5(Gray)</p></td>
+<td><p>RS485B</p></td>
+</tr>
+<tr class="row-even"><td><p>Pin Assignment 6(Pink)</p></td>
+<td><p>RS232_TX</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pin Assignment 7(Blue)</p></td>
+<td><p>RS232_RX</p></td>
+</tr>
+<tr class="row-even"><td><p>Pin Assignment 8(Red)</p></td>
+<td><p>GND</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>Mating Cable Harness</p></li>
+</ul>
+<p><img alt="image" src="_images/Mating_Cable_Harness5.png" /></p>
+</section>
+<section id="usb-port">
+<h2>1.5.6 USB Port<a class="headerlink" href="#usb-port" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Female Aviation Connector</p></li>
+</ul>
+<p><img alt="image" src="_images/Female_Aviation_Connector6.png" /></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Connector Name</p></th>
+<th class="head"><p>USB 3.0 + 5V (* 2)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Board‑End Connector Model</p></td>
+<td><p>E10B-FT3-PPF</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pin Assignment</p></td>
+<td><p>None</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>Mating Cable Harness</p></li>
+</ul>
+<p><img alt="image" src="_images/Mating_Cable_Harness6.png" /></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="1.4Rear-Mount_Payload_Installation.html" class="btn btn-neutral float-left" title="1.4 Rear-Mount Payload Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="1.6D1_Max_Hardware_Architecture_Diagram.html" class="btn btn-neutral float-right" title="1.6 D1 Max Hardware Architecture Diagram" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Agibot.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,396 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3.4 SDK Callback &mdash; D1_Max V0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=e2b40702"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/js/flyout-hide.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="3.5 SDK Control Ownership" href="3.5SDK_Control_Ownership.html" />
+    <link rel="prev" title="3.3 SDK Client API" href="3.3SDK_Client_API.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            D1_Max
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="1.Product_Introduction.html">1.Product Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2.SDK_Development_Guide.html">2.SDK Development Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="3.SDK_Function_Introduction.html">3.SDK Function Introduction</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="3.1SDK_Connection.html">3.1 SDK Connection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.2SDK_Type.html">3.2 SDK Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.3SDK_Client_API.html">3.3 SDK Client API</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.4 SDK Callback</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#interface-overview">Interface Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#idatacallback">IDataCallback</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#definition">Definition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#callback-list">Callback List</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#icontrolcallback">IControlCallback</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">Definition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">Callback List</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#implementation-example">Implementation Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#notes">Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="3.5SDK_Control_Ownership.html">3.5 SDK Control Ownership</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.6SDK_State.html">3.6 SDK State</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="4.Sensor_Data_Retrieval.html">4.Sensor Data Retrieval</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5.Debugging_Instructions.html">5.Debugging Instructions</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">D1_Max</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="3.SDK_Function_Introduction.html">3.SDK Function Introduction</a></li>
+      <li class="breadcrumb-item active">3.4 SDK Callback</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="sdk-callback">
+<h1>3.4 SDK Callback<a class="headerlink" href="#sdk-callback" title="Link to this heading"></a></h1>
+<p>This document defines the data callback and control command callback interfaces in the Robot SDK.<br />
+Namespace: <code class="docutils literal notranslate"><span class="pre">robot_sdk</span></code></p>
+<hr class="docutils" />
+<section id="interface-overview">
+<h2>Interface Overview<a class="headerlink" href="#interface-overview" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="#idatacallback"><code class="docutils literal notranslate"><span class="pre">IDataCallback</span></code></a>: Data reporting callback interface</p></li>
+<li><p><a class="reference internal" href="#icontrolcallback"><code class="docutils literal notranslate"><span class="pre">IControlCallback</span></code></a>: Control command callback interface (non-blocking mode)</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+<section id="idatacallback">
+<span id="id1"></span><h2>IDataCallback<a class="headerlink" href="#idatacallback" title="Link to this heading"></a></h2>
+<p>Users need to implement this interface as required to receive data from the robot system.</p>
+<blockquote>
+<div><p>⚠️ Callback functions must be <strong>lightweight</strong> and cannot perform time-consuming operations.<br />
+In callback functions, it is recommended to perform only fast operations such as data copying and validation.<br />
+If time-consuming tasks need to be performed (such as database writes, file I/O, complex calculations, network transmission, etc.), please <strong>copy the data to an independent thread or thread pool</strong> within the callback function for processing.</p>
+</div></blockquote>
+<section id="definition">
+<h3>Definition<a class="headerlink" href="#definition" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">ROBOT_EXPORT_API</span><span class="w"> </span><span class="n">IDataCallback</span><span class="w"> </span><span class="p">{</span>
+<span class="w"> </span><span class="k">public</span><span class="o">:</span>
+<span class="w">  </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">OnImuData</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">ImuData</span><span class="o">&amp;</span><span class="w"> </span><span class="n">data</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">  </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">OnLuxData</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">LuxData</span><span class="o">&amp;</span><span class="w"> </span><span class="n">data</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">  </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">OnMcData</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">MotionData</span><span class="o">&amp;</span><span class="w"> </span><span class="n">data</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">  </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">OnSpeedData</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">SpeedData</span><span class="o">&amp;</span><span class="w"> </span><span class="n">data</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">  </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">OnRobotStateData</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">RobotState</span><span class="o">&amp;</span><span class="w"> </span><span class="n">data</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">  </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">OnFaultData</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">FaultDatas</span><span class="o">&amp;</span><span class="w"> </span><span class="n">data</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">  </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">OnControlLost</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">ControlLostInfo</span><span class="o">&amp;</span><span class="w"> </span><span class="n">info</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">  </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">OnControlAvailable</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">ControlAvailableInfo</span><span class="o">&amp;</span><span class="w"> </span><span class="n">info</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+
+<span class="w">  </span><span class="k">virtual</span><span class="w"> </span><span class="o">~</span><span class="n">IDataCallback</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">default</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="callback-list">
+<h3>Callback List<a class="headerlink" href="#callback-list" title="Link to this heading"></a></h3>
+<section id="onimudata">
+<h4>🧭 <code class="docutils literal notranslate"><span class="pre">OnImuData</span></code><a class="headerlink" href="#onimudata" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p><strong>Description</strong>: IMU data callback (reported at fixed frequency after configuration)</p></li>
+<li><p><strong>Parameter</strong>: <code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">ImuData&amp;</span> <span class="pre">data</span></code> — IMU data structure</p></li>
+<li><p><strong>Call Frequency</strong>: Reported at configured frequency</p></li>
+</ul>
+</section>
+<section id="onluxdata">
+<h4>💡 <code class="docutils literal notranslate"><span class="pre">OnLuxData</span></code><a class="headerlink" href="#onluxdata" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p><strong>Description</strong>: Light intensity data callback (reported at fixed frequency of 1Hz after configuration)</p></li>
+<li><p><strong>Parameter</strong>: <code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">LuxData&amp;</span> <span class="pre">data</span></code> — Light intensity data structure</p></li>
+</ul>
+</section>
+<section id="onmcdata">
+<h4>🤖 <code class="docutils literal notranslate"><span class="pre">OnMcData</span></code><a class="headerlink" href="#onmcdata" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p><strong>Description</strong>: Robot motion data callback (reported at fixed frequency of 50Hz after configuration)</p></li>
+<li><p><strong>Parameter</strong>: <code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">MotionData&amp;</span> <span class="pre">data</span></code> — Motion data structure</p></li>
+</ul>
+</section>
+<section id="onspeeddata">
+<h4>🤖 <code class="docutils literal notranslate"><span class="pre">OnSpeedData</span></code><a class="headerlink" href="#onspeeddata" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p><strong>Description</strong>: Robot speed data callback</p></li>
+<li><p><strong>Parameter</strong>: <code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">SpeedData&amp;</span> <span class="pre">data</span></code> — Speed data structure</p></li>
+</ul>
+</section>
+<section id="onrobotstatedata">
+<h4>🤖 <code class="docutils literal notranslate"><span class="pre">OnRobotStateData</span></code><a class="headerlink" href="#onrobotstatedata" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p><strong>Description</strong>: Robot state data callback (actively reported at 1Hz)</p></li>
+<li><p><strong>Parameter</strong>: <code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">RobotState&amp;</span> <span class="pre">data</span></code> — Robot state structure</p></li>
+</ul>
+</section>
+<section id="onfaultdata">
+<h4>⚠️ <code class="docutils literal notranslate"><span class="pre">OnFaultData</span></code><a class="headerlink" href="#onfaultdata" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p><strong>Description</strong>: Fault information data callback (actively reported when a fault occurs)</p></li>
+<li><p><strong>Parameter</strong>: <code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">FaultDatas&amp;</span> <span class="pre">data</span></code> — Collection of fault data</p></li>
+</ul>
+</section>
+<section id="oncontrollost">
+<h4>🔓 <code class="docutils literal notranslate"><span class="pre">OnControlLost</span></code><a class="headerlink" href="#oncontrollost" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p><strong>Description</strong>: Control lost callback</p></li>
+<li><p><strong>Parameter</strong>: <code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">ControlLostInfo&amp;</span> <span class="pre">info</span></code> — Control lost information</p></li>
+</ul>
+</section>
+<section id="oncontrolavailable">
+<h4>🔒 <code class="docutils literal notranslate"><span class="pre">OnControlAvailable</span></code><a class="headerlink" href="#oncontrolavailable" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p><strong>Description</strong>: Control available callback</p></li>
+<li><p><strong>Parameter</strong>: <code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">ControlAvailableInfo&amp;</span> <span class="pre">info</span></code> — Control available information</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+</section>
+</section>
+<section id="icontrolcallback">
+<span id="id2"></span><h2>IControlCallback<a class="headerlink" href="#icontrolcallback" title="Link to this heading"></a></h2>
+<p>This interface is used to receive callbacks confirming that the robot has “received” control commands.<br />
+Only used in <strong>non-blocking mode</strong>.</p>
+<section id="id3">
+<h3>Definition<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">ROBOT_EXPORT_API</span><span class="w"> </span><span class="n">IControlCallback</span><span class="w"> </span><span class="p">{</span>
+<span class="w"> </span><span class="k">public</span><span class="o">:</span>
+<span class="w">  </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">OnSoftEmergencyStop</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">on</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">  </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">OnStandUp</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">  </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">OnLieDown</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">  </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">OnCrawl</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">  </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">OnClimb</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">  </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">OnSlim</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">  </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">OnGait</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">  </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">OnReverseHeadTail</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">  </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">OnMode</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">mode</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">  </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">OnSpeed</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">speed_level</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">  </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">OnLocked</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">  </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">OnFrontLight</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">on</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">  </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">OnBackLight</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">on</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">  </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">OnAutoModeLight</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">on</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">  </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">OnLuxConfig</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">on</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">  </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">OnImuConfig</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">freq</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">  </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">OnMcConfig</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">on</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">  </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">OnSpeedReportConfig</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">on</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">frequency</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">  </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">OnTakeControlAck</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">TakeControlAck</span><span class="o">&amp;</span><span class="w"> </span><span class="n">ack</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">  </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">OnReleaseControlAck</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">ReleaseControlAck</span><span class="o">&amp;</span><span class="w"> </span><span class="n">ack</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">  </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">OnUpdateCameraBitrateAck</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">CameraBitrateAck</span><span class="o">&amp;</span><span class="w"> </span><span class="n">ack</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+
+<span class="w">  </span><span class="k">virtual</span><span class="w"> </span><span class="o">~</span><span class="n">IControlCallback</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">default</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="id4">
+<h3>Callback List<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Callback Function</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Parameter</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">OnSoftEmergencyStop(bool</span> <span class="pre">on)</span></code></p></td>
+<td><p>Emergency stop command received</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">on</span> <span class="pre">=</span> <span class="pre">true</span></code>: activate emergency stop; <code class="docutils literal notranslate"><span class="pre">on</span> <span class="pre">=</span> <span class="pre">false</span></code>: deactivate emergency stop</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">OnStandUp()</span></code></p></td>
+<td><p>Stand up command received</p></td>
+<td><p>—</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">OnLieDown()</span></code></p></td>
+<td><p>Lie down command received</p></td>
+<td><p>—</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">OnCrawl()</span></code></p></td>
+<td><p>Crawl command received</p></td>
+<td><p>—</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">OnClimb()</span></code></p></td>
+<td><p>Climb command received</p></td>
+<td><p>—</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">OnSlim()</span></code></p></td>
+<td><p>Slim command received</p></td>
+<td><p>—</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">OnGait()</span></code></p></td>
+<td><p>Gait command received</p></td>
+<td><p>—</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">OnReverseHeadTail()</span></code></p></td>
+<td><p>Reverse head/tail command received</p></td>
+<td><p>—</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">OnMode(int</span> <span class="pre">mode)</span></code></p></td>
+<td><p>Mode switch command received</p></td>
+<td><p>Mode number</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">OnSpeed(int</span> <span class="pre">speed_level)</span></code></p></td>
+<td><p>Speed level switch command received</p></td>
+<td><p>Speed level</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">OnLocked()</span></code></p></td>
+<td><p>Lock command received</p></td>
+<td><p>—</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">OnFrontLight(bool</span> <span class="pre">on)</span></code></p></td>
+<td><p>Front fill light command received</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">true</span></code>: activate; <code class="docutils literal notranslate"><span class="pre">false</span></code>: deactivate</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">OnBackLight(bool</span> <span class="pre">on)</span></code></p></td>
+<td><p>Back fill light command received</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">true</span></code>: activate; <code class="docutils literal notranslate"><span class="pre">false</span></code>: deactivate</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">OnAutoModeLight(bool</span> <span class="pre">on)</span></code></p></td>
+<td><p>Auto fill light mode command received</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">true</span></code>: activate; <code class="docutils literal notranslate"><span class="pre">false</span></code>: deactivate</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">OnLuxConfig(bool</span> <span class="pre">on)</span></code></p></td>
+<td><p>Light intensity configuration command received</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">true</span></code>: enable; <code class="docutils literal notranslate"><span class="pre">false</span></code>: disable</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">OnImuConfig(int</span> <span class="pre">freq)</span></code></p></td>
+<td><p>IMU configuration command received</p></td>
+<td><p>Frequency value</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">OnMcConfig(bool</span> <span class="pre">on)</span></code></p></td>
+<td><p>Motion data configuration command received</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">true</span></code>: enable; <code class="docutils literal notranslate"><span class="pre">false</span></code>: disable</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">OnSpeedReportConfig(bool</span> <span class="pre">on,</span> <span class="pre">uint32_t</span> <span class="pre">frequency)</span></code></p></td>
+<td><p>Speed data configuration command received</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">true</span></code>: enable; <code class="docutils literal notranslate"><span class="pre">false</span></code>: disable; <code class="docutils literal notranslate"><span class="pre">frequency</span></code>: frequency</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">OnTakeControlAck(const</span> <span class="pre">TakeControlAck&amp;</span> <span class="pre">ack)</span></code></p></td>
+<td><p>Take control command acknowledgment received</p></td>
+<td><p>Acknowledgment information</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">OnReleaseControlAck(const</span> <span class="pre">ReleaseControlAck&amp;</span> <span class="pre">ack)</span></code></p></td>
+<td><p>Release control command acknowledgment received</p></td>
+<td><p>Acknowledgment information</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">OnUpdateCameraBitrateAck(const</span> <span class="pre">CameraBitrateAck&amp;</span> <span class="pre">ack)</span></code></p></td>
+<td><p>Camera bitrate update command received</p></td>
+<td><p>Acknowledgment information, updated bitrate</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<hr class="docutils" />
+<section id="implementation-example">
+<h2>Implementation Example<a class="headerlink" href="#implementation-example" title="Link to this heading"></a></h2>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;robot_sdk/sdk_callback.hpp&quot;</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">MyDataCallback</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">robot_sdk</span><span class="o">::</span><span class="n">IDataCallback</span><span class="w"> </span><span class="p">{</span>
+<span class="w"> </span><span class="k">public</span><span class="o">:</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">OnImuData</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">ImuData</span><span class="o">&amp;</span><span class="w"> </span><span class="n">data</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Lightweight processing, e.g., caching</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">MyControlCallback</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">robot_sdk</span><span class="o">::</span><span class="n">IControlCallback</span><span class="w"> </span><span class="p">{</span>
+<span class="w"> </span><span class="k">public</span><span class="o">:</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">OnStandUp</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Handle stand up command acknowledgment</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Do not perform time-consuming tasks in callbacks.</p></li>
+<li><p>If time-consuming processing is needed, copy the data and submit it to an independent thread in the callback.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="3.3SDK_Client_API.html" class="btn btn-neutral float-left" title="3.3 SDK Client API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="3.5SDK_Control_Ownership.html" class="btn btn-neutral float-right" title="3.5 SDK Control Ownership" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Agibot.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
