@@ -9,15 +9,18 @@
   <title>2.4 环境依赖 &mdash; D1_Max V0.1.0 文档</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/css/tippy.css?v=c6278a58" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=1107372c" />
+      <link rel="stylesheet" type="text/css" href="_static/css/all.min.css?v=4b521257" />
 
   
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="_static/documentation_options.js?v=599f233c"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
       <script src="_static/translations.js?v=beaddf03"></script>
-      <script src="_static/js/flyout-hide.js?v=477916bd"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
@@ -45,23 +48,276 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="1.Product_Introduction.html">一、产品介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1.Product_Introduction.html">一、产品介绍</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="1.1Product_Overview.html">1.1 产品概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.2Product_Checklist.html">1.2 产品清单</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.3Product_Specifications.html">1.3 产品参数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.4Rear-Mount_Payload_Installation.html">1.4 载荷上装</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="1.4Rear-Mount_Payload_Installation.html#payload-mounting-hole-layout">1.4.1 负载安装孔位图</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.4Rear-Mount_Payload_Installation.html#centerofgravity-constraints">1.4.2 重心限制</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="1.5Electrical_Expansion_Interfaces.html">1.5 电气拓展接口</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="1.5Electrical_Expansion_Interfaces.html#power-port-48v-10a">1.5.1 电源口48V(10A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.5Electrical_Expansion_Interfaces.html#power-port-24v-20a">1.5.2 电源口24V(20A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.5Electrical_Expansion_Interfaces.html#ethernet-port-24v">1.5.3 网口(24V)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.5Electrical_Expansion_Interfaces.html#ethernet-port-12v">1.5.4 网口(12V)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.5Electrical_Expansion_Interfaces.html#serial-port">1.5.5 串口</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.5Electrical_Expansion_Interfaces.html#usb-port">1.5.6 USB口</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="1.6D1_Max_Hardware_Architecture_Diagram.html">1.6 D1 Max硬件架构图</a></li>
+</ul>
+</li>
 <li class="toctree-l1 current"><a class="reference internal" href="2.SDK_Development_Guide.html">二、SDK开发指南</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="2.1SDK_Introduction.html">2.1 SDK介绍</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.2SDK_Software_Service_Interface_List.html">2.2 SDK软件服务接口列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.3Safety_Protection_Mechanisms.html">2.3 安全保护机制</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.3Safety_Protection_Mechanisms.html">2.3 安全保护机制</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="2.3Safety_Protection_Mechanisms.html#hard-emergency-stop">2.3.1 硬急停</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2.3Safety_Protection_Mechanisms.html#soft-emergency-stop">2.3.2 软急停</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2.3Safety_Protection_Mechanisms.html#internal-exception-protection-automatic-trigger">2.3.3 内部异常保护(自动触发)</a></li>
+</ul>
+</li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">2.4 环境依赖</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.5Device_Login.html">2.5 设备登录</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.6Obtaining_the_SDK.html">2.6 SDK获取</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.6Obtaining_the_SDK.html">2.6 SDK获取</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="2.6Obtaining_the_SDK.html#way1">way1：</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2.6Obtaining_the_SDK.html#way2">way2：</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="2.7Demo_Execution.html">2.7 示例Demo运行步骤</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.8SDK_Control_Instructions.html">2.8 SDK控制说明</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.9Joint_Naming_Convention.html">2.9 关节命名规范</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.10Sensor_Device_Coordinate_Definitions.html">2.10 传感设备坐标定义</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="3.SDK_Function_Introduction.html">三、SDK函数介绍</a></li>
-<li class="toctree-l1"><a class="reference internal" href="4.Sensor_Data_Retrieval.html">四、传感设备数据获取</a></li>
-<li class="toctree-l1"><a class="reference internal" href="5.Debugging_Instructions.html">五、调试指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3.SDK_Function_Introduction.html">三、SDK函数介绍</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="3.1SDK_Connection.html">3.1 连接配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="3.1SDK_Connection.html#overview">概述</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3.1SDK_Connection.html#namespace">命名空间</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3.1SDK_Connection.html#connection-state-enumeration">连接状态枚举</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.1SDK_Connection.html#connectionstate">ConnectionState</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.1SDK_Connection.html#connection-configuration-structure">连接配置结构</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.1SDK_Connection.html#connectionconfig">ConnectionConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.1SDK_Connection.html#member-detailed-description">成员详细说明</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.1SDK_Connection.html#transport-protocol-type">传输协议类型</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.1SDK_Connection.html#transportprotocol">TransportProtocol</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.1SDK_Connection.html#usage-examples">使用示例</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.1SDK_Connection.html#example-1-basic-connection-configuration">示例 1：基本连接配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.1SDK_Connection.html#example-2-custom-connection-timeout">示例 2：自定义连接超时</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.1SDK_Connection.html#example-3-enable-auto-reconnection">示例 3：启用自动重连</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.1SDK_Connection.html#example-4-use-udp-protocol">示例 4：使用 UDP 协议</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.1SDK_Connection.html#example-5-monitor-connection-state-changes">示例 5：监控连接状态变化</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.1SDK_Connection.html#best-practices">最佳实践</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.1SDK_Connection.html#connection-timeout-configuration">连接超时设置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.1SDK_Connection.html#auto-reconnection-configuration">自动重连配置</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.1SDK_Connection.html#related-documentation">相关文档</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="3.2SDK_Type.html">3.2 数据类型</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="3.2SDK_Type.html#overview">概述</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3.2SDK_Type.html#namespace">命名空间</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3.2SDK_Type.html#transport-protocol">传输协议</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#transportprotocol">TransportProtocol</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.2SDK_Type.html#fault-related">故障相关</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#faultcode">FaultCode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#faultlevel">FaultLevel</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.2SDK_Type.html#imu-data">IMU 数据</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#imudata">ImuData</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.2SDK_Type.html#fault-data">故障数据</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#faultdata">FaultData</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.2SDK_Type.html#power-related">电源相关</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#powersupplystatus">PowerSupplyStatus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#batterydata">BatteryData</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.2SDK_Type.html#sensor-data">传感器数据</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#luxdata">LuxData</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.2SDK_Type.html#robot-state-enumerations">机器人状态枚举</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#filllightstatus">FillLightStatus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#speedlevel">SpeedLevel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#emergencystatus">EmergencyStatus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#headdirection">HeadDirection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#sportmode">SportMode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#motionstatus">MotionStatus</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.2SDK_Type.html#control-related">控制相关</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#ctrlsource">CtrlSource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#controllostinfo">ControlLostInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#controlavailableinfo">ControlAvailableInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#takecontrolack">TakeControlAck</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#releasecontrolack">ReleaseControlAck</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#camerabitratecmd">CameraBitrateCmd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#camerabitrateack">CameraBitrateAck</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#speed">Speed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#joint-temperature-description">关节温度说明</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#robotstate">RobotState</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#motiondata">MotionData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#speeddata">SpeedData</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.2SDK_Type.html#related-documentation">相关文档</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="3.3SDK_Client_API.html">3.3 SDKClient类接口</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="3.3SDK_Client_API.html#overview">概述</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3.3SDK_Client_API.html#namespace">命名空间</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3.3SDK_Client_API.html#class-definition">类定义</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3.3SDK_Client_API.html#error-code-mechanism">错误码机制</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#sdk-common-error-codes">SDK 常用错误码</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.3SDK_Client_API.html#type-definitions">类型定义</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3.3SDK_Client_API.html#constructor-and-destructor">构造与析构</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#constructor">构造函数</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#destructor">析构函数</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.3SDK_Client_API.html#connection-management">连接管理</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#connect-connect-to-robot">Connect - 连接机器人</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#disconnect-disconnect">Disconnect - 断开连接</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#isconnected-check-connection-status">IsConnected - 判断连接状态</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#getconnectionstate-get-connection-state">GetConnectionState - 获取连接状态</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.3SDK_Client_API.html#callback-configuration">回调设置</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#setcontrolcallback-set-control-callback">SetControlCallback - 设置控制回调</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#setdatacallback-set-data-callback">SetDataCallback - 设置数据回调</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.3SDK_Client_API.html#basic-control-interfaces">基础控制接口</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#softemergencystop-emergency-stop">SoftEmergencyStop - 急停</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#standup-stand-up">StandUp - 站立</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#liedown-lie-down">LieDown - 卧倒</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#crawl-crawl">Crawl - 匍匐</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#climb-climb">Climb - 爬高台</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#slim-slim">Slim - 瘦身</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#gait-gait">Gait - 步态</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#dsb-over-the-mouse-barrier-posture">DSB - 过挡鼠板姿态</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#reverseheadtail-reverse-head-tail">ReverseHeadTail - 调转头尾</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#setmode-set-mode">SetMode - 设置模式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#setspeed-set-speed-level">SetSpeed - 设置速度等级</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#locked-lock">Locked - 锁定</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.3SDK_Client_API.html#light-control-interfaces">灯光控制接口</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#frontlight-front-fill-light">FrontLight - 前补光灯</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#backlight-back-fill-light">BackLight - 后补光灯</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#automodelight-auto-fill-light-mode">AutoModeLight - 自动补光灯模式</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.3SDK_Client_API.html#motion-and-posture-control">运动与姿态控制</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#move-move">Move - 移动</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#turn-turn">Turn - 翻滚</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#controlhead-control-head">ControlHead - 控制头部</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#highlowstance-high-low-stance">HighLowStance - 高低站姿</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.3SDK_Client_API.html#data-configuration-interfaces">数据配置接口</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#setimuconfig-configure-imu">SetImuConfig - 配置IMU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#setluxconfig-configure-light-intensity">SetLuxConfig - 配置光强值</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#setmcconfig-configure-motion-data">SetMcConfig - 配置运动数据</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#setspeedreportconfig-configure-speed-data">SetSpeedReportConfig - 配置速度数据</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#takecontrol-take-control">TakeControl - 获取控制权</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#releasecontrol-release-control">ReleaseControl - 释放控制权</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#updatecamerabitrate-update-camera-bitrate">UpdateCameraBitrate - 更新摄像头码率</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.3SDK_Client_API.html#version-information">版本信息</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#const-std-string-version-const"><code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">std::string&amp;</span> <span class="pre">Version()</span> <span class="pre">const</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#const-std-string-protocolversion-const"><code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">std::string&amp;</span> <span class="pre">ProtocolVersion()</span> <span class="pre">const</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#const-std-string-systemversion-const"><code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">std::string&amp;</span> <span class="pre">SystemVersion()</span> <span class="pre">const</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.3SDK_Client_API.html#code-examples">示例代码</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="3.4SDK_Callback.html">3.4 Callback参考</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="3.4SDK_Callback.html#interface-overview">接口概览</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3.4SDK_Callback.html#idatacallback">IDataCallback</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.4SDK_Callback.html#definition">定义</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.4SDK_Callback.html#callback-list">回调列表</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.4SDK_Callback.html#icontrolcallback">IControlCallback</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.4SDK_Callback.html#id3">定义</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.4SDK_Callback.html#id4">回调列表</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.4SDK_Callback.html#implementation-example">实现示例</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3.4SDK_Callback.html#notes">注意事项</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="3.5SDK_Control_Ownership.html">3.5 SDK控制权归属</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="3.5SDK_Control_Ownership.html#control-authority-between-sdk-and-app">SDK与APP控制权问题详解</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.5SDK_Control_Ownership.html#scenario-1-the-app-connects-first-followed-by-the-sdk-control-authority-is-held-by-the-app-and-the-sdk-cannot-control-the-robot">情况1：APP先连接，SDK后连接。控制权在APP端，SDK无法控制。</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.5SDK_Control_Ownership.html#scenario-2-the-sdk-connects-first-followed-by-the-app-control-authority-is-held-by-the-sdk-the-app-cannot-control-the-robot-but-it-can-forcibly-preempt-the-sdk-s-control-authority">情况2：SDK先连接，APP后连接。控制权在SDK端，APP无法控制，但是APP可以强行抢夺SDK控制权。</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="3.6SDK_State.html">3.6 SDK内部运动状态流转</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="3.6SDK_State.html#sdk-mode-switching">SDK模式切换</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3.6SDK_State.html#sdk-command-delivery">SDK命令下发</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="4.Sensor_Data_Retrieval.html">四、传感设备数据获取</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="4.1Video_Stream_Data.html">4.1 视频流数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.2LiDAR_Data.html">4.2 激光雷达数据</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="4.2LiDAR_Data.html#ros2-interface-definition">4.2.1 ROS2接口定义</a></li>
+<li class="toctree-l3"><a class="reference internal" href="4.2LiDAR_Data.html#retrieving-lidar-data">4.2.2 获取激光雷达数据</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="4.3Ultrasonic_Radar_Data.html">4.3 超声波雷达数据</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="4.3Ultrasonic_Radar_Data.html#ros2-interface-definition">4.3.1 ROS2接口定义</a></li>
+<li class="toctree-l3"><a class="reference internal" href="4.3Ultrasonic_Radar_Data.html#retrieving-ultrasonic-radar-data">4.3.2 获取超声波雷达数据</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="4.4RTK_Data.html">4.4 RTK数据</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="4.4RTK_Data.html#rtk-introduction">4.4.1 RTK简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="4.4RTK_Data.html#obtaining-sixents-rtk-service">4.4.2 获取六分RTK服务</a></li>
+<li class="toctree-l3"><a class="reference internal" href="4.4RTK_Data.html#rtk-service-configuration-on-the-nx-side">4.4.3 NX侧RTK服务配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="4.4RTK_Data.html#ros2-interface-definition">4.4.4 RTK ROS2接口定义</a></li>
+<li class="toctree-l3"><a class="reference internal" href="4.4RTK_Data.html#retrieving-rtk-data">4.4.5 获取RTK数据</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="4.5IMU_Data.html">4.5 IMU数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.6Camera_Data.html">4.6 相机数据</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="5.Debugging_Instructions.html">五、调试指南</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="5.1Control_Authority_Switching_Instructions.html">5.1 控制权切换说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.2Autonomous_Docking%26Recharging_Instructions.html">5.2 自主回充说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.3ROS2_Multi%E2%80%91Machine_Communication_Configuration.html">5.3 ROS2多机通信配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.4Log_Viewing.html">5.4 日志查看</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.5Device_Process_Utility_Usage.html">5.5 设备进程工具使用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.6Connecting_to_an_External_Wi%E2%80%91Fi_Network.html">5.6 设备连接外部wifi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.7Accessing_the_Wired_Ethernet_Port_While_Connected_to_Wi%E2%80%91Fi.html">5.7 连接WiFi的情况下访问有线网口</a></li>
+</ul>
+</li>
 </ul>
 
         </div>
@@ -74,7 +330,7 @@
       </nav>
 
       <div class="wy-nav-content">
-        <div class="rst-content">
+        <div class="rst-content style-external-links">
           <div role="navigation" aria-label="页面导航">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>

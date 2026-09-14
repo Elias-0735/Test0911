@@ -9,14 +9,17 @@
   <title>5.1 Control Authority Switching Instructions &mdash; D1_Max V0.1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/css/tippy.css?v=c6278a58" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=1107372c" />
+      <link rel="stylesheet" type="text/css" href="_static/css/all.min.css?v=4b521257" />
 
   
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="_static/documentation_options.js?v=e2b40702"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-      <script src="_static/js/flyout-hide.js?v=477916bd"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -44,10 +47,266 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="1.Product_Introduction.html">1.Product Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2.SDK_Development_Guide.html">2.SDK Development Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3.SDK_Function_Introduction.html">3.SDK Function Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="4.Sensor_Data_Retrieval.html">4.Sensor Data Retrieval</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1.Product_Introduction.html">1.Product Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="1.1Product_Overview.html">1.1 Product Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.2Product_Checklist.html">1.2 Product Checklist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.3Product_Specifications.html">1.3 Product Specifications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.4Rear-Mount_Payload_Installation.html">1.4 Rear-Mount Payload Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="1.4Rear-Mount_Payload_Installation.html#payload-mounting-hole-layout">1.4.1 Payload Mounting Hole Layout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.4Rear-Mount_Payload_Installation.html#centerofgravity-constraints">1.4.2 Center‑of‑Gravity Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="1.5Electrical_Expansion_Interfaces.html">1.5 Electrical Expansion Interfaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="1.5Electrical_Expansion_Interfaces.html#power-port-48v-10a">1.5.1 Power Port – 48V(10A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.5Electrical_Expansion_Interfaces.html#power-port-24v-20a">1.5.2 Power Port – 24V(20A)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.5Electrical_Expansion_Interfaces.html#ethernet-port-24v">1.5.3 Ethernet Port(24V)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.5Electrical_Expansion_Interfaces.html#ethernet-port-12v">1.5.4 Ethernet Port(12V)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.5Electrical_Expansion_Interfaces.html#serial-port">1.5.5 Serial Port</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.5Electrical_Expansion_Interfaces.html#usb-port">1.5.6 USB Port</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="1.6D1_Max_Hardware_Architecture_Diagram.html">1.6 D1 Max Hardware Architecture Diagram</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="2.SDK_Development_Guide.html">2.SDK Development Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="2.1SDK_Introduction.html">2.1 SDK Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2SDK_Software_Service_Interface_List.html">2.2 SDK Software Service Interface List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.3Safety_Protection_Mechanisms.html">2.3 Safety Protection Mechanisms</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="2.3Safety_Protection_Mechanisms.html#hard-emergency-stop">2.3.1 Hard Emergency Stop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2.3Safety_Protection_Mechanisms.html#soft-emergency-stop">2.3.2 Soft Emergency Stop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2.3Safety_Protection_Mechanisms.html#internal-exception-protection-automatic-trigger">2.3.3 Internal Exception Protection (Automatic Trigger)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="2.4Environment_Dependencies.html">2.4 Environment Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.5Device_Login.html">2.5 Device Login</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.6Obtaining_the_SDK.html">2.6 Obtaining the SDK</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="2.6Obtaining_the_SDK.html#way1">way1：</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2.6Obtaining_the_SDK.html#way2">way2：</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="2.7Demo_Execution.html">2.7 Demo Execution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.8SDK_Control_Instructions.html">2.8 SDK Control Instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.9Joint_Naming_Convention.html">2.9 Joint Naming Convention</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.10Sensor_Device_Coordinate_Definitions.html">2.10 Sensor Device Coordinate Definitions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="3.SDK_Function_Introduction.html">3.SDK Function Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="3.1SDK_Connection.html">3.1 SDK Connection</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="3.1SDK_Connection.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3.1SDK_Connection.html#namespace">Namespace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3.1SDK_Connection.html#connection-state-enumeration">Connection State Enumeration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.1SDK_Connection.html#connectionstate">ConnectionState</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.1SDK_Connection.html#connection-configuration-structure">Connection Configuration Structure</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.1SDK_Connection.html#connectionconfig">ConnectionConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.1SDK_Connection.html#member-detailed-description">Member Detailed Description</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.1SDK_Connection.html#transport-protocol-type">Transport Protocol Type</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.1SDK_Connection.html#transportprotocol">TransportProtocol</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.1SDK_Connection.html#usage-examples">Usage Examples</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.1SDK_Connection.html#example-1-basic-connection-configuration">Example 1: Basic Connection Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.1SDK_Connection.html#example-2-custom-connection-timeout">Example 2: Custom Connection Timeout</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.1SDK_Connection.html#example-3-enable-auto-reconnection">Example 3: Enable Auto-Reconnection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.1SDK_Connection.html#example-4-use-udp-protocol">Example 4: Use UDP Protocol</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.1SDK_Connection.html#example-5-monitor-connection-state-changes">Example 5: Monitor Connection State Changes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.1SDK_Connection.html#best-practices">Best Practices</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.1SDK_Connection.html#connection-timeout-configuration">Connection Timeout Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.1SDK_Connection.html#auto-reconnection-configuration">Auto-Reconnection Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.1SDK_Connection.html#related-documentation">Related Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="3.2SDK_Type.html">3.2 SDK Type</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="3.2SDK_Type.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3.2SDK_Type.html#namespace">Namespace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3.2SDK_Type.html#transport-protocol">Transport Protocol</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#transportprotocol">TransportProtocol</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.2SDK_Type.html#fault-related">Fault-Related</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#faultcode">FaultCode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#faultlevel">FaultLevel</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.2SDK_Type.html#imu-data">IMU Data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#imudata">ImuData</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.2SDK_Type.html#fault-data">Fault Data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#faultdata">FaultData</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.2SDK_Type.html#power-related">Power-Related</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#powersupplystatus">PowerSupplyStatus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#batterydata">BatteryData</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.2SDK_Type.html#sensor-data">Sensor Data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#luxdata">LuxData</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.2SDK_Type.html#robot-state-enumerations">Robot State Enumerations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#filllightstatus">FillLightStatus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#speedlevel">SpeedLevel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#emergencystatus">EmergencyStatus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#headdirection">HeadDirection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#sportmode">SportMode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#motionstatus">MotionStatus</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.2SDK_Type.html#control-related">Control-Related</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#ctrlsource">CtrlSource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#controllostinfo">ControlLostInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#controlavailableinfo">ControlAvailableInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#takecontrolack">TakeControlAck</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#releasecontrolack">ReleaseControlAck</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#camerabitratecmd">CameraBitrateCmd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#camerabitrateack">CameraBitrateAck</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#speed">Speed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#joint-temperature-description">Joint temperature description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#robotstate">RobotState</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#motiondata">MotionData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.2SDK_Type.html#speeddata">SpeedData</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.2SDK_Type.html#related-documentation">Related documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="3.3SDK_Client_API.html">3.3 SDK Client API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="3.3SDK_Client_API.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3.3SDK_Client_API.html#namespace">Namespace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3.3SDK_Client_API.html#class-definition">Class Definition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3.3SDK_Client_API.html#error-code-mechanism">Error Code Mechanism</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#sdk-common-error-codes">SDK Common Error Codes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.3SDK_Client_API.html#type-definitions">Type Definitions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3.3SDK_Client_API.html#constructor-and-destructor">Constructor and Destructor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#constructor">Constructor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#destructor">Destructor</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.3SDK_Client_API.html#connection-management">Connection Management</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#connect-connect-to-robot">Connect - Connect to Robot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#disconnect-disconnect">Disconnect - Disconnect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#isconnected-check-connection-status">IsConnected - Check Connection Status</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#getconnectionstate-get-connection-state">GetConnectionState - Get Connection State</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.3SDK_Client_API.html#callback-configuration">Callback Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#setcontrolcallback-set-control-callback">SetControlCallback - Set Control Callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#setdatacallback-set-data-callback">SetDataCallback - Set Data Callback</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.3SDK_Client_API.html#basic-control-interfaces">Basic Control Interfaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#softemergencystop-emergency-stop">SoftEmergencyStop - Emergency Stop</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#standup-stand-up">StandUp - Stand Up</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#liedown-lie-down">LieDown - Lie Down</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#crawl-crawl">Crawl - Crawl</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#climb-climb">Climb - Climb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#slim-slim">Slim - Slim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#gait-gait">Gait - Gait</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#dsb-over-the-mouse-barrier-posture">DSB - Over the mouse barrier posture</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#reverseheadtail-reverse-head-tail">ReverseHeadTail - Reverse Head/Tail</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#setmode-set-mode">SetMode - Set Mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#setspeed-set-speed-level">SetSpeed - Set Speed Level</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#locked-lock">Locked - Lock</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.3SDK_Client_API.html#light-control-interfaces">Light Control Interfaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#frontlight-front-fill-light">FrontLight - Front Fill Light</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#backlight-back-fill-light">BackLight - Back Fill Light</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#automodelight-auto-fill-light-mode">AutoModeLight - Auto Fill Light Mode</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.3SDK_Client_API.html#motion-and-posture-control">Motion and Posture Control</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#move-move">Move - Move</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#turn-turn">Turn - Turn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#controlhead-control-head">ControlHead - Control Head</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#highlowstance-high-low-stance">HighLowStance - High/Low Stance</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.3SDK_Client_API.html#data-configuration-interfaces">Data Configuration Interfaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#setimuconfig-configure-imu">SetImuConfig - Configure IMU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#setluxconfig-configure-light-intensity">SetLuxConfig - Configure Light Intensity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#setmcconfig-configure-motion-data">SetMcConfig - Configure Motion Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#setspeedreportconfig-configure-speed-data">SetSpeedReportConfig - Configure Speed Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#takecontrol-take-control">TakeControl - Take Control</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#releasecontrol-release-control">ReleaseControl - Release Control</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#updatecamerabitrate-update-camera-bitrate">UpdateCameraBitrate - Update Camera Bitrate</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.3SDK_Client_API.html#version-information">Version Information</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#const-std-string-version-const"><code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">std::string&amp;</span> <span class="pre">Version()</span> <span class="pre">const</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#const-std-string-protocolversion-const"><code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">std::string&amp;</span> <span class="pre">ProtocolVersion()</span> <span class="pre">const</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.3SDK_Client_API.html#const-std-string-systemversion-const"><code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">std::string&amp;</span> <span class="pre">SystemVersion()</span> <span class="pre">const</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.3SDK_Client_API.html#code-examples">Code Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="3.4SDK_Callback.html">3.4 SDK Callback</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="3.4SDK_Callback.html#interface-overview">Interface Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3.4SDK_Callback.html#idatacallback">IDataCallback</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.4SDK_Callback.html#definition">Definition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.4SDK_Callback.html#callback-list">Callback List</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.4SDK_Callback.html#icontrolcallback">IControlCallback</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.4SDK_Callback.html#id3">Definition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.4SDK_Callback.html#id4">Callback List</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3.4SDK_Callback.html#implementation-example">Implementation Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3.4SDK_Callback.html#notes">Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="3.5SDK_Control_Ownership.html">3.5 SDK Control Ownership</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="3.5SDK_Control_Ownership.html#control-authority-between-sdk-and-app">Control Authority Between SDK and App</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3.5SDK_Control_Ownership.html#scenario-1-the-app-connects-first-followed-by-the-sdk-control-authority-is-held-by-the-app-and-the-sdk-cannot-control-the-robot">Scenario 1: The App Connects First, Followed by the SDK. Control authority is held by the App, and the SDK cannot control the robot.</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3.5SDK_Control_Ownership.html#scenario-2-the-sdk-connects-first-followed-by-the-app-control-authority-is-held-by-the-sdk-the-app-cannot-control-the-robot-but-it-can-forcibly-preempt-the-sdk-s-control-authority">Scenario 2: The SDK Connects First, Followed by the App. Control authority is held by the SDK. The App cannot control the robot, but it can forcibly preempt the SDK’s control authority.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="3.6SDK_State.html">3.6 SDK State</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="3.6SDK_State.html#sdk-mode-switching">SDK Mode Switching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3.6SDK_State.html#sdk-command-delivery">SDK Command Delivery</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="4.Sensor_Data_Retrieval.html">4.Sensor Data Retrieval</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="4.1Video_Stream_Data.html">4.1 Video Stream Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.2LiDAR_Data.html">4.2 LiDAR Data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="4.2LiDAR_Data.html#ros2-interface-definition">4.2.1 ROS2 Interface Definition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="4.2LiDAR_Data.html#retrieving-lidar-data">4.2.2 Retrieving LiDAR Data</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="4.3Ultrasonic_Radar_Data.html">4.3 Ultrasonic Radar Data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="4.3Ultrasonic_Radar_Data.html#ros2-interface-definition">4.3.1 ROS2 Interface Definition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="4.3Ultrasonic_Radar_Data.html#retrieving-ultrasonic-radar-data">4.3.2 Retrieving Ultrasonic Radar Data</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="4.4RTK_Data.html">4.4 RTK Data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="4.4RTK_Data.html#rtk-introduction">4.4.1 RTK Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="4.4RTK_Data.html#obtaining-sixents-rtk-service">4.4.2 Obtaining Sixents RTK Service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="4.4RTK_Data.html#rtk-service-configuration-on-the-nx-side">4.4.3 RTK Service Configuration on the NX Side</a></li>
+<li class="toctree-l3"><a class="reference internal" href="4.4RTK_Data.html#ros2-interface-definition">4.4.4 ROS2 Interface Definition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="4.4RTK_Data.html#retrieving-rtk-data">4.4.5 Retrieving RTK Data</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="4.5IMU_Data.html">4.5 IMU Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.6Camera_Data.html">4.6 Camera Data</a></li>
+</ul>
+</li>
 <li class="toctree-l1 current"><a class="reference internal" href="5.Debugging_Instructions.html">5.Debugging Instructions</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">5.1 Control Authority Switching Instructions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="5.2Autonomous_Docking%26Recharging_Instructions.html">5.2 Autonomous Docking &amp; Recharging Instructions</a></li>
@@ -70,7 +329,7 @@
       </nav>
 
       <div class="wy-nav-content">
-        <div class="rst-content">
+        <div class="rst-content style-external-links">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
